@@ -1,9 +1,17 @@
 body {
+  background-image: url("../media/bg-home.png");
+  /*background-size: cover;  */
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-color: #0b0712;
   color: #FFFFFF;
-  background-color: #000000;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;  
+  width: 100%;
+  height: 100%;
+  /*warning*/
+  overflow: hidden;
 }
 
 code {
@@ -18,6 +26,8 @@ nav {
   left: 0px;
   top: 0px;
   background: #141520;
+
+  transition: width 0.5s;
 }
 
 ul, li {
@@ -26,13 +36,24 @@ ul, li {
   list-style-type: none;
 }
 
+nav a:hover {
+  text-decoration: none;
+}
+
+.body-opasity {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
 .main-header {
   background-color: #FFFFFF;
   width: 100vw;
   height: 57px;
 }
 
-.main-header-contact-us {
+.main-header-contact-us-button {
   position: inherit;
   background: #FFFFFF;
   border: 2px solid #E1A200;
@@ -67,6 +88,8 @@ ul, li {
   top: 11px;
   left: 91px;
   height: 27px;
+
+  transition: 0.5s;
 }
 
 .navbar-button-hide {
@@ -74,7 +97,9 @@ ul, li {
   width: 33px;
   height: 33px;
   left: 77px;
-  top: 94px;
+  top: 100px;
+
+  transition: 0.5s;
 }
 
 .navbar-line {
@@ -83,9 +108,10 @@ ul, li {
   height: 1px;
   left: 77px;
   top: 166px;
-
   background: #E1A200;
   border-radius: 12px;
+
+  transition: 0.5s;
 }
 
 .navbar-links {
@@ -94,24 +120,24 @@ ul, li {
   height: 327px;
   left: 81px;
   top: 213px;
-
-  /*font-family: 'Roboto', sans-serif;*/
   font-style: normal;
   font-weight: 500;
   line-height: 59px;
   font-size: 20px;
   letter-spacing: 0.05em;
-
   color: #FFFFFF;
+
+  transition: 0.5s;
 }
 
-.navbar-links a{
+.navbar-links .navbar-link{
   color: #E1A200; 
   margin: 0;
   padding: 0;
+  transition: 0.5s;
 }
 
-.navbar-links a:hover { 
+.navbar-links .navbar-link:hover { 
   color: #FFFFFF;
 }
 
@@ -121,10 +147,11 @@ ul, li {
   height: 1px;
   left: 43px;
   top: 712px;
-
   background: #E1A200;
   border-radius: 12px;
   transform: rotate(-90deg);
+  transition: 0.5s;
+  overflow: hidden;
 }
 
 .navbar-counter {
@@ -133,16 +160,120 @@ ul, li {
   height: 16px;
   left: 78px;
   top: 780px;
-
-  /*font-family: 'Roboto', sans-serif;*/
   font-style: normal;
   font-weight: 900;
   line-height: normal;
   font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-
   color: #FFFFFF;
-
   transform: rotate(-90deg);
+  transition: 0.5s;
+}
+
+.navbar-hide {
+  width: 150px;
+}
+
+.navbar-hide .navbar-main-logo {
+  transition: 0.5s;
+  top: 11px;
+  left: 38px;
+  height: 27px;
+}
+
+.navbar-hide .navbar-button-hide {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  left: 59px;
+  transform: rotate(180deg);  
+  transition: 0.5s;
+}
+
+.navbar-hide .navbar-line {
+  width: 100%;
+  height: 1px;
+  left: 0px;
+  transition: 0.5s;
+}
+
+.navbar-hide .navbar-links {  
+  top: 230px;
+  left: 60px;
+  transition: 0.5s;
+}
+
+.navbar-hide .navbar-links .navbar-link:hover {
+  color: rgba(0,0,0,0);
+  transition: 0.2s;
+}
+
+.navbar-hide .navbar-links .navbar-link{
+  color: rgba(0,0,0,0);
+  transition: 0.2s;
+}
+
+.navbar-hide .navbar-link-home {
+  content: url('../media/navbar-home.svg');
+  background-repeat: no-repeat;
+}
+
+.navbar-hide .navbar-link-home:hover {
+  content: url('../media/navbar-home-hover.svg');
+}
+
+.navbar-hide .navbar-link-about {
+  content: url('../media/navbar-about.svg');
+  background-repeat: no-repeat;
+}
+
+.navbar-hide .navbar-link-about:hover {
+  content: url('../media/navbar-about-hover.svg');
+}
+
+.navbar-hide .navbar-link-services {
+  content: url('../media/navbar-services.svg');
+  background-repeat: no-repeat;
+}
+
+.navbar-hide .navbar-link-services:hover {
+  content: url('../media/navbar-services-hover.svg');
+}
+
+.navbar-hide .navbar-link-solutions {
+  content: url('../media/navbar-solutions.svg');
+  background-repeat: no-repeat;
+}
+
+.navbar-hide .navbar-link-solutions:hover {
+  content: url('../media/navbar-solutions-hover.svg');
+}
+
+.navbar-hide .navbar-link-approach {
+  content: url('../media/navbar-approach.svg');
+  background-repeat: no-repeat;
+}
+
+.navbar-hide .navbar-link-approach:hover {
+  content: url('../media/navbar-approach-hover.svg');
+}
+
+.navbar-hide .navbar-link-contact-us {
+  content: url('../media/navbar-contact-us.svg');
+  background-repeat: no-repeat;
+}
+
+.navbar-hide .navbar-link-contact-us:hover {
+  content: url('../media/navbar-contact-us-hover.svg');
+}
+
+.navbar-hide .navbar-line-2 {
+  left: 33px;
+  transition: 0.5s;
+}
+
+.navbar-hide .navbar-counter {
+  left: 68px;
+  transition: 0.5s;
 }

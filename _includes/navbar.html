@@ -2,28 +2,28 @@
   <div class="navbar-logo-block" >
     <img src="media/logo.svg" alt="logo" class="navbar-main-logo" />
   </div>
-  <input type="image" title="boo" class="navbar-button-hide" src="media/button-arrow-left.svg"/>
+  <img title="boo" class="navbar-button-hide" src="media/button-arrow-left.svg"/>
   <hr class="navbar-line"/>
   <ul class="navbar-links">
-    <li class="nav-item">
-      <a class="nav-link" href="/">{{ page.en.navbar.home }}</a>
+    <li class="navbar-item-home">
+      <a class="navbar-link navbar-link-home" href="/">{{ page.en.navbar.home }}</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">{{ page.en.navbar.about }}</a>
+    <li class="navbar-item-about">
+      <a class="navbar-link navbar-link-about" href="about.html">{{ page.en.navbar.about }}</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">{{ page.en.navbar.services }}</a>
+    <li class="navbar-item-services">
+      <a class="navbar-link navbar-link-services" href="#">{{ page.en.navbar.services }}</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">{{ page.en.navbar.solutions }}</a>
+    <li class="navbar-item-solutions">
+      <a class="navbar-link navbar-link-solutions" href="#">{{ page.en.navbar.solutions }}</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">{{ page.en.navbar.approach }}</a>
+    <li class="navbar-item-approach">
+      <a class="navbar-link navbar-link-approach" href="#">{{ page.en.navbar.approach }}</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">{{ page.en.contact_us }}</a>
+    <li class="navbar-item-contact-us">
+      <a class="navbar-link navbar-link-contact-us" href="#">{{ page.en.contact_us }}</a>
     </li>
   </ul>
   <hr class="navbar-line-2"/>
-  <div class="navbar-counter">01</div>
+  <div class="navbar-counter">{{ page.page }}</div>
 </nav>
