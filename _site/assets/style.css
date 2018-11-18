@@ -35,6 +35,7 @@ ul, li {
   list-style-type: none;
 }
 
+/*Default*/
 nav a:hover {
   text-decoration: none;
 }
@@ -43,6 +44,7 @@ nav a:hover {
   transition: none !important;
 }
 
+/*Body*/
 .body-opasity {
   position: absolute;
   height: 100%;
@@ -50,6 +52,7 @@ nav a:hover {
   background-color: rgba(0,0,0,0.4);
 }
 
+/*Header*/
 .main-header {
   background-color: #FFFFFF;
   width: 100vw;
@@ -58,7 +61,7 @@ nav a:hover {
 
 .main-header-contact-us-button {
   position: inherit;
-  background: #FFFFFF;
+  background: rgba(0,0,0,0);
   border: 2px solid #E1A200;
   box-sizing: border-box;
   border-radius: 29.5px;
@@ -81,6 +84,7 @@ nav a:hover {
   left: 67px;
 }
 
+/*Navbar / Navigation / Links*/
 .navbar-logo-block {
   height: 57px;
   background: #E1A200;
@@ -173,15 +177,26 @@ nav a:hover {
   transition: 0.5s;
 }
 
+/*Navbar hide / mini*/
 .navbar-hide {
   width: 150px;
+}
+
+@keyframes pulse {
+  0% {
+    height: 27px;
+  }
+  100% {    
+    height: 26px;
+  }
 }
 
 .navbar-hide .navbar-main-logo {
   transition: 0.5s;
   top: 11px;
   left: 38px;
-  height: 27px;
+  height: 27px;  
+  animation: pulse 1s infinite alternate;
 }
 
 .navbar-hide .navbar-button-hide {
@@ -231,6 +246,7 @@ nav a:hover {
 }
 
 .navbar-hide .navbar-link-about {
+  margin-left: -3px;
   content: url('../media/navbar-about.svg');
 }
 
@@ -279,3 +295,5 @@ nav a:hover {
   left: 68px;
   transition: 0.5s;
 }
+
+/*Content*/
