@@ -1,5 +1,10 @@
 jQuery(document).ready(function () {
+	// let trans = "nav, .navbar-links, .navbar-link, .navbar-main-logo, .navbar-button-hide, " +
+	// ".navbar-line"
+
+ //  $(trans).addClass("no-transition");
   $("nav").addClass(sessionStorage.getItem("navbar"));
+  // $(trans).removeClass("no-transition");
 
   $(".navbar-button-hide").click(() => {
     let n = $("nav");
@@ -12,10 +17,4 @@ jQuery(document).ready(function () {
 });
 
 // function clearNavLinks() {
-//   $('.navbar-link-home').html("____");
-//   $('.navbar-link-about').html("____");
-//   $('.navbar-link-services').html("____");
-//   $('.navbar-link-solutions').html("____");
-//   $('.navbar-link-approach').html("____");
-//   $('.navbar-link-contact-us').html("____");
 // }

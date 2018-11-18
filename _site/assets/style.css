@@ -26,7 +26,6 @@ nav {
   left: 0px;
   top: 0px;
   background: #141520;
-
   transition: width 0.5s;
 }
 
@@ -38,6 +37,10 @@ ul, li {
 
 nav a:hover {
   text-decoration: none;
+}
+
+.no-transition {
+  transition: none !important;
 }
 
 .body-opasity {
@@ -88,7 +91,6 @@ nav a:hover {
   top: 11px;
   left: 91px;
   height: 27px;
-
   transition: 0.5s;
 }
 
@@ -198,8 +200,8 @@ nav a:hover {
   transition: 0.5s;
 }
 
-.navbar-hide .navbar-links {  
-  top: 230px;
+.navbar-hide .navbar-links {
+  /*top: 230px;*/
   left: 60px;
   transition: 0.5s;
 }
@@ -214,18 +216,22 @@ nav a:hover {
   transition: 0.2s;
 }
 
+/*.navbar-hide .navbar-link-home::before {
+  opacity: 0%
+}*/
+
 .navbar-hide .navbar-link-home {
   content: url('../media/navbar-home.svg');
-  background-repeat: no-repeat;
+  transition: 0.5s;
 }
 
 .navbar-hide .navbar-link-home:hover {
   content: url('../media/navbar-home-hover.svg');
+  transition: 0.5s;
 }
 
 .navbar-hide .navbar-link-about {
   content: url('../media/navbar-about.svg');
-  background-repeat: no-repeat;
 }
 
 .navbar-hide .navbar-link-about:hover {
@@ -234,7 +240,6 @@ nav a:hover {
 
 .navbar-hide .navbar-link-services {
   content: url('../media/navbar-services.svg');
-  background-repeat: no-repeat;
 }
 
 .navbar-hide .navbar-link-services:hover {
@@ -243,7 +248,6 @@ nav a:hover {
 
 .navbar-hide .navbar-link-solutions {
   content: url('../media/navbar-solutions.svg');
-  background-repeat: no-repeat;
 }
 
 .navbar-hide .navbar-link-solutions:hover {
@@ -252,7 +256,6 @@ nav a:hover {
 
 .navbar-hide .navbar-link-approach {
   content: url('../media/navbar-approach.svg');
-  background-repeat: no-repeat;
 }
 
 .navbar-hide .navbar-link-approach:hover {
@@ -261,7 +264,6 @@ nav a:hover {
 
 .navbar-hide .navbar-link-contact-us {
   content: url('../media/navbar-contact-us.svg');
-  background-repeat: no-repeat;
 }
 
 .navbar-hide .navbar-link-contact-us:hover {
