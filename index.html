@@ -1,6 +1,6 @@
 ---
 layout: default
-title: soft - Home
+title: Lsoft - Home
 page: '01'
 en:  
   contact_us: Contact us
@@ -14,12 +14,22 @@ en:
 <!-- <html>... -->
 {% include header.html %}
 {% include navbar.html %}
-<div class="container">
-	<div class="row">
-		<div class="col-2"></div>
-		<content class="col-5">
-			<h1>Welcome to <br><b>Libido Software</b></h1>
-       <button class="main-header-contact-us-button">{{ page.en.contact_us }}</button>
+<div class="container-fluid">
+	<div class="index-row-1 row align-items-center justify-content-md-center">
+		<content class="col-7">
+			<h1>Welcome to <br><span class="index-title-1">Libido Software</span></h1>
+      <p class="index-title-2">An adult web development,<br>design and marketing agency</p>
+      <button class="main-header-contact-us-button" onclick="alert('ты не тыкай')">{{ page.en.contact_us }}</button>
 		</content>
 	</div>
+  <div class="row justify-content-md-center">
+    <div class="col-7 index-row-our-services">
+      OUR SERVICES
+    </div>
+  </div>
+  <div class="index-row-2 row align-items-end justify-content-md-center">
+    <content class="col-10">
+      {% include carousel.html %}
+    </div>
+  </div>
 </div>

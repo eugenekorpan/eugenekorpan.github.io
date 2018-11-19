@@ -11,9 +11,9 @@
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- local files -->
-  <script async src="../assets/scripts.js"></script>
+  <script async src="assets/scripts.js"></script>
   <link rel="stylesheet" href="assets/style.css">
-  <title>soft - Home</title>
+  <title>Lsoft - Home</title>
 </head>
   <body>
   <!-- <html>... -->
@@ -61,14 +61,61 @@
   <hr class="navbar-line-2"/>
   <div class="navbar-counter">01</div>
 </nav>
-<div class="container">
-	<div class="row">
-		<div class="col-2"></div>
-		<content class="col-5">
-			<h1>Welcome to <br><b>Libido Software</b></h1>
-       <button class="main-header-contact-us-button">Contact us</button>
+<div class="container-fluid">
+	<div class="index-row-1 row align-items-center justify-content-md-center">
+		<content class="col-7">
+			<h1>Welcome to <br><span class="index-title-1">Libido Software</span></h1>
+      <p class="index-title-2">An adult web development,<br>design and marketing agency</p>
+      <button class="main-header-contact-us-button" onclick="alert('ты не тыкай')">Contact us</button>
 		</content>
 	</div>
+  <div class="row justify-content-md-center">
+    <div class="col-7 index-row-our-services">
+      OUR SERVICES
+    </div>
+  </div>
+  <div class="index-row-2 row align-items-end justify-content-md-center">
+    <content class="col-10">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="carousel-item1 text-center">
+        <img title="prev" class="services-imgs" src="media/services-sales-and-marketing.svg"/>
+        <div class="services-text">Sales and Marketing</div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="carousel-item1 text-center">
+        <img title="prev" class="services-imgs" src="media/services-design.svg"/>
+        <div class="services-text" style="margin-top:-5px">Design</div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="carousel-item1 text-center">
+        <img title="prev" class="services-imgs" src="media/services-web-and-app.svg"/>
+        <div class="services-text">Web anp App development</div>
+      </div>  
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <div class="carousel-control1">
+        <a class="carousel-control-prev-div" href="#carouselExampleControls" data-slide="prev">
+          <img width="25px" height="25px" title="prev" class="" src="media/button-arrow-left.svg"/>
+        </a>
+        <a class="carousel-control-next-div" href="#carouselExampleControls" role="button" data-slide="next">
+          <img width="25px" height="25px" title="next" class="carousel-control-next1" src="media/button-arrow-left.svg"/>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
 </div>
 
   </body>

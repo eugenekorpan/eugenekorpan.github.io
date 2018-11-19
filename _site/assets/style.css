@@ -14,6 +14,14 @@ body {
   overflow: hidden;
 }
 
+h1 {
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 35px;
+  letter-spacing: 0.03em;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
   monospace;
@@ -27,6 +35,7 @@ nav {
   top: 0px;
   background: #141520;
   transition: width 0.5s;
+  z-index: 1;
 }
 
 ul, li {
@@ -66,7 +75,7 @@ nav a:hover {
   box-sizing: border-box;
   border-radius: 29.5px;
   color: #E1A200;
-  top: 11px;
+  margin: 11px;
   height: 34px;
   width: 161px;
 
@@ -187,7 +196,7 @@ nav a:hover {
     height: 27px;
   }
   100% {    
-    height: 26px;
+    height: 28px;
   }
 }
 
@@ -232,7 +241,7 @@ nav a:hover {
 }
 
 /*.navbar-hide .navbar-link-home::before {
-  opacity: 0%
+opacity: 0%
 }*/
 
 .navbar-hide .navbar-link-home {
@@ -296,4 +305,84 @@ nav a:hover {
   transition: 0.5s;
 }
 
-/*Content*/
+/*Index content*/
+.index-row-1 {
+  height: 450px;
+  margin-bottom: 60px;
+}
+
+.index-title-2 {
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 18px;
+}
+
+.index-title-1 {
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 35px;
+  letter-spacing: 0.05em;
+}
+
+/*Index carousel*/
+.index-row-our-services {  
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.carousel-item1 {
+  float: right;
+  width: 215px;
+  height: 125px;
+  border: 2px solid #E1A200;
+  border-radius: 7px;
+  margin: 6px;
+}
+
+.carousel {
+  width: 681px;
+}
+
+.carousel-control1 {
+  top: 20px;
+  width: 60px;
+  height: 50px;
+}
+
+.carousel-control-next1 {
+  transform: rotate(180deg);
+}
+
+.services-imgs {
+  margin-top: 22px;
+  margin-bottom: 10px;
+}
+
+.services-text {
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 12px;
+
+  color: #FFFFFF;
+}
+
+.carousel-inner .carousel-item-right.active,
+.carousel-inner .carousel-item-next {
+  transform: translateX(-33.33%);
+}
+
+.carousel-inner .carousel-item-left.active, 
+.carousel-inner .carousel-item-prev {
+  transform: translateX(33.33%)
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
