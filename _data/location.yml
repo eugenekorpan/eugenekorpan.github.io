@@ -1,1 +1,19 @@
-- en:
+en:
+  contact_us: Contact us
+  navbar:
+    home: Home
+    about: About
+    services: Services
+    solutions: Solutions
+    approach: Approach
+
+  index:
+    h1: Welcome to
+    h2: Libido Software
+    h3: An adult web development,<br>design and marketing agency
+
+  services:
+    our_services: Our services
+    sales_and_marketing: Sales and Marketing
+    design: Design
+    dev: Web anp App development
