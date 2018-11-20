@@ -5,15 +5,43 @@ page: '06'
 ---
 <!-- <html>... -->
 <body style="background-image: url('media/bg-contact-us.png')">
-	<div class="body-opasity">
-		{% include header.html %}
-		{% include navbar.html %}
-		<div class="container-fluid">
-			<div class="row align-items-center justify-content-md-center contact-us-row">
-				<content class="col-7 contact-us-div">
-					bla
-				</content>
-			</div>
-		</div>
-	</div>
+  <div class="body-opasity">
+    {% include header.html %}
+    {% include navbar.html %}
+    <div class="container-fluid">
+      <div class="row align-items-center contact-us-row">
+        <div class="col-2"></div>
+        <div class="col-4">
+          <div class="contact-us-div">
+            <div class="contact-us-title">{{ site.data.location.en.contact_us_btn }}</div>
+            <form action="#">
+              <label class="contact-us-label" for="name">{{ site.data.location.en.contact_us.name }}</label>
+              <input class="contact-us-input" type="text" name="name" placeholder="{{ site.data.location.en.contact_us.name_plc }}"><br>
+              <label class="contact-us-label" for="email">{{ site.data.location.en.contact_us.email }}</label>
+              <input class="contact-us-input" type="email" name="email" placeholder="{{ site.data.location.en.contact_us.email_plc }}"><br>
+              <label class="contact-us-label" for="email2">{{ site.data.location.en.contact_us.email }}</label>
+              <input class="contact-us-input email2" type="email" name="email2" placeholder="{{ site.data.location.en.contact_us.email_plc2 }}"><br>
+              <input class="contact-us-send-btn" type="submit" value="{{ site.data.location.en.contact_us.send }}"">
+            </form>
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="contact-us-div2">
+            {{ site.data.location.en.contact_us.h2 }}
+            <hr class="contact-us-line"/>            
+            {{ site.data.location.en.contact_us.comunicate_with_us }}<br>
+            {{ site.data.location.en.contact_us.phone }}<br>
+            {{ site.data.location.en.contact_us.skype }}<br>
+            {{ site.data.location.en.contact_us.our_email }}<br>
+            {{ site.data.location.en.contact_us.follow_us }}<br>
+            <div class="">
+              <img src="media/instagram-icon.svg" alt="instagram" />
+              <img src="media/facebook-icon.svg" alt="facebook" />
+              <img src="media/in-icon.svg" alt="in" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>

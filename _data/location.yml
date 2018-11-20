@@ -1,5 +1,5 @@
 en:
-  contact_us: Contact us
+  contact_us_btn: Contact us
   navbar:
     home: Home
     about: About
@@ -17,3 +17,17 @@ en:
     sales_and_marketing: Sales and Marketing
     design: Design
     dev: Web anp App development
+
+  contact_us:
+    name: Your name
+    name_plc: How should we call you?
+    email: Your e-mail
+    email_plc: Please, enter your e-mail
+    email_plc2: Let us know about the topic you're interested in. Honewstly, it's painless
+    send: Send
+    h2: Freud said&#58;<br> <p class="contact-us-p">“Love and work are the cornerstones of our humanness”.</p> We do agree with that. Respecting the greatest psychoanalyst ever, our team has become the ones who don’t mind. Feel free to get in touch with us
+    comunicate_with_us: Comunicate with us&#58;
+    phone: Phone number&#58; +1-541-754-3010
+    skype: Skype&#58; libido_software
+    our_email: E-mail&#58; contact@libidosoft.com
+    follow_us: Follow us&#58;
