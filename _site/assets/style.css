@@ -384,3 +384,17 @@ opacity: 0%
 .carousel-inner .carousel-item-left{ 
   transform: translateX(0);
 }
+
+/*Contact us*/
+.contact-us-div {
+  width: 458px;
+  height: 654px;
+  border: 2px solid #E1A200;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.contact-us-row {
+  height: 850px;
+  
+}
