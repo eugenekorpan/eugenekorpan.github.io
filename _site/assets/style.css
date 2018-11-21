@@ -401,6 +401,50 @@ opacity: 0%
   transform: translateX(0);
 }
 
+/*Approach*/
+.approach-row {
+  margin-top: 89px; 
+}
+
+.approach-title {
+  font-style: normal;
+  font-weight: bold;
+  line-height: 43px;
+  font-size: 32px;
+}
+
+.approach-title span {
+  font-style: normal;
+  font-weight: bold;
+  line-height: 47px;
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #E1A200;
+}
+
+.approach-row img {
+  margin: 15px;
+}
+
+.approach-row {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.approach-row b {
+  display: inline-block;
+  padding-bottom: 15px;
+  vertical-align: bottom;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 27px;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+}
+
 /*Contact us*/
 .contact-us-row {
   height: 850px;
@@ -444,64 +488,64 @@ opacity: 0%
 
 /*.contact-us-input.email2::placeholder {
   margin: 0px;
-}*/
+  }*/
 
-.contact-us-label {
-  margin: 0px 0px 11px 38px;
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  font-size: 15px;
-  text-transform: uppercase;
-  color: #E1A200;
-}
+  .contact-us-label {
+    margin: 0px 0px 11px 38px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #E1A200;
+  }
 
-.contact-us-send-btn {
-  margin: 0px 0px 11px 38px;
-  width: 378px;
-  height: 49px;
-  background: #E1A200;
-  border: 1px solid #E1A200;
-  border-radius: 10px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  font-size: 13px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #FFFFFF;
-}
+  .contact-us-send-btn {
+    margin: 0px 0px 11px 38px;
+    width: 378px;
+    height: 49px;
+    background: #E1A200;
+    border: 1px solid #E1A200;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
 
-.contact-us-div2 {
-  width: 458px;
-  height: 654px;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 26px;
-  font-size: 18px;
-  text-align: justify;
-  letter-spacing: 0.03em;
-  color: #FFFFFF;
-}
+  .contact-us-div2 {
+    width: 458px;
+    height: 654px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 26px;
+    font-size: 18px;
+    text-align: justify;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+  }
 
-.contact-us-p {
-  text-indent: 1em;
-  font-weight: bold;
-  line-height: 51px;
-  font-size: 35px;
-  letter-spacing: 0.05em;
-}
+  .contact-us-p {
+    text-indent: 1em;
+    font-weight: bold;
+    line-height: 51px;
+    font-size: 35px;
+    letter-spacing: 0.05em;
+  }
 
-.contact-us-div2 b {
-  font-style: normal;
-  font-weight: bold;
-  line-height: 37px;
-  font-size: 20px;
-  text-align: justify;
-  letter-spacing: 0.03em;
-}
+  .contact-us-div2 b {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 37px;
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 0.03em;
+  }
 
-.contact-us-line {
-  border: 1px solid #E1A200;
-  margin: 5px 0px 40px 0px;
-}
+  .contact-us-line {
+    border: 1px solid #E1A200;
+    margin: 5px 0px 40px 0px;
+  }

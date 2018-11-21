@@ -8,5 +8,57 @@ page: '05'
   <div class="body-opasity">
     {% include header.html %}
     {% include navbar.html %}
+    <div class="container-fluid">
+      <div class="row approach-row">
+        <div class="col-2"></div>
+        <div class="col-3">
+          <div class="approach-title">
+            {{ site.data.location.en.approach.philosophy_zone }}
+          </div>
+        </div>
+      </div>
+      <div class="row approach-row">
+        <div class="col-2"></div>
+        <div class="col-3">
+          <div class="approach-block-1">
+            <img src="media/approach-1.svg" />
+            {{ site.data.location.en.approach.uniqueness }}
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="approach-block-2">
+            <img src="media/approach-2.svg" />
+            {{ site.data.location.en.approach.awareness }}
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="approach-block-3">
+            <img src="media/approach-3.svg" />
+            {{ site.data.location.en.approach.flexibility }}
+          </div>
+        </div>
+      </div>
+      <div class="row approach-row">
+        <div class="col-2"></div>
+        <div class="col-3">
+          <div class="approach-block-4">
+            <img src="media/approach-4.svg" />
+            {{ site.data.location.en.approach.security }}
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="approach-block-5">
+            <img src="media/approach-5.svg" />
+            {{ site.data.location.en.approach.open_mindedness }}
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="approach-block-6">
+            <img src="media/approach-6.svg" />
+            {{ site.data.location.en.approach.full_service }}
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
