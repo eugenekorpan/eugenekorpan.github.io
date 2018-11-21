@@ -20,7 +20,7 @@ page: '06'
               <label class="contact-us-label" for="email">{{ site.data.location.en.contact_us.email }}</label>
               <input class="contact-us-input" type="email" name="email" placeholder="{{ site.data.location.en.contact_us.email_plc }}"><br>
               <label class="contact-us-label" for="email2">{{ site.data.location.en.contact_us.email }}</label>
-              <input class="contact-us-input email2" type="email" name="email2" placeholder="{{ site.data.location.en.contact_us.email_plc2 }}"><br>
+              <textarea class="contact-us-input email2" type="email" name="email2" placeholder="{{ site.data.location.en.contact_us.email_plc2 }}"></textarea><br>
               <input class="contact-us-send-btn" type="submit" value="{{ site.data.location.en.contact_us.send }}"">
             </form>
           </div>
@@ -34,11 +34,7 @@ page: '06'
             {{ site.data.location.en.contact_us.skype }}<br>
             {{ site.data.location.en.contact_us.our_email }}<br>
             {{ site.data.location.en.contact_us.follow_us }}<br>
-            <div class="">
-              <img src="media/instagram-icon.svg" alt="instagram" />
-              <img src="media/facebook-icon.svg" alt="facebook" />
-              <img src="media/in-icon.svg" alt="in" />
-            </div>
+            {% include social.html %}
           </div>
         </div>
       </div>

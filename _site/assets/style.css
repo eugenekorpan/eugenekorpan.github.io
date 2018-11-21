@@ -1,3 +1,4 @@
+/*Default*/
 body {
   /*background-size: cover;  */
   background-position: right top;
@@ -43,7 +44,6 @@ ul, li {
   list-style-type: none;
 }
 
-/*Default*/
 nav a:hover {
   text-decoration: none;
 }
@@ -58,6 +58,22 @@ nav a:hover {
   height: 100%;
   width: 100%;
   background-color: rgba(0,0,0,0.4);
+}
+
+/*Social btns*/
+.social-btns {
+  margin: 16px 10px 16px 0px;
+}
+
+.social-instagram-link { content: url('../media/social-instagram-icon.svg') }
+.social-instagram-link:hover { content: url('../media/social-instagram-icon-hover.svg') }
+.social-facebook-link { content: url('../media/social-facebook-icon.svg') }
+.social-facebook-link:hover { content: url('../media/social-facebook-icon-hover.svg') }
+.social-in-link { content: url('../media/social-in-icon.svg') }
+.social-in-link:hover { content: url('../media/social-in-icon-hover.svg') }
+.social-ico {
+  height: 25px;
+  width: 25px;
 }
 
 /*Header*/
@@ -422,8 +438,13 @@ opacity: 0%
 }
 
 .contact-us-input.email2 {
-  height: 129px;
+  max-height: 129px;
+  min-height: 129px;
 }
+
+/*.contact-us-input.email2::placeholder {
+  margin: 0px;
+}*/
 
 .contact-us-label {
   margin: 0px 0px 11px 38px;
@@ -471,6 +492,16 @@ opacity: 0%
   letter-spacing: 0.05em;
 }
 
+.contact-us-div2 b {
+  font-style: normal;
+  font-weight: bold;
+  line-height: 37px;
+  font-size: 20px;
+  text-align: justify;
+  letter-spacing: 0.03em;
+}
+
 .contact-us-line {
   border: 1px solid #E1A200;
+  margin: 5px 0px 40px 0px;
 }
