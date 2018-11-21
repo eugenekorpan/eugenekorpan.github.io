@@ -1,4 +1,18 @@
 - name: Home
+  lname: home
   link: /
 - name: About
+  lname: about
   link: /about.html
+- name: Services
+  lname: services
+  link: /services.html
+- name: Solutions
+  lname: solutions
+  link: /solutions.html
+- name: Approach
+  lname: approach
+  link: /approach.html
+- name: Contact us
+  lname: contact-us
+  link: /contact-us.html

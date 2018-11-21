@@ -1,10 +1,10 @@
 /*Default*/
 body {
-  /*background-size: cover;  */
+  background-size: auto 100vh;
   background-position: right top;
   background-repeat: no-repeat;
   background-color: #0b0712;
-  color: #FFFFFF;
+  color: #FFF;
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;  
@@ -453,7 +453,7 @@ opacity: 0%
 .contact-us-row { height: 850px }
 
 .contact-us-div {
-  width: 458px;
+  max-width: 460px;
   height: 654px;
   border: 2px solid #E1A200;
   box-sizing: border-box;
@@ -473,7 +473,7 @@ opacity: 0%
 }
 
 .contact-us-input {
-  width: 378px;
+  width: 83%;
   height: 49px;
   padding: 21px;
   margin: 0px 38px 34px 38px;
@@ -500,7 +500,7 @@ opacity: 0%
 
 .contact-us-send-btn {
   margin: 0px 0px 11px 38px;
-  width: 378px;
+  width: 83%;
   height: 49px;
   background: #E1A200;
   border: 1px solid #E1A200;
@@ -515,7 +515,7 @@ opacity: 0%
 }
 
 .contact-us-div2 {
-  width: 458px;
+  max-width: 458px;
   height: 654px;
   font-style: normal;
   font-weight: normal;
