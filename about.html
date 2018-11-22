@@ -8,5 +8,24 @@ page: '02'
   <div class="body-opasity">
     {% include header.html %}
     {% include navbar.html %}
+    <div class="container-fluid about">
+      <div class="row about-row-1">
+        <div class="col-2"></div>
+        <div class="col-4">
+          <div class="about-col-1">
+            <b>{{ site.data.location.en.about.h1 }}</b>
+            {{ site.data.location.en.about.p-1 }}
+            <div class="">
+              <button class="main-header-contact-us-button solutions-contact-us-btn" onclick="location.href='contact-us.html'">{{ site.data.location.en.contact_us_btn }}</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="about-btns-board">
+            {% include about-carousel.html %}
+          </div>          
+        </div>
+      </div>
+    </div>
   </div>
 </body>

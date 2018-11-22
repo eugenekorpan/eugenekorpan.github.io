@@ -402,6 +402,38 @@ opacity: 0%
 }
 
 /*About*/
+.about {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.about-row-1 {
+  margin-top: 18vh;
+  margin-bottom: 4vh;
+}
+
+.about-row-1 .about-col-1 {
+  padding-right: 3vw;
+  text-align: justify;
+}
+
+.about b {
+  display: block;
+  margin-bottom: 3vh;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 47px;
+  font-size: 35px;
+  letter-spacing: 0.03em;
+}
+
+/*About carousel*/
+#aboutCarousel.carousel {
+  width: 500px;
+}
 
 /*Services*/
 .services {
