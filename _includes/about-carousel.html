@@ -1,15 +1,12 @@
 <div id="aboutCarousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-      
+
     <div class="carousel-item active">
       <img src="http://placehold.it/500x400">
     </div>
-    <div class="carousel-item">
-      <img src="http://placehold.it/500x400">
-    </div>
-    <div class="carousel-item">
-      <img src="http://placehold.it/500x400">
-    </div>
+    {% for c in (0..3) %}<div class="carousel-item"><img src="http://placehold.it/500x400"></div>{% endfor %}
+    <div class="carousel-item"><img width="500" height="400" src="../media/hello.jpg"></div>    
+    {% for c in (0..3) %}<div class="carousel-item"><img src="http://placehold.it/500x400"></div>{% endfor %}
 
   </div>
   <div class="row">
