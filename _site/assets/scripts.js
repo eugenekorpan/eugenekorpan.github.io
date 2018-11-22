@@ -1,5 +1,5 @@
 jQuery(document).ready(function () {
-  $('.carousel .carousel-item').each(function(){
+  $('#carouselMainPage.carousel .carousel-item').each(function(){
     var next = $(this).next();
     if (!next.length) {
       next = $(this).siblings(':first');

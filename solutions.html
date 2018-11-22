@@ -5,7 +5,7 @@ page: '04'
 ---
 <!-- <html>... -->
 <body style="background-image: url('media/bg-solutions.png')">
-  <div class="body-opasity">
+  <div class="body-opasity solutions">
     {% include header.html %}
     {% include navbar.html %}
     <div class="container-fluid">
@@ -13,11 +13,28 @@ page: '04'
         <div class="col-2"></div>
         <div class="col-9">
           {{ site.data.location.en.solutions.title }}
+        </div>
+      </div>
+
+      <div class="row solutions-row-2">
+        <div class="col-2"></div>
+        <div class="col-9">
           {{ site.data.location.en.solutions.p-1 }}
-          <hr class="solutions-line"/>
-          {{ site.data.location.en.solutions.h2 }}
-          {{ site.data.location.en.solutions.p-2 }}
-          <button class="main-header-contact-us-button" onclick="location.href='contact-us.html'">{{ site.data.location.en.contact_us_btn }}</button>
+        </div>
+      </div>
+
+      <div class="row solutions-row-3">
+        <div class="col-2"></div>
+        <div class="col-4">
+          <div class="solutions-p-2">
+            <hr class="solutions-line"/>
+            <b>{{ site.data.location.en.solutions.h2 }}</b>
+            {{ site.data.location.en.solutions.p-2 }}
+            <button class="main-header-contact-us-button solutions-contact-us-btn" onclick="location.href='contact-us.html'">{{ site.data.location.en.contact_us_btn }}</button>
+          </div>
+        </div>
+        <div class="col-5">
+          {% include solutions-carousel.html %}
         </div>
       </div>
     </div>
