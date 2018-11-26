@@ -432,6 +432,59 @@ nav a:hover {
   width: 500px;
 }
 
+.about-carousel-prev-col {
+  display: block;
+  height: 100%;
+}
+
+.about-carousel-prev-col img {
+  position: relative;
+  left: 12vw;
+  top: 40%;
+}
+
+.about-carousel-next-col {
+  display: block;
+  height: 100%;
+}
+
+.about-carousel-next-col img {
+  position: relative;
+  top: 40%;
+  transform: rotate(180deg);
+}
+
+#aboutCarousel .carousel-indicators {
+  display: inline-block;
+  position: inherit;
+  margin: 30px 15px 0px 25px;
+  width: 80px;
+  color: #E1A200;
+}
+
+#aboutCarousel .carousel-indicators div {
+  margin: 5px;
+  display: inline;
+}
+
+#aboutCarousel .carousel-indicators .active {
+  background: none;  
+  color: #FFF;
+}
+
+.about-carousel-control-prev-btn {
+  display: inline;
+}
+
+.about-carousel-control-prev-btn {
+  display: inline;
+  transform: rotate(180deg);
+}
+
+.about-carousel-control-next-btn img {
+  transform: rotate(180deg);
+}
+
 /*Services*/
 .services {
   font-style: normal;
