@@ -240,7 +240,6 @@ nav a:hover {
 }
 
 .navbar-hide .navbar-links {
-  /*top: 230px;*/
   left: 60px;
   transition: 0.5s;
 }
@@ -254,10 +253,6 @@ nav a:hover {
   color: rgba(0,0,0,0);
   transition: 0.2s;
 }
-
-/*.navbar-hide .navbar-link-home::before {
-opacity: 0%
-}*/
 
 .navbar-hide .navbar-link-home {
   content: url('../media/navbar-home.svg');
@@ -375,6 +370,8 @@ opacity: 0%
 .services-imgs {
   margin-top: 22px;
   margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .services-text {
@@ -473,16 +470,83 @@ opacity: 0%
   overflow: hidden;
 }
 
-.services-sales-and-marketing {
+.services-btn {
   float: left;
   width: 210.5px;
   height: 145px;
-  border: 2px solid #E1A200;
+  border: 0.5px solid #E1A200;
 }
 
-.services-sales-and-marketing:hover {
-  color: #141520;
+.services-btn:hover {
   background-color: #E1A200;
+}
+
+.services-btn:hover .services-text {
+  color: #141520;
+}
+
+.services-website-dev-img {
+  content: url('../media/services-website-dev.svg');
+}
+
+.services-btn:hover .services-website-dev-img {
+  content: url('../media/services-website-dev-hover.svg');
+}
+
+.services-apps-img {
+  content: url('../media/services-apps.svg');
+}
+
+.services-btn:hover .services-apps-img {
+  content: url('../media/services-apps-hover.svg');
+}
+
+.services-support-and-maintenance-img {
+  content: url('../media/services-support-and-maintenance.svg');
+}
+
+.services-btn:hover .services-support-and-maintenance-img {
+  content: url('../media/services-support-and-maintenance-hover.svg');
+}
+
+.services-logo-design-img {
+  content: url('../media/services-logo-design.svg');
+}
+
+.services-btn:hover .services-logo-design-img {
+  content: url('../media/services-logo-design-hover.svg');
+}
+
+.services-design-img {
+  content: url('../media/services-design.svg');
+}
+
+.services-btn:hover .services-design-img {
+  content: url('../media/services-design-hover.svg');
+}
+
+.services-sales-and-marketing-img {
+  content: url('../media/services-sales-and-marketing.svg');
+}
+
+.services-btn:hover .services-sales-and-marketing-img {
+  content: url('../media/services-sales-and-marketing-hover.svg');
+}
+
+.services-seo-img {
+  content: url('../media/services-seo.svg');
+}
+
+.services-btn:hover .services-seo-img {
+  content: url('../media/services-seo-hover.svg');
+}
+
+.services-content-writing-img {
+  content: url('../media/services-content-writing.svg');
+}
+
+.services-btn:hover .services-content-writing-img {
+  content: url('../media/services-content-writing-hover.svg');
 }
 
 /*Solutions*/

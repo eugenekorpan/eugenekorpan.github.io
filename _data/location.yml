@@ -12,11 +12,19 @@ en:
 
   services:
     our_services: Our services
-    sales_and_marketing: Sales and Marketing
-    design: Design
-    dev: Web anp App development
     h1: What we're working on
     p-1: Do you have ideas related to adult enterprise which great deal of software companies are embarrassed by? Perhaps you want to redesign your website or app, but the offer was refused due to prejudiced view in sex industry. We can handle with promoting of your business from building of website till branding and advertising services
+    sales_and_marketing: Sales and Marketing
+    sales_&_marketing: Sales & Marketing
+    design: Design
+    web_design: Website design
+    dev: Web anp App development
+    dev2: Website development
+    apps: Apps
+    support_and_maintenance: Support and Maintenance
+    logo_design_and_branding: Logo design & branding
+    seo: SEO
+    content_writing: Content writing
 
   solutions:
     title: Solutions
