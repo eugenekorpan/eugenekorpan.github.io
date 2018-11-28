@@ -14,10 +14,10 @@ jQuery(document).ready(function () {
     }
   });
 
-  $("nav").addClass(sessionStorage.getItem("navbar"));
+  $(".navbar-container").addClass(sessionStorage.getItem("navbar"));
 
   $(".navbar-button-hide").click(() => {
-    let n = $("nav");
+    let n = $(".navbar-container");
     n.toggleClass("navbar-hide");
     if(n.hasClass("navbar-hide")) {
       sessionStorage.setItem("navbar", "navbar-hide");
@@ -25,23 +25,3 @@ jQuery(document).ready(function () {
     else {sessionStorage.setItem("navbar", "")}
   });
 });
-
-
-
-
-
-
-
-
-
-
-// function clearNavLinks() {
-// }
-
-
-// let trans = "nav, .navbar-links, .navbar-link, .navbar-main-logo, .navbar-button-hide, " +
-// ".navbar-line"
-
-//  $(trans).addClass("no-transition");  
-
-// $(trans).removeClass("no-transition");

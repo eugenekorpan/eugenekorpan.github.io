@@ -5,37 +5,27 @@ page: '04'
 ---
 <!-- <html>... -->
 <body style="background-image: url('media/bg-solutions.png')">
-  <div class="body-opasity solutions">
-    {% include header.html %}
+  <div class="wrap-container body-opasity">   
     {% include navbar.html %}
-    <div class="container-fluid">
-      <div class="row solutions-row-1">
-        <div class="col-2"></div>
-        <div class="col-9">
-          {{ site.data.location.en.solutions.title }}
-        </div>
-      </div>
+    <div class="main-container">
+      {% include header.html %}
+      <div class="content-container">
 
-      <div class="row solutions-row-2">
-        <div class="col-2"></div>
-        <div class="col-9">
-          {{ site.data.location.en.solutions.p-1 }}
-        </div>
-      </div>
-
-      <div class="row solutions-row-3">
-        <div class="col-2"></div>
-        <div class="col-4">
-          <div class="solutions-p-2">
+        <div class="solutions">
+          <div class="solutions-col-1">
+            <div class="solutions-title">
+              {{ site.data.location.en.solutions.title }}
+            </div>
             <hr class="solutions-line"/>
             <b>{{ site.data.location.en.solutions.h2 }}</b>
-            {{ site.data.location.en.solutions.p-2 }}
-            <button class="main-header-contact-us-button solutions-contact-us-btn" onclick="location.href='contact-us.html'">{{ site.data.location.en.contact_us_btn }}</button>
+            <p>{{ site.data.location.en.solutions.p-2 }}</p>
+            <button class="contact-us-button solutions-contact-us-btn" onclick="location.href='contact-us.html'">{{ site.data.location.en.contact_us_btn }}</button>
+          </div>
+          <div class="solutions-col-2">
+            {% include solutions-carousel.html %}
           </div>
         </div>
-        <div class="col-5">
-          {% include solutions-carousel.html %}
-        </div>
+
       </div>
     </div>
   </div>

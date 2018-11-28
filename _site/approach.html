@@ -17,116 +17,99 @@
 </head>
   <!-- <html>... -->
 <body style="background-image: url('media/bg-approach.png')">
-  <div class="body-opasity">
-    <header class="main-header">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-8"></div>
-      <div class="social-btns">
-  <a href="#" class="social-instagram-link social-ico"></a>
-  <a href="#" class="social-facebook-link social-ico"></a>
-  <a href="#" class="social-in-link social-ico"></a>
-</div>
-      <div class="col-2">
-        <button class="main-header-contact-us-button" onclick="location.href='contact-us.html'">Contact us</button>
-      </div>
+  <div class="wrap-container body-opasity">   
+    <script>document.write('<div class="navbar-container ' + sessionStorage.getItem("navbar") + '">')</script>
+  <nav>
+    <div class="navbar-logo-block" onclick="location.href='/'">
+      <img src="media/logo.svg" alt="logo" class="navbar-main-logo"/>
     </div>
+    <img title="boo" class="navbar-button-hide" src="media/button-arrow-left.svg"/>
+    <hr class="navbar-line"/>
+    <ul class="navbar-links">
+      
+        <li class="navbar-item-home">
+          <a class="navbar-link navbar-link-home" href="/" 
+          >Home</a>
+        </li>
+      
+        <li class="navbar-item-about">
+          <a class="navbar-link navbar-link-about" href="/about.html" 
+          >About</a>
+        </li>
+      
+        <li class="navbar-item-services">
+          <a class="navbar-link navbar-link-services" href="/services.html" 
+          >Services</a>
+        </li>
+      
+        <li class="navbar-item-solutions">
+          <a class="navbar-link navbar-link-solutions" href="/solutions.html" 
+          >Solutions</a>
+        </li>
+      
+        <li class="navbar-item-approach">
+          <a class="navbar-link navbar-link-approach" href="/approach.html" 
+          
+            style="color: white;"
+          >Approach</a>
+        </li>
+      
+        <li class="navbar-item-contact-us">
+          <a class="navbar-link navbar-link-contact-us" href="/contact-us.html" 
+          >Contact us</a>
+        </li>
+      
+    </ul>
+    <hr class="navbar-line-2"/>
+    <div class="navbar-counter">05</div>
+  </nav>
+</div>
+    <div class="main-container">
+      <header class="main-header">
+  <div class="social-btns">
+    <a href="#" class="social-instagram-link social-ico"></a>
+    <a href="#" class="social-facebook-link social-ico"></a>
+    <a href="#" class="social-in-link social-ico"></a>
   </div>
+  <button class="main-header-contact-us-button contact-us-button" onclick="location.href='contact-us.html'">Contact us</button>
 </header>
-    <script>document.write('<nav class="' + sessionStorage.getItem("navbar") + '">')</script>
-  <div class="navbar-logo-block" onclick="location.href='/'">
-    <img src="media/logo.svg" alt="logo" class="navbar-main-logo"/>
-  </div>
-  <img title="boo" class="navbar-button-hide" src="media/button-arrow-left.svg"/>
-  <hr class="navbar-line"/>
-  <ul class="navbar-links">
-    
-      <li class="navbar-item-home">
-        <a class="navbar-link navbar-link-home" href="/" 
-        >Home</a>
-      </li>
-    
-      <li class="navbar-item-about">
-        <a class="navbar-link navbar-link-about" href="/about.html" 
-        >About</a>
-      </li>
-    
-      <li class="navbar-item-services">
-        <a class="navbar-link navbar-link-services" href="/services.html" 
-        >Services</a>
-      </li>
-    
-      <li class="navbar-item-solutions">
-        <a class="navbar-link navbar-link-solutions" href="/solutions.html" 
-        >Solutions</a>
-      </li>
-    
-      <li class="navbar-item-approach">
-        <a class="navbar-link navbar-link-approach" href="/approach.html" 
-        
-          style="color: white;"
-        >Approach</a>
-      </li>
-    
-      <li class="navbar-item-contact-us">
-        <a class="navbar-link navbar-link-contact-us" href="/contact-us.html" 
-        >Contact us</a>
-      </li>
-    
-  </ul>
-  <hr class="navbar-line-2"/>
-  <div class="navbar-counter">05</div>
-</nav>
-    <div class="container-fluid">
-      <div class="row approach-row-1">
-        <div class="col-2"></div>
-        <div class="col-3">
-          <div class="approach-title">
-            Philosophy <span>zone</span>
+      <div class="content-container">
+
+        <div class="approach">
+          <div class="approach-row-1">
+            <div class="approach-title">
+              Philosophy <span>zone</span>
+            </div>
+          </div>
+
+          <div class="approach-row-2">
+            <div class="approach-block">
+              <img src="media/approach-1.svg" />
+              <b>Uniqueness</b><br> Your company is unrepeatable and you’re do your best to reflect its identity. So we are. From the first description of your business we become involved in all details and peculiarity of the project to satisfy your expectations to provide you with bespoke product
+            </div>
+            <div class="approach-block">
+              <img src="media/approach-2.svg" />
+              <b>Awareness</b><br> While we are working on your project, we keep you up-to-date about the changes we make. Such an approach helps us to match our performance to your expectations. Being cooperative we will report about all challenges and successfully completed tasks we did
+            </div>
+            <div class="approach-block">
+              <img src="media/approach-3.svg" />
+              <b>Flexibility</b><br> Our full range of services allows us to provide you with various employees from salespeople to full-stack developers. Depends on your goals, budget and aspirations we will hunt down the suitable solution for your product toward your gaining of the lead results and making a profit
+            </div>
+            <div class="approach-block">
+              <img src="media/approach-4.svg" />
+              <b>Security</b><br> We respect your confidentiality. Working in this industry we know privacy is relevant for you. Still, we aren’t predisposed to disclose information neither about you, nor about the project we’ve done. NDA has a high value in regard to the ccessfully completed tasks we did
+            </div>
+            <div class="approach-block">
+              <img src="media/approach-5.svg" />
+              <b>Open-mindedness</b><br> Remain committed to 18+ industry over the years, we’ve acquired a mastery over the erotic and sex subjects. Meanwhile we analyze the market for bringing your business up to speed on the current situation trends in the adult field. Therewith nothing is off-limits for us
+            </div>
+            <div class="approach-block">
+              <img src="media/approach-6.svg" />
+              <b>Full service</b><br> Remain committed to 18+ industry over the years, we’ve acquired a mastery over the erotic and sex subjects. Meanwhile we analyze the market for bringing your business up to speed on the current situation trends in the adult field. Therewith nothing is off-limits for us
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row approach-row">
-        <div class="col-2"></div>
-        <div class="col-3">
-          <div class="approach-block">
-            <img src="media/approach-1.svg" />
-            <b>Uniqueness</b><br> Your company is unrepeatable and you’re do your best to reflect its identity. So we are. From the first description of your business we become involved in all details and peculiarity of the project to satisfy your expectations to provide you with bespoke product
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="approach-block">
-            <img src="media/approach-2.svg" />
-            <b>Awareness</b><br> While we are working on your project, we keep you up-to-date about the changes we make. Such an approach helps us to match our performance to your expectations. Being cooperative we will report about all challenges and successfully completed tasks we did
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="approach-block">
-            <img src="media/approach-3.svg" />
-            <b>Flexibility</b><br> Our full range of services allows us to provide you with various employees from salespeople to full-stack developers. Depends on your goals, budget and aspirations we will hunt down the suitable solution for your product toward your gaining of the lead results and making a profit
-          </div>
-        </div>
-      </div>
-      <div class="row approach-row">
-        <div class="col-2"></div>
-        <div class="col-3">
-          <div class="approach-block">
-            <img src="media/approach-4.svg" />
-            <b>Security</b><br> We respect your confidentiality. Working in this industry we know privacy is relevant for you. Still, we aren’t predisposed to disclose information neither about you, nor about the project we’ve done. NDA has a high value in regard to the ccessfully completed tasks we did
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="approach-block">
-            <img src="media/approach-5.svg" />
-            <b>Open-mindedness</b><br> Remain committed to 18+ industry over the years, we’ve acquired a mastery over the erotic and sex subjects. Meanwhile we analyze the market for bringing your business up to speed on the current situation trends in the adult field. Therewith nothing is off-limits for us
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="approach-block">
-            <img src="media/approach-6.svg" />
-            <b>Full service</b><br> Remain committed to 18+ industry over the years, we’ve acquired a mastery over the erotic and sex subjects. Meanwhile we analyze the market for bringing your business up to speed on the current situation trends in the adult field. Therewith nothing is off-limits for us
-          </div>
-        </div>
+
       </div>
     </div>
   </div>

@@ -5,24 +5,31 @@ page: '01'
 ---
 <!-- <html>... -->
 <body style="background-image: url('media/bg-home.png')">
-  {% include header.html %}
-  {% include navbar.html %}
-  <div class="container-fluid">
-    <div class="index-row-1 row align-items-center justify-content-md-center">
-      <content class="col-7">
-        <h1>{{ site.data.location.en.index.h1 }}<br><span class="index-title-1">{{ site.data.location.en.index.h2 }}</span></h1>
-        <p class="index-title-2">{{ site.data.location.en.index.h3 }}</p>
-        <button class="main-header-contact-us-button" onclick="location.href='contact-us.html'">{{ site.data.location.en.contact_us_btn }}</button>
-      </content>
-    </div>
-    <div class="row justify-content-md-center">
-      <div class="col-7 index-row-our-services">
-        {{ site.data.location.en.services.our_services }}
-      </div>
-    </div>
-    <div class="index-row-2 row align-items-end justify-content-md-center">
-      <div class="col-10">
-        {% include carousel.html %}
+  <div class="wrap-container">   
+    {% include navbar.html %}
+    <div class="main-container">
+      {% include header.html %}
+      <div class="content-container">
+
+        <div>
+          <div class="index-row-1">
+            <h1>
+              {{ site.data.location.en.index.h1 }}<br>
+              <span class="index-title-1">{{ site.data.location.en.index.h2 }}</span>
+            </h1>
+            <p class="index-title-2">{{ site.data.location.en.index.h3 }}</p>
+            <button class="contact-us-button" onclick="location.href='contact-us.html'">{{ site.data.location.en.contact_us_btn }}</button>
+          </div>
+          <div class="index-row-our-services">
+            {{ site.data.location.en.services.our_services }}
+          </div>
+          <div class="index-row-2">
+            <div class="index-carousel">
+              {% include carousel.html %}
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

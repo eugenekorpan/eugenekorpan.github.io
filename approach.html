@@ -5,59 +5,47 @@ page: '05'
 ---
 <!-- <html>... -->
 <body style="background-image: url('media/bg-approach.png')">
-  <div class="body-opasity">
-    {% include header.html %}
+  <div class="wrap-container body-opasity">   
     {% include navbar.html %}
-    <div class="container-fluid">
-      <div class="row approach-row-1">
-        <div class="col-2"></div>
-        <div class="col-3">
-          <div class="approach-title">
-            {{ site.data.location.en.approach.philosophy_zone }}
+    <div class="main-container">
+      {% include header.html %}
+      <div class="content-container">
+
+        <div class="approach">
+          <div class="approach-row-1">
+            <div class="approach-title">
+              {{ site.data.location.en.approach.philosophy_zone }}
+            </div>
+          </div>
+
+          <div class="approach-row-2">
+            <div class="approach-block">
+              <img src="media/approach-1.svg" />
+              {{ site.data.location.en.approach.uniqueness }}
+            </div>
+            <div class="approach-block">
+              <img src="media/approach-2.svg" />
+              {{ site.data.location.en.approach.awareness }}
+            </div>
+            <div class="approach-block">
+              <img src="media/approach-3.svg" />
+              {{ site.data.location.en.approach.flexibility }}
+            </div>
+            <div class="approach-block">
+              <img src="media/approach-4.svg" />
+              {{ site.data.location.en.approach.security }}
+            </div>
+            <div class="approach-block">
+              <img src="media/approach-5.svg" />
+              {{ site.data.location.en.approach.open_mindedness }}
+            </div>
+            <div class="approach-block">
+              <img src="media/approach-6.svg" />
+              {{ site.data.location.en.approach.full_service }}
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row approach-row">
-        <div class="col-2"></div>
-        <div class="col-3">
-          <div class="approach-block">
-            <img src="media/approach-1.svg" />
-            {{ site.data.location.en.approach.uniqueness }}
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="approach-block">
-            <img src="media/approach-2.svg" />
-            {{ site.data.location.en.approach.awareness }}
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="approach-block">
-            <img src="media/approach-3.svg" />
-            {{ site.data.location.en.approach.flexibility }}
-          </div>
-        </div>
-      </div>
-      <div class="row approach-row">
-        <div class="col-2"></div>
-        <div class="col-3">
-          <div class="approach-block">
-            <img src="media/approach-4.svg" />
-            {{ site.data.location.en.approach.security }}
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="approach-block">
-            <img src="media/approach-5.svg" />
-            {{ site.data.location.en.approach.open_mindedness }}
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="approach-block">
-            <img src="media/approach-6.svg" />
-            {{ site.data.location.en.approach.full_service }}
-          </div>
-        </div>
+
       </div>
     </div>
   </div>
