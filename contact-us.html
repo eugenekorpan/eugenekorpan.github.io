@@ -5,28 +5,29 @@ page: '06'
 ---
 <!-- <html>... -->
 <body style="background-image: url('media/bg-contact-us.png')">
-  <div class="body-opasity">
-    {% include header.html %}
+  <div class="wrap-container body-opasity">   
     {% include navbar.html %}
-    <div class="container-fluid">
-      <div class="row align-items-center contact-us-row">
-        <div class="col-3 col-xl-2"></div>
-        <div class="col-3 col-xl-4">
-          <div class="contact-us-div">
-            <div class="contact-us-title">{{ site.data.location.en.contact_us_btn }}</div>
-            <form action="#">
-              <label class="contact-us-label" for="name">{{ site.data.location.en.contact_us.name }}</label>
-              <input class="contact-us-input" type="text" name="name" placeholder="{{ site.data.location.en.contact_us.name_plc }}"><br>
-              <label class="contact-us-label" for="email">{{ site.data.location.en.contact_us.email }}</label>
-              <input class="contact-us-input" type="email" name="email" placeholder="{{ site.data.location.en.contact_us.email_plc }}"><br>
-              <label class="contact-us-label" for="email2">{{ site.data.location.en.contact_us.email }}</label>
-              <textarea class="contact-us-input email2" type="email" name="email2" placeholder="{{ site.data.location.en.contact_us.email_plc2 }}"></textarea><br>
-              <input class="contact-us-send-btn" type="submit" value="{{ site.data.location.en.contact_us.send }}"">
-            </form>
+    <div class="main-container">
+      {% include header.html %}
+      <div class="content-container">
+
+        <div class="contact-us">
+          <div class="contact-us-col-1">
+            <div class="contact-us-block">
+              <div class="contact-us-title">{{ site.data.location.en.contact_us_btn }}</div>
+              <form action="#">
+                <label class="contact-us-label" for="name">{{ site.data.location.en.contact_us.name }}</label>
+                <input class="contact-us-input" type="text" name="name" placeholder="{{ site.data.location.en.contact_us.name_plc }}"><br>
+                <label class="contact-us-label" for="email">{{ site.data.location.en.contact_us.email }}</label>
+                <input class="contact-us-input" type="email" name="email" placeholder="{{ site.data.location.en.contact_us.email_plc }}"><br>
+                <label class="contact-us-label" for="email2">{{ site.data.location.en.contact_us.email }}</label>
+                <textarea class="contact-us-input email2" type="email" name="email2" placeholder="{{ site.data.location.en.contact_us.email_plc2 }}"></textarea><br>
+                <input class="contact-us-send-btn" type="submit" value="{{ site.data.location.en.contact_us.send }}"">
+              </form>
+            </div>
           </div>
-        </div>
-        <div class="col-5 col-xl-4">
-          <div class="contact-us-div2">
+
+          <div class="contact-us-col-2">
             {{ site.data.location.en.contact_us.h2 }}
             <hr class="contact-us-line"/>            
             {{ site.data.location.en.contact_us.comunicate_with_us }}<br>
@@ -37,6 +38,7 @@ page: '06'
             {% include social.html %}
           </div>
         </div>
+
       </div>
     </div>
   </div>

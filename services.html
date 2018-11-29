@@ -5,66 +5,60 @@ page: '03'
 ---
 <!-- <html>... -->
 <body style="background-image: url('media/bg-services.png')">
-  <div class="body-opasity">
-    {% include header.html %}
+  <div class="wrap-container body-opasity">   
     {% include navbar.html %}
-    <div class="container-fluid services">
-      <div class="row services-row-1">
-        <div class="col-2"></div>
-        <div class="col-4">
+    <div class="main-container">
+      {% include header.html %}
+      <div class="content-container">
+
+        <div class="services">
           <div class="services-col-1">
             <b>{{ site.data.location.en.services.h1 }}</b>
             {{ site.data.location.en.services.p-1 }}
             <div class="">
-              <button class="main-header-contact-us-button solutions-contact-us-btn" onclick="location.href='contact-us.html'">{{ site.data.location.en.contact_us_btn }}</button>
+              <button class="contact-us-button solutions-contact-us-btn" onclick="location.href='contact-us.html'">{{ site.data.location.en.contact_us_btn }}</button>
             </div>
           </div>
-        </div>
-        <div class="col-4">
-          <div class="services-btns-board">
 
-            <div class="services-btn text-center">
-              <div class="services-website-dev-img services-imgs"></div>
-              <div class="services-text">{{ site.data.location.en.services.dev2 }}</div>
+          <div class="services-col-2">
+            <div class="services-btns-board">
+              <div class="services-btn text-center">
+                <div class="services-website-dev-img services-imgs"></div>
+                <div class="services-text">{{ site.data.location.en.services.dev2 }}</div>
+              </div>
+              <div class="services-btn text-center">
+                <div class="services-apps-img services-imgs"></div>
+                <div class="services-text">{{ site.data.location.en.services.apps }}</div>
+              </div>
+              <div class="services-btn text-center">
+                <div class="services-support-and-maintenance-img services-imgs"></div>
+                <div class="services-text">{{ site.data.location.en.services.support_and_maintenance }}</div>
+              </div>
+              <div class="services-btn text-center">
+                <div class="services-logo-design-img services-imgs"></div>
+                <div class="services-text">{{ site.data.location.en.services.logo_design_and_branding }}</div>
+              </div>
+              <div class="services-btn text-center">
+                <div class="services-design-img services-imgs"></div>
+                <div class="services-text">{{ site.data.location.en.services.web_design }}</div>
+              </div>
+              <div class="services-btn text-center">
+                <div class="services-sales-and-marketing-img services-imgs"></div>
+                <div class="services-text">{{ site.data.location.en.services.sales_and_marketing }}</div>
+              </div>
+              <div class="services-btn text-center">
+                <div class="services-seo-img services-imgs"></div>
+                <div class="services-text">{{ site.data.location.en.services.seo }}</div>
+              </div>
+              <div class="services-btn text-center">
+                <div class="services-content-writing-img services-imgs"></div>
+                <div class="services-text">{{ site.data.location.en.services.content_writing }}</div>
+              </div>
             </div>
-            
-            <div class="services-btn text-center">
-              <div class="services-apps-img services-imgs"></div>
-              <div class="services-text">{{ site.data.location.en.services.apps }}</div>
-            </div>
-            
-            <div class="services-btn text-center">
-              <div class="services-support-and-maintenance-img services-imgs"></div>
-              <div class="services-text">{{ site.data.location.en.services.support_and_maintenance }}</div>
-            </div>
-            
-            <div class="services-btn text-center">
-              <div class="services-logo-design-img services-imgs"></div>
-              <div class="services-text">{{ site.data.location.en.services.logo_design_and_branding }}</div>
-            </div>
-            
-            <div class="services-btn text-center">
-              <div class="services-design-img services-imgs"></div>
-              <div class="services-text">{{ site.data.location.en.services.web_design }}</div>
-            </div>
-            
-            <div class="services-btn text-center">
-              <div class="services-sales-and-marketing-img services-imgs"></div>
-              <div class="services-text">{{ site.data.location.en.services.sales_and_marketing }}</div>
-            </div>
-            
-            <div class="services-btn text-center">
-              <div class="services-seo-img services-imgs"></div>
-              <div class="services-text">{{ site.data.location.en.services.seo }}</div>
-            </div>
-            
-            <div class="services-btn text-center">
-              <div class="services-content-writing-img services-imgs"></div>
-              <div class="services-text">{{ site.data.location.en.services.content_writing }}</div>
-            </div>
+          </div>
 
-          </div>          
         </div>
+
       </div>
     </div>
   </div>

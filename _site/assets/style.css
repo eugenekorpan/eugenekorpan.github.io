@@ -7,35 +7,16 @@ body {
   color: #FFF;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;  
+  font-family: 'Montserrat', sans-serif;
   width: 100%;
   height: 100%;
   /*warning*/
-  overflow: hidden;
-}
-
-h1 {
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  font-size: 35px;
-  letter-spacing: 0.03em;
+  /*overflow: hidden;*/
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
   monospace;
-}
-
-nav {
-  position: absolute;
-  width: 248px;
-  height: 100vh;
-  left: 0px;
-  top: 0px;
-  background: #141520;
-  transition: width 0.5s;
-  z-index: 1;
 }
 
 ul, li {
@@ -54,43 +35,55 @@ nav a:hover {
 
 /*Body*/
 .body-opasity {
-  position: absolute;
-  height: 100%;
-  width: 100%;
   background-color: rgba(0,0,0,0.4);
 }
 
-/*Social btns*/
-.social-btns {
-  margin: 16px 10px 16px 0px;
+.wrap-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 100vh;
+  width: 100%;
 }
 
-.social-instagram-link { content: url('../media/social-instagram-icon.svg') }
-.social-instagram-link:hover { content: url('../media/social-instagram-icon-hover.svg') }
-.social-facebook-link { content: url('../media/social-facebook-icon.svg') }
-.social-facebook-link:hover { content: url('../media/social-facebook-icon-hover.svg') }
-.social-in-link { content: url('../media/social-in-icon.svg') }
-.social-in-link:hover { content: url('../media/social-in-icon-hover.svg') }
-.social-ico {
-  height: 25px;
-  width: 25px;
+.navbar-container {
+  order: 1;
+  background: #141520;
+  transition: width 0.5s;
+  width: 248px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  order: 2;
+  flex: 1;
+}
+
+.content-container {
+  padding-left: 6vw;
+  padding-right: 6vw;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 /*Header*/
 .main-header {
+  text-align: right;
   background-color: #FFFFFF;
-  width: 100vw;
+  /*height: 6vh;*/
   height: 57px;
+  padding-right: 6vw;
 }
 
-.main-header-contact-us-button {
-  position: inherit;
-  background: rgba(0,0,0,0);
+.contact-us-button {
+  background: none;
   border: 2px solid #E1A200;
-  box-sizing: border-box;
   border-radius: 29.5px;
   color: #E1A200;
-  margin-top: 11px;
   height: 34px;
   width: 161px;
 
@@ -108,6 +101,28 @@ nav a:hover {
   left: 67px;
 }
 
+.main-header-contact-us-button {
+  position: relative;
+  top: -9px;
+}
+
+/*Social btns*/
+.social-btns {
+  display: inline-block;
+  margin: 16px 10px 16px 0px;
+}
+
+.social-instagram-link { content: url('../media/social-instagram-icon.svg') }
+.social-instagram-link:hover { content: url('../media/social-instagram-icon-hover.svg') }
+.social-facebook-link { content: url('../media/social-facebook-icon.svg') }
+.social-facebook-link:hover { content: url('../media/social-facebook-icon-hover.svg') }
+.social-in-link { content: url('../media/social-in-icon.svg') }
+.social-in-link:hover { content: url('../media/social-in-icon-hover.svg') }
+.social-ico {
+  height: 25px;
+  width: 25px;
+}
+
 /*Navbar / Navigation / Links*/
 .navbar-logo-block {
   height: 57px;
@@ -123,24 +138,20 @@ nav a:hover {
 }
 
 .navbar-button-hide {
-  position: absolute;
+  position: relative;
   width: 33px;
   height: 33px;
-  left: 77px;
-  top: 100px;
-
+  left: 80px;
+  top: 46px;
   transition: 0.5s;
 }
 
 .navbar-line {
-  position: absolute;
+  position: relative;
   width: 86px;
   height: 1px;
-  left: 77px;
-  top: 166px;
+  top: 75px;
   background: #E1A200;
-  border-radius: 12px;
-
   transition: 0.5s;
 }
 
@@ -203,7 +214,8 @@ nav a:hover {
 
 /*Navbar hide / mini*/
 .navbar-hide {
-  width: 150px;
+  width: 150px !important;
+  transition: 0.5s;
 }
 
 @keyframes pulse {
@@ -224,9 +236,6 @@ nav a:hover {
 }
 
 .navbar-hide .navbar-button-hide {
-  position: absolute;
-  width: 33px;
-  height: 33px;
   left: 59px;
   transform: rotate(180deg);  
   transition: 0.5s;
@@ -317,23 +326,41 @@ nav a:hover {
 
 /*Index content*/
 .index-row-1 {
-  height: 450px;
-  margin-bottom: 60px;
+  margin-bottom: 13vh;
+}
+
+.index-row-1 h1 {
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 40px;
+  letter-spacing: 0.03em;
+
+  margin-bottom: 5vh;
+}
+
+.index-row-1 p {
+  margin-bottom: 5vh;
 }
 
 .index-title-2 {
   font-style: normal;
   font-weight: normal;
   line-height: normal;
-  font-size: 18px;
+  font-size: 21px;
 }
 
 .index-title-1 {
   font-style: normal;
   font-weight: bold;
   line-height: normal;
-  font-size: 35px;
+  font-size: 40px;
   letter-spacing: 0.05em;
+}
+
+.index-carousel {
+  position: relative;
+  left: -233px;
 }
 
 /*Index carousel*/
@@ -343,6 +370,7 @@ nav a:hover {
   line-height: normal;
   font-size: 18px;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .carousel-item1 {
@@ -358,8 +386,12 @@ nav a:hover {
   width: 681px;
 }
 
+.carousel-inner {  
+  z-index: -1;
+}
+
 .carousel-control1 {
-  top: 20px;
+  margin-top: 10px;
 }
 
 .carousel-control-next1 {
@@ -400,6 +432,9 @@ nav a:hover {
 
 /*About*/
 .about {
+  display: flex;
+  align-items: stretch;
+
   font-style: normal;
   font-weight: normal;
   line-height: 24px;
@@ -407,8 +442,8 @@ nav a:hover {
   text-align: justify;
 }
 
-.about-row-1 {
-  margin-top: 18vh;
+.about-col-1 {
+  padding: 0px 30px 30px 0px;
   margin-bottom: 4vh;
 }
 
@@ -422,35 +457,35 @@ nav a:hover {
   margin-bottom: 3vh;
   font-style: normal;
   font-weight: bold;
-  line-height: 47px;
-  font-size: 35px;
   letter-spacing: 0.03em;
+  line-height: 54px;
+  font-size: 40px;
 }
 
 /*About carousel*/
 #aboutCarousel.carousel {
   width: 500px;
+  align-self: center;
 }
 
 .about-carousel-prev-col {
-  display: block;
-  height: 100%;
+  padding: 20px 20px 20px 0px;
+  align-self: center;
+  display: block;   
 }
 
 .about-carousel-prev-col img {
   position: relative;
-  left: 12vw;
-  top: 40%;
 }
 
 .about-carousel-next-col {
+  padding: 20px 0px 20px 20px;
   display: block;
-  height: 100%;
+  align-self: center;
 }
 
 .about-carousel-next-col img {
   position: relative;
-  top: 40%;
   transform: rotate(180deg);
 }
 
@@ -487,6 +522,10 @@ nav a:hover {
 
 /*Services*/
 .services {
+  display: flex;
+  align-items: stretch;
+  flex: 1;
+
   font-style: normal;
   font-weight: normal;
   line-height: 24px;
@@ -494,14 +533,13 @@ nav a:hover {
   text-align: justify;
 }
 
-.services-row-1 {
-  margin-top: 18vh;
-  margin-bottom: 4vh;
+.services-col-1 {
+  padding: 0px 30px 0px 0px;
+  flex: 1;
 }
 
-.services-row-1 .services-col-1 {
-  padding-right: 3vw;
-  text-align: justify;
+.services-col-2 {  
+  width: 425px;
 }
 
 .services b {
@@ -604,6 +642,10 @@ nav a:hover {
 
 /*Solutions*/
 .solutions {
+  display: flex;
+  align-items: stretch;
+  flex: 1;
+
   font-style: normal;
   font-weight: normal;
   line-height: 24px;
@@ -611,50 +653,65 @@ nav a:hover {
   text-align: justify;
 }
 
-.solutions-row-1 {
-  margin-top: 15vh;
-  margin-bottom: 4vh;
+.solutions-title {
   font-style: normal;
   font-weight: bold;
-  line-height: 47px;
-  font-size: 35px;
+  line-height: 54px;
+  font-size: 40px;
   letter-spacing: 0.03em;
 }
 
-.solutions-row-3 b {
+.solutions-line {
+  opacity: 0.9;
+  border: 2px solid #E1A200;
+  margin-left: 0px;
+  width: 187px;  
+  border-radius: 2px;
+  margin-bottom: 7vh;
+}
+
+.solutions b {
   margin-top: 5vh;
   margin-bottom: 3vh;
   display: block;
   font-style: normal;
   font-weight: bold;
   line-height: 27px;
-  font-size: 20px;
+  font-size: 25px;
   letter-spacing: 0.03em;
 }
 
-.solutions-p-2 {
+.solutions p {  
   padding-right: 4vw;
-}
-
-.solutions-line {
-  margin-left: 0px;
-  border: 2px solid #E1A200;
-  width: 181px;
 }
 
 .solutions-contact-us-btn {
   display: block;
   margin-left: 0px;
-  margin-top: 3vh; 
+  margin-top: 12vh; 
 }
 
 /*Solutions carousel*/
 #solutionsCarousel.carousel {
-  width: 350px;
+  width: 500px;
 }
 
 /*Approach*/
-.approach-row-1 { margin: 87px 0px 25px 7.5px }
+.approach {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.approach-row-1 {
+  padding-left: 2%;
+}
 
 .approach-title {
   font-style: normal;
@@ -672,17 +729,20 @@ nav a:hover {
   color: #E1A200;
 }
 
-.approach-row img { margin: 15px }
-
-.approach-row {
-  font-style: normal;
-  font-weight: normal;
-  line-height: 24px;
-  font-size: 18px;
-  text-align: justify;
+.approach-row-2 { 
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.approach-row b {
+.approach-block {
+  flex-basis: 400px;
+  flex-grow: 1;
+  padding: 2%;
+}
+
+.approach-row-2 img { margin: 15px }
+
+.approach-row-2 b {
   display: inline-block;
   padding-bottom: 15px;
   vertical-align: bottom;
@@ -693,17 +753,31 @@ nav a:hover {
   letter-spacing: 0.03em;
 }
 
-.approach-block { padding: 0px 15px 15px 15px }
-
 /*Contact us*/
-.contact-us-row { height: 850px }
+.contact-us {
+  display: flex;
+  align-items: stretch;
+  flex: 1;
 
-.contact-us-div {
-  max-width: 460px;
-  height: 654px;
-  border: 2px solid #E1A200;
-  box-sizing: border-box;
-  border-radius: 10px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  font-size: 18px;
+  text-align: justify;  
+}
+
+.contact-us-col-1 {  
+ flex: 1;
+ min-width: 460px;
+ max-width: 560px;
+}
+
+.contact-us-block {
+ width: 460px;
+ height: 654px;
+ border: 2px solid #E1A200;
+ box-sizing: border-box;
+ border-radius: 10px;
 }
 
 .contact-us-title {
@@ -715,7 +789,7 @@ nav a:hover {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-top: 51px;
-  margin-left: 63px; 
+  margin-left: 38px; 
 }
 
 .contact-us-input {
@@ -735,7 +809,7 @@ nav a:hover {
 }
 
 .contact-us-label {
-  margin: 0px 0px 11px 38px;
+  margin: 0px 0px 11px 50px;
   font-style: normal;
   font-weight: normal;
   line-height: normal;
@@ -760,16 +834,9 @@ nav a:hover {
   color: #FFFFFF;
 }
 
-.contact-us-div2 {
-  max-width: 458px;
-  height: 654px;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 26px;
-  font-size: 18px;
-  text-align: justify;
-  letter-spacing: 0.03em;
-  color: #FFFFFF;
+.contact-us-col-2 {
+ flex: 1;
+ margin: 15px;
 }
 
 .contact-us-p {
@@ -792,4 +859,10 @@ nav a:hover {
 .contact-us-line {
   border: 1px solid #E1A200;
   margin: 5px 0px 40px 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    background-image: url('../media/bg-about.png') !important;
+  }
 }
