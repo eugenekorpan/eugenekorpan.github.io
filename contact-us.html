@@ -31,11 +31,13 @@ page: '06'
             {{ site.data.location.en.contact_us.h2 }}
             <hr class="contact-us-line"/>            
             {{ site.data.location.en.contact_us.comunicate_with_us }}<br>
-            {{ site.data.location.en.contact_us.phone }}<br>
-            {{ site.data.location.en.contact_us.skype }}<br>
-            {{ site.data.location.en.contact_us.our_email }}<br>
+            <div class="contact-us-opacity">
+              {{ site.data.location.en.contact_us.phone }}<br>
+              {{ site.data.location.en.contact_us.skype }}<br>
+              {{ site.data.location.en.contact_us.our_email }}<br>              
+            </div>
             {{ site.data.location.en.contact_us.follow_us }}<br>
-            {% include social.html %}
+            <div class="contact-us-social">{% include social.html %}</div>
           </div>
         </div>
 

@@ -3,6 +3,7 @@ body {
   background-size: auto 100vh;
   background-position: right top;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-color: #0b0712;
   color: #FFF;
   margin: 0;
@@ -27,6 +28,14 @@ ul, li {
 
 nav a:hover {
   text-decoration: none;
+}
+
+:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
 }
 
 /*Body*/
@@ -63,7 +72,8 @@ nav a:hover {
   padding-bottom: 3vh;
   flex: 1;
   display: flex;
-  align-items: center;
+  align-items: center;  
+  overflow: auto;
 }
 
 /*Header*/
@@ -106,6 +116,14 @@ nav a:hover {
 .social-btns {
   display: inline-block;
   margin: 16px 10px 16px 0px;
+}
+
+.social-btns a:first-child {
+  margin-right: 7px;
+}
+
+.social-btns a:last-child {
+  margin-left: 7px;
 }
 
 .social-instagram-link { content: url('../media/social-instagram-icon.svg') }
@@ -184,7 +202,6 @@ nav a:hover {
   position: relative;
   height: 28vh;
   top: 450px;
-  /*background-color: #F00;*/
 }
 
 .navbar-line-2-block {
@@ -334,6 +351,8 @@ nav a:hover {
 }
 
 /*Index content*/
+/*.index {}*/
+
 .index-row-1 {
   margin-bottom: 13vh;
 }
@@ -365,6 +384,10 @@ nav a:hover {
   line-height: normal;
   font-size: 40px;
   letter-spacing: 0.05em;
+}
+
+.index-row-2 {
+  width: 450px;
 }
 
 .index-carousel {
@@ -469,6 +492,11 @@ nav a:hover {
   letter-spacing: 0.03em;
   line-height: 54px;
   font-size: 40px;
+}
+
+.about-contact-us-btn {  
+  display: block;
+  margin-top: 12vh; 
 }
 
 /*About carousel*/
@@ -744,7 +772,7 @@ nav a:hover {
 }
 
 .approach-block {
-  flex-basis: 400px;
+  flex-basis: 420px;
   flex-grow: 1;
   padding: 2%;
 }
@@ -772,18 +800,17 @@ nav a:hover {
   font-weight: normal;
   line-height: 24px;
   font-size: 18px;
-  text-align: justify;  
+  text-align: justify;
 }
 
 .contact-us-col-1 {  
  flex: 1;
- min-width: 460px;
- max-width: 560px;
+ min-width: 555px;
 }
 
 .contact-us-block {
- width: 460px;
- height: 654px;
+ width: 555px;
+ height: 729px;
  border: 2px solid #E1A200;
  box-sizing: border-box;
  border-radius: 10px;
@@ -797,19 +824,26 @@ nav a:hover {
   font-size: 35px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin-top: 51px;
-  margin-left: 38px; 
+  margin-top: 71px;
+  margin-left: 63px;
 }
 
 .contact-us-input {
-  width: 83%;
-  height: 49px;
   padding: 21px;
-  margin: 0px 38px 34px 38px;
+  margin: 0px 38px 34px 68px;
   color: #FFF;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0);
   border: 1px solid #E1A200;
   border-radius: 10px;
+  width: 420px;
+  height: 49px;
+  border: 1px solid #E1A200;
+  border-radius: 10px;
+}
+
+.contact-us-input:focus {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: #FFF;
 }
 
 .contact-us-input.email2 {
@@ -818,18 +852,18 @@ nav a:hover {
 }
 
 .contact-us-label {
-  margin: 0px 0px 11px 50px;
+  margin: 0px 0px 11px 89px;
   font-style: normal;
   font-weight: normal;
   line-height: normal;
-  font-size: 15px;
+  font-size: 21px;
   text-transform: uppercase;
   color: #E1A200;
 }
 
 .contact-us-send-btn {
-  margin: 0px 0px 11px 38px;
-  width: 83%;
+  margin: 13px 0px 0px 68px;
+  width: 420px;
   height: 49px;
   background: #E1A200;
   border: 1px solid #E1A200;
@@ -844,19 +878,21 @@ nav a:hover {
 }
 
 .contact-us-col-2 {
- flex: 1;
- margin: 15px;
+  flex: 1;
+  padding: 5vh;
 }
 
-.contact-us-p {
-  text-indent: 1em;
+.contact-us p {
   font-weight: bold;
   line-height: 51px;
   font-size: 35px;
   letter-spacing: 0.05em;
+  text-align: left;
 }
 
-.contact-us-div2 b {
+.contact-us-col-2 b {
+  display: inline-block;
+  margin-bottom: 1vh;
   font-style: normal;
   font-weight: bold;
   line-height: 37px;
@@ -865,9 +901,18 @@ nav a:hover {
   letter-spacing: 0.03em;
 }
 
+.contact-us-opacity {
+  opacity: 0.6;
+  margin-bottom: 3vh;
+}
+
 .contact-us-line {
   border: 1px solid #E1A200;
-  margin: 5px 0px 40px 0px;
+  margin: 3vh 0px 3vh 0px;
+}
+
+.contact-us-social {
+  margin-top: -1vh;
 }
 
 @media screen and (max-height: 768px) {
@@ -876,8 +921,54 @@ nav a:hover {
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .main-header, .navbar-container {
+@media screen and (max-width: 700px) {
+  .navbar-container {
+    display: none;
+  }
+
+  .alt-navbar {
+    display: inline-block !important;
+    position: absolute;
+    bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  /*About*/
+  .about {
+    flex-direction: column;
+  }
+
+  .about-carousel-prev-col, .about-carousel-next-col {
+    display: none;
+  }
+
+  #aboutCarousel .carousel-inner {
     zoom: 0.75 !important;
   }
+
+  .about-contact-us-btn {  
+    display: block;
+    margin-top: 5vh; 
+  }
+
+  .about-col-2 {
+    width: 400px !important;
+  }
+
+  /*Contact us*/
+
+}
+
+
+@media screen and (max-width: 1366px), (max-height: 768px) {
+  .main-header, .navbar-container, .content-container {
+    zoom: 0.75 !important;
+  }
+}
+
+.alt-navbar {
+  right: 0px;
+  z-index: 2;
+  display: none;
 }
