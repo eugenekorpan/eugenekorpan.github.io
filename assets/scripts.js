@@ -1,4 +1,9 @@
 jQuery(document).ready(function () {
+  // $(window).resize(() => {
+  //   let x = $(window).width()/1920;
+  //   $('.navbar').css('zoom', x);
+  // });
+
   $('#carouselMainPage.carousel .carousel-item').each(function(){
     var next = $(this).next();
     if (!next.length) {

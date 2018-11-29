@@ -9,13 +9,17 @@
       {% for item in site.data.navigation %}
         <li class="navbar-item-{{ item.lname }}">
           <a class="navbar-link navbar-link-{{ item.lname }}" href="{{ item.link }}" 
-          {% if page.url == item.link %}
-            style="color: white;"
-          {% endif %}>{{ item.name }}</a>
+            {% if page.url == item.link %}
+              style="color: white;"
+            {% endif %}>{{ item.name }}</a>
         </li>
       {% endfor %}
     </ul>
-    <hr class="navbar-line-2"/>
-    <div class="navbar-counter">{{ page.page }}</div>
+    <div class="navbar-line-2-flex">
+      <div class="navbar-line-2-block">
+        <hr class="navbar-line-2"/>
+        <div class="navbar-counter">{{ page.page }}</div>
+      </div>
+    </div>
   </nav>
 </div>

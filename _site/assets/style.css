@@ -29,10 +29,6 @@ nav a:hover {
   text-decoration: none;
 }
 
-.no-transition {
-  transition: none !important;
-}
-
 /*Body*/
 .body-opasity {
   background-color: rgba(0,0,0,0.4);
@@ -182,25 +178,38 @@ nav a:hover {
   color: #FFFFFF;
 }
 
+.navbar-line-2-flex {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 28vh;
+  top: 450px;
+  /*background-color: #F00;*/
+}
+
+.navbar-line-2-block {
+  width: 100%;
+  position: relative;
+}
+
 .navbar-line-2 {
-  position: absolute;
-  width: 86px;
-  height: 1px;
-  left: 43px;
-  top: 712px;
+  display: inline-block;
+  position: inherit;
+  height: 86px;
+  width: 2.3px;
+  left: 81px;
+  top: 20px;
   background: #E1A200;
   border-radius: 12px;
-  transform: rotate(-90deg);
   transition: 0.5s;
   overflow: hidden;
 }
 
 .navbar-counter {
-  position: absolute;
+  position: relative;
   width: 18px;
   height: 16px;
-  left: 78px;
-  top: 780px;
+  left: 73.5px;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
@@ -315,12 +324,12 @@ nav a:hover {
 }
 
 .navbar-hide .navbar-line-2 {
-  left: 33px;
+  left: 73px;
   transition: 0.5s;
 }
 
 .navbar-hide .navbar-counter {
-  left: 68px;
+  left: 66px;
   transition: 0.5s;
 }
 
@@ -861,8 +870,14 @@ nav a:hover {
   margin: 5px 0px 40px 0px;
 }
 
+@media screen and (max-height: 768px) {
+  .navbar-line-2-flex {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1200px) {
-  body {
-    background-image: url('../media/bg-about.png') !important;
+  .main-header, .navbar-container {
+    zoom: 0.75 !important;
   }
 }
