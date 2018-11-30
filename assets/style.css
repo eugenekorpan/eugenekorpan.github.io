@@ -4,7 +4,7 @@ body {
   background-position: right top;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: #0b0712;
+  background-color: #2e2e2e;
   color: #FFF;
   margin: 0;
   padding: 0;
@@ -49,6 +49,7 @@ button:focus {
   align-items: stretch;
   height: 100vh;
   width: 100%;
+  overflow: auto;
 }
 
 .navbar-container {
@@ -73,7 +74,7 @@ button:focus {
   flex: 1;
   display: flex;
   align-items: center;  
-  overflow: auto;
+  /*overflow: auto;*/
 }
 
 /*Header*/
@@ -795,6 +796,7 @@ button:focus {
   display: flex;
   align-items: stretch;
   flex: 1;
+  justify-content: center;
 
   font-style: normal;
   font-weight: normal;
@@ -803,17 +805,17 @@ button:focus {
   text-align: justify;
 }
 
-.contact-us-col-1 {  
- flex: 1;
- min-width: 555px;
+.contact-us-col-1 {
+  width: 555px;
+  margin: 5vh;
 }
 
 .contact-us-block {
- width: 555px;
- height: 729px;
- border: 2px solid #E1A200;
- box-sizing: border-box;
- border-radius: 10px;
+  width: 555px;
+  height: 729px;
+  border: 2px solid #E1A200;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .contact-us-title {
@@ -846,7 +848,7 @@ button:focus {
   border-color: #FFF;
 }
 
-.contact-us-input.email2 {
+.contact-us-input.message {
   max-height: 129px;
   min-height: 129px;
 }
@@ -858,7 +860,7 @@ button:focus {
   line-height: normal;
   font-size: 21px;
   text-transform: uppercase;
-  color: #E1A200;
+  color: #FFF;
 }
 
 .contact-us-send-btn {
@@ -880,6 +882,11 @@ button:focus {
 .contact-us-col-2 {
   flex: 1;
   padding: 5vh;
+}
+
+.contact-us-col-2 span {
+  display: inline-block;
+  margin-bottom: 1vh;
 }
 
 .contact-us p {
@@ -915,6 +922,11 @@ button:focus {
   margin-top: -1vh;
 }
 
+.contact-us-social .social-ico {
+  height: 33px;
+  width: 33px;
+}
+
 @media screen and (max-height: 768px) {
   .navbar-line-2-flex {
     display: none;
@@ -930,6 +942,10 @@ button:focus {
     display: inline-block !important;
     position: absolute;
     bottom: 0px;
+  }
+
+  .main-header {
+    background: #2e2e2e;
   }
 }
 
@@ -956,8 +972,10 @@ button:focus {
     width: 400px !important;
   }
 
-  /*Contact us*/
-
+  /*Contact us*/  
+  .contact-us {
+    flex-direction: column;
+  }
 }
 
 
