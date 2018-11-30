@@ -85,6 +85,18 @@ button:focus {
   padding-right: 6vw;
 }
 
+.main-header .open-navbar-btn {
+  color: #FFF;
+  margin-left: 15px;
+  font-size: 35px;
+  /*display: flex; */
+  display: none; 
+  float: left; 
+  background: none; 
+  border: none; 
+  transform: rotate(90deg);
+}
+
 .contact-us-button {
   background: none;
   border: 2px solid #E1A200;
@@ -937,14 +949,12 @@ button:focus {
     display: none;
   }
 
-  .alt-navbar {
-    display: inline-block !important;
-    position: absolute;
-    bottom: 0px;
-  }
-
   .main-header {
     background: #2e2e2e;
+  }
+
+  .main-header .open-navbar-btn {
+    display: flex;
   }
 }
 
@@ -979,13 +989,15 @@ button:focus {
 
 
 @media screen and (max-width: 1366px), (max-height: 768px) {
-  .main-header, .navbar-container, .content-container {
+  .main-header, .navbar-container {
     zoom: 0.75 !important;
   }
 }
 
 .alt-navbar {
+  position: absolute;
   right: 0px;
+  bottom: 0px;
   z-index: 2;
   display: none;
 }

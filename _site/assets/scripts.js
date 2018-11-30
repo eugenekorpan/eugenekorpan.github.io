@@ -3,6 +3,10 @@ jQuery(document).ready(function () {
   //   let x = $(window).width()/1920;
   //   $('.navbar').css('zoom', x);
   // });
+  $('.main-header .open-navbar-btn').click(() => {
+    if ($('.alt-navbar').is(':visible')) {$('.alt-navbar').hide()}
+      else {$('.alt-navbar').show()}    
+    });
 
   $('#carouselMainPage.carousel .carousel-item').each(function(){
     var next = $(this).next();
