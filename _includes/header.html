@@ -1,4 +1,5 @@
 <header class="main-header">
+  <button class="open-navbar-btn">|||</button>
   <div class="social-btns">
     <a href="#" class="social-instagram-link social-ico"></a>
     <a href="#" class="social-facebook-link social-ico"></a>
@@ -6,3 +7,19 @@
   </div>
   <button class="main-header-contact-us-button contact-us-button" onclick="location.href='contact-us.html'">{{ site.data.location.en.contact_us_btn }}</button>
 </header>
+
+
+
+<div class="alt-navbar">
+  <ul class="">
+  (dev)
+  {% for item in site.data.navigation %}
+    <li class="navbar-item-{{ item.lname }}">
+      <a class="navbar-link navbar-link-{{ item.lname }}" href="{{ item.link }}" 
+        {% if page.url == item.link %}
+          style="color: white;"
+        {% endif %}>{{ item.name }}</a>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
