@@ -1,25 +1,30 @@
-<header class="main-header">
-  <button class="open-navbar-btn">|||</button>
+<header class="main-header {% if page.url=="/" %}none-background{% endif %}">
   <div class="social-btns">
     <a href="#" class="social-instagram-link social-ico"></a>
     <a href="#" class="social-facebook-link social-ico"></a>
     <a href="#" class="social-in-link social-ico"></a>
   </div>
   <button class="main-header-contact-us-button contact-us-button" onclick="location.href='contact-us.html'">{{ site.data.location.en.contact_us_btn }}</button>
+
+  <div class="main-header-left">
+    <button class="open-navbar-btn">|||</button>
+    <a href="/"><img src="../media/logo-mobile.svg" class="main-logo-mobile" width="120px"></a>
+  </div>
+  <a href="/contact-us.html"><img src="../media/contact-us-mobile.svg" class="main-header-mobile" width="45px"></a>
 </header>
 
 
 
 <div class="alt-navbar">
   <ul class="">
-  (dev)
-  {% for item in site.data.navigation %}
+    (dev)
+    {% for item in site.data.navigation %}
     <li class="navbar-item-{{ item.lname }}">
       <a class="navbar-link navbar-link-{{ item.lname }}" href="{{ item.link }}" 
-        {% if page.url == item.link %}
-          style="color: white;"
-        {% endif %}>{{ item.name }}</a>
+      {% if page.url == item.link %}
+      style="color: white;"
+      {% endif %}>{{ item.name }}</a>
     </li>
-  {% endfor %}
+    {% endfor %}
   </ul>
 </div>

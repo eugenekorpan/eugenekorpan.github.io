@@ -6,12 +6,7 @@ body {
   background-attachment: fixed;
   background-color: #0b0712;
   color: #FFF;
-  margin: 0;
-  padding: 0;
   font-family: 'Montserrat', sans-serif;
-  min-height: 100vh;
-  /*warning*/
-  /*overflow: hidden;*/
 }
 
 code {
@@ -46,9 +41,8 @@ button:focus {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  height: 100%;
+  min-height: 100vh;
   overflow: auto;
-  min-height: 0px;
 }
 
 .navbar-container {
@@ -56,6 +50,7 @@ button:focus {
   background: #141520;
   transition: width 0.5s;
   width: 248px;
+  min-width: 248px;
 }
 
 .main-container {
@@ -66,7 +61,6 @@ button:focus {
 }
 
 .content-container {
-
   padding-left: 6vw;
   padding-right: 6vw;
   padding-top: 3vh;
@@ -122,6 +116,10 @@ button:focus {
 .main-header-contact-us-button {
   position: relative;
   top: -9px;
+}
+
+.main-header-mobile, .main-logo-mobile {
+  display: none;
 }
 
 /*Social btns*/
@@ -945,16 +943,37 @@ button:focus {
 }
 
 @media screen and (max-width: 700px) {
-  .navbar-container {
+  body {
+    background-position: top;
+  }
+  
+  .navbar-container, .main-header-contact-us-button, 
+  .social-btns {
     display: none;
   }
 
   .main-header {
     background: #2e2e2e;
+    display: flex;
+    justify-content: space-between;
   }
 
   .main-header .open-navbar-btn {
     display: flex;
+  }
+
+  .main-header-mobile {
+    display: inline-block;
+    margin: 10px 0px 0px 10px;
+  }
+
+  .main-logo-mobile {
+    margin: 13px 10px 13px 77px;
+    display: block;
+  }
+
+  .none-background {
+    background: none;
   }
 }
 
@@ -966,10 +985,6 @@ button:focus {
 
   .about-carousel-prev-col, .about-carousel-next-col {
     display: none;
-  }
-
-  #aboutCarousel .carousel-inner {
-    zoom: 0.75 !important;
   }
 
   .about-contact-us-btn {  
@@ -989,7 +1004,7 @@ button:focus {
 
 
 @media screen and (max-width: 1366px), (max-height: 768px) {
-  .main-header, .navbar-container {
+  .navbar-container, .main-container {
     zoom: 0.75 !important;
   }
 }
