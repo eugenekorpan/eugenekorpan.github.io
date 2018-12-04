@@ -1,7 +1,7 @@
 /*Default*/
 body {
-  background-size: auto 100vh;
-  background-position: right top;
+  /*background-size: auto 100vh;*/
+  background-position: center right;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: #000;
@@ -485,6 +485,10 @@ button:focus {
 }
 
 .about-col-1, .about-col-2 {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: center;
   flex: 1;
   padding: 2vw;
 }
@@ -501,7 +505,7 @@ button:focus {
 
 .about-contact-us-btn {  
   display: block;
-  margin-top: 12vh; 
+  margin-top: 5vh; 
 }
 
 #aboutCarousel .carousel-inner {
@@ -530,17 +534,26 @@ button:focus {
   }
 }
 
-/*About carousel*/
-#aboutCarousel.carousel {
-  align-self: center;
+.about .about-text-1, .about .about-text-2,
+.about .about-text-3, .about .about-text-4 {
+  display: none;
+  transition: 1s;
+  animation-name: appear;
+  animation-duration: 1s;
 }
 
+@keyframes appear {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+/*About carousel*/
 #aboutCarousel .slide {
-  width: 100%;
+  max-width: 100%;
 }
 
 .about-carousel-prev-col {
-  padding: 20px 20px 20px 0px;
+  margin-left: -3vw;
   align-self: center;
   display: block;   
 }
@@ -550,7 +563,7 @@ button:focus {
 }
 
 .about-carousel-next-col {
-  padding: 20px 0px 20px 20px;
+  margin-right: -3vw;
   display: block;
   align-self: center;
 }
@@ -975,7 +988,8 @@ button:focus {
 
 @media screen and (max-width: 700px) {
   body {
-    background-position: top;
+    background-position: 63% 50%;
+    background-size: auto auto;
   }
 
   /*Index*/
@@ -1011,26 +1025,110 @@ button:focus {
   .none-background {
     background: none;
   }
+
+  /*About*/
+  #about-body .content-container {
+    padding: 0;
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+  }
+
+  #about-body {
+    background: none;
+    background-color: #000;
+  }
+
+  .about {
+    flex-direction: column-reverse !important;
+  }
+
+  .about-col-1, .about-col-2 {
+    display: flex;
+    /*align-items: flex-start;*/
+    /*flex-direction: column;*/
+    /*flex: 1;*/
+    /*height: auto;*/
+    padding: 0px;
+    justify-content: flex-start;
+    text-align: left !important;
+  }
+
+  .about-col-1 {
+    padding: 7vw;
+    background: #FFF;
+    color: #000;
+    font-size: 22px;
+    text-align: justify !important;
+  }
+
+  .about-col-2 { }
+
+  .about-contact-us-btn {
+    display: none;
+  }
+
+  #aboutCarousel { }
+  #aboutCarousel .active { }
+
+  #aboutCarousel .carousel-inner {
+    max-width: 133vw;
+    overflow: hidden;
+  }
+
+  #aboutCarousel .slide {
+    min-height: 50vh;
+    width: 100%;
+    min-width: 675px;
+  }
+
+  #aboutCarousel img { }
+
+  .about-carousel-control-prev-btn {
+    display: none;
+  }
+
+  .carousel-indicators div {
+    content: url();
+    background: rgba(255,255,255,0.6);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+  }
+
+  #aboutCarousel .carousel-indicators .active {
+    background: rgba(100,100,100,0.6);
+  }
+
+  #aboutCarousel .about-btns {
+    margin-top: -70px;
+  }  
+
+  .about-carousel-control-next-btn {
+    position: relative;
+    top: -45px;
+    left: -115px;
+  }
+
+  #about-line-animation {
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 1000px) {
   /*About*/
   .about {
     flex-direction: column;
-    height: 100%;
+    min-height: 100%;
   }
 
   .about-carousel-prev-col, .about-carousel-next-col {
     display: none;
   }
 
-  .about-contact-us-btn {  
-    display: block;
-    margin-top: 5vh; 
-  }
-
   .about-col-2 {
-    width: 400px !important;
+    max-height: 65vh;
+    text-align: center;
   }
 
   /*Contact us*/  
@@ -1044,12 +1142,22 @@ button:focus {
   .navbar-container, .main-container {
     zoom: 0.75 !important;
   }
+
+  #index-body { }
+}
+
+@media screen and (min-width: 1920px) {
+  body {
+    background-size: auto 60vw;
+    background-position: center center;
+  }
 }
 
 .alt-navbar {
+  width: 250px;
+  height: 100%;
+  background-color: #151521;
   position: absolute;
-  right: 0px;
-  bottom: 0px;
-  z-index: 2;
+  z-index: 3;
   display: none;
 }

@@ -33,16 +33,39 @@ jQuery(document).ready(function () {
     }
     else {sessionStorage.setItem("navbar", "")}
   });
-});
 
-// var canvas = document.getElementById("about-line-animation"), 
-// context = canvas.getContext("2d");
-// context.lineWidth = 2;
-// context.lineCap = "round";
-// context.beginPath();
-// context.moveTo(30, 20);
-// context.lineTo(50,250);
-// context.lineTo(450,250);
-// context.lineTo(250,50);
-// context.strokeStyle = "rgb(225,162,0)";
-// context.stroke();
+  $("#aboutCarousel").on("touchstart", function(event){
+    let xClick = event.originalEvent.touches[0].pageX;
+    $(this).one("touchmove", function(event){
+      let xMove = event.originalEvent.touches[0].pageX;
+      if( Math.floor(xClick - xMove) > 5 ){
+        document.getElementsByClassName('about-carousel-control-next-btn')[0].click();
+      }
+      else if( Math.floor(xClick - xMove) < -5 ){
+        document.getElementsByClassName('about-carousel-control-prev-btn')[0].click();
+      }
+    });
+    $("#aboutCarousel").on("touchend", function(){
+      $(this).off("touchmove");
+    });
+  });
+
+  setInterval(() => {    
+    if ($('#aboutCarousel .indicator-1').hasClass('active')) {slideChange(1)};
+    if ($('#aboutCarousel .indicator-2').hasClass('active')) {slideChange(2)};
+    if ($('#aboutCarousel .indicator-3').hasClass('active')) {slideChange(3)};
+    if ($('#aboutCarousel .indicator-4').hasClass('active')) {slideChange(4)};
+  }, 200);
+
+  let currentSlide;
+  slideChange = (slide) => {
+    if (currentSlide !== slide) {
+      currentSlide = slide;
+      for (let i = 1; i <= 4; i++) {
+        $('.about .about-text-' + i).css('display', 'none');
+      }
+      $('.about .about-text-' + slide).css('display', 'inline');
+    }
+  }
+
+});

@@ -4,7 +4,7 @@ title: soft - about
 page: '02'
 ---
 <!-- <html>... -->
-<body style="background-image: url('media/bg-about.png')">
+<body style="background-image: url('media/bg-about.png')" id="about-body">
   <div class="wrap-container">
     {% include navbar.html %}
     <div class="main-container">
@@ -17,8 +17,22 @@ page: '02'
           </a>
 
           <div class="about-col-1">
-            <b>{{ site.data.location.en.about.h1 }}</b>
-            {{ site.data.location.en.about.p-1 }}
+            <div class="about-text-1">
+              <b>{{ site.data.location.en.about.h1-1 }}</b>
+              {{ site.data.location.en.about.p-1-1 }}
+            </div>
+            <div class="about-text-2">
+              <b>{{ site.data.location.en.about.h1-2 }}</b>
+              {{ site.data.location.en.about.p-1-2 }}
+            </div>
+            <div class="about-text-3">
+              <b>{{ site.data.location.en.about.h1-3 }}</b>
+              {{ site.data.location.en.about.p-1-3 }}
+            </div>
+            <div class="about-text-4">
+              <b>{{ site.data.location.en.about.h1-4 }}</b>
+              {{ site.data.location.en.about.p-1-4 }}
+            </div>
             <button class="contact-us-button about-contact-us-btn" onclick="location.href='contact-us.html'">{{ site.data.location.en.contact_us_btn }}</button>
           </div>
 
@@ -34,17 +48,17 @@ page: '02'
                 <img width="30px" height="30px" title="prev" class="about-carousel-control-prev" src="media/button-arrow-left.svg"/>
               </a>                  
               <div class="carousel-indicators">
-                <div data-target="#aboutCarousel" data-slide-to="0" class="active">1</div>
-                <div data-target="#aboutCarousel" data-slide-to="1">2</div>
-                <div data-target="#aboutCarousel" data-slide-to="2">3</div>
-                <div data-target="#aboutCarousel" data-slide-to="2">4</div>
+                <div data-target="#aboutCarousel" data-slide-to="0" class="indicator-1 active">1</div>
+                <div data-target="#aboutCarousel" data-slide-to="1" class="indicator-2">2</div>
+                <div data-target="#aboutCarousel" data-slide-to="2" class="indicator-3">3</div>
+                <div data-target="#aboutCarousel" data-slide-to="2" class="indicator-4">4</div>
               </div>
               <a class="about-carousel-control-next-btn" href="#aboutCarousel" role="button" data-slide="next">
                 <img width="30px" height="30px" title="next" class="about-carousel-control-next" src="media/button-arrow-left.svg"/>
               </a>
             </div>
 
-<!--             <svg id="about-line-animation" viewBox="0 0 679 1126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!--        <svg id="about-line-animation" viewBox="0 0 679 1126" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M10 0C4.47715 0 0 4.47715 0 10V450C0 455.523 4.47715 460 10 460H668C673.523 460 678 455.523 678 450V10C678 4.47715 673.523 0 668 0H10Z"/>
             </svg> -->
           </div>

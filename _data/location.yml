@@ -7,8 +7,15 @@ en:
     h3: An adult web development,<br>design and marketing agency
 
   about:
-    h1: About us
-    p-1: We could say we’re the highly-qualified team with experienced developers, designers and marketers like everyone else wrote onto their  pages. We didn’t. We dare guess you have an advance knowledge about our skills so as landing you’re here. The distinguishing feature of our agency is our unbiased specification. Consolidated with competent and skilled team indeed
+    h1-1: About us
+    p-1-1: We could say we’re the highly-qualified team with experienced developers, designers and marketers like everyone else wrote onto their  pages. We didn’t. We dare guess you have an advance knowledge about our skills so as landing you’re here. The distinguishing feature of our agency is our unbiased specification. Consolidated with competent and skilled team indeed
+    h1-2: Why we specialize in adult industry
+    p-1-2: Someone has to. Really, according to Forrester Research porn industry was estimated as a $100 billion industry. In comparison, Hollywood makes $10 million in profit that is 10 times lower. Thereby this industry is so hot and well loved, we couldn’t leave unattended the fact of the increasing demand for outsourcing services. While you’re continuing to get on with your business, we develop your product from technical side
+    h1-3: Cause that what we do
+    p-1-3: Despite on human wants to have sex, there is everybody and their brother blames adult industry. We aren’t going along with it. Observing it from a psychological aspect of humanity, we'll analyze your business thoroughly, suggest all possible solutions from bug fixing of existent site till creating the design and building of marketing strategy from the ground up. Specializing in the one field, we’re capable to delve into a project deeply and proceed with the work achieving your goals
+    h1-4: Who would want to
+    p-1-4: Don't we all? Whether you’re going to make a dating site, or you want your sex-shop will become more visible. Staying competitive in adult industry, everyone needs to do the same&#58; create or re-design website, have strong marketing campaign strategy and find out the ways to generate standing customers. When all is said and done, your prospective buyers will prone to the company that shed the light on their identity and provide the self-explanatory information. We have a clue how it should be done
+
 
   services:
     our_services: Our services
