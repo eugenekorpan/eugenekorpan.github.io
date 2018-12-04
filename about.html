@@ -5,7 +5,7 @@ page: '02'
 ---
 <!-- <html>... -->
 <body style="background-image: url('media/bg-about.png')">
-  <div class="wrap-container body-opasity">
+  <div class="wrap-container">
     {% include navbar.html %}
     <div class="main-container">
       {% include header.html %}
@@ -24,8 +24,10 @@ page: '02'
 
           <div id="aboutCarousel" class="carousel slide about-col-2" data-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active"><img width="500" height="400" src="../media/hello.jpg"></div>
-              {% for c in (0..1) %}<div class="carousel-item"><img src="http://placehold.it/500x400"></div>{% endfor %}
+              <div class="carousel-item active"><img class="slide" src="../media/about-us-image-1.png"></div>
+              <div class="carousel-item"><img class="slide" src="../media/about-us-image-2.png"></div>
+              <div class="carousel-item"><img class="slide" src="../media/about-us-image-3.png"></div>
+              <div class="carousel-item"><img class="slide" src="../media/about-us-image-4.png"></div>
             </div>
             <div class="about-btns">
               <a class="about-carousel-control-prev-btn" href="#aboutCarousel" data-slide="prev">
@@ -35,11 +37,16 @@ page: '02'
                 <div data-target="#aboutCarousel" data-slide-to="0" class="active">1</div>
                 <div data-target="#aboutCarousel" data-slide-to="1">2</div>
                 <div data-target="#aboutCarousel" data-slide-to="2">3</div>
+                <div data-target="#aboutCarousel" data-slide-to="2">4</div>
               </div>
               <a class="about-carousel-control-next-btn" href="#aboutCarousel" role="button" data-slide="next">
                 <img width="30px" height="30px" title="next" class="about-carousel-control-next" src="media/button-arrow-left.svg"/>
               </a>
             </div>
+
+<!--             <svg id="about-line-animation" viewBox="0 0 679 1126" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 0C4.47715 0 0 4.47715 0 10V450C0 455.523 4.47715 460 10 460H668C673.523 460 678 455.523 678 450V10C678 4.47715 673.523 0 668 0H10Z"/>
+            </svg> -->
           </div>
 
           <a class="about-carousel-next-col" href="#aboutCarousel" data-slide="next">

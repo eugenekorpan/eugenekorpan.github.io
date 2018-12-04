@@ -34,3 +34,15 @@ jQuery(document).ready(function () {
     else {sessionStorage.setItem("navbar", "")}
   });
 });
+
+// var canvas = document.getElementById("about-line-animation"), 
+// context = canvas.getContext("2d");
+// context.lineWidth = 2;
+// context.lineCap = "round";
+// context.beginPath();
+// context.moveTo(30, 20);
+// context.lineTo(50,250);
+// context.lineTo(450,250);
+// context.lineTo(250,50);
+// context.strokeStyle = "rgb(225,162,0)";
+// context.stroke();

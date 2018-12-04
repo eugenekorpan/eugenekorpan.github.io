@@ -4,7 +4,7 @@ body {
   background-position: right top;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: #0b0712;
+  background-color: #000;
   color: #FFF;
   font-family: 'Montserrat', sans-serif;
 }
@@ -50,7 +50,6 @@ button:focus {
   background: #141520;
   transition: width 0.5s;
   width: 248px;
-  min-width: 248px;
 }
 
 .main-container {
@@ -68,6 +67,7 @@ button:focus {
   flex: 1;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 /*Header*/
@@ -87,7 +87,7 @@ button:focus {
   display: none; 
   float: left; 
   background: none; 
-  border: none; 
+  border: none;
   transform: rotate(90deg);
 }
 
@@ -397,7 +397,7 @@ button:focus {
 }
 
 .index-row-2 {
-  width: 450px;
+  width: 440px;
 }
 
 .index-carousel {
@@ -484,14 +484,9 @@ button:focus {
   text-align: justify;
 }
 
-.about-col-1 {
-  padding: 0px 30px 30px 0px;
-  margin-bottom: 4vh;
-}
-
-.about-row-1 .about-col-1 {
-  padding-right: 3vw;
-  text-align: justify;
+.about-col-1, .about-col-2 {
+  flex: 1;
+  padding: 2vw;
 }
 
 .about b {
@@ -509,10 +504,39 @@ button:focus {
   margin-top: 12vh; 
 }
 
+#aboutCarousel .carousel-inner {
+  border-radius: 6px;
+}
+
+#about-line-animation {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+#about-line-animation path {
+  stroke-dasharray: 3650;
+  stroke-dashoffset: 3650;
+  animation: dash 5s linear forwards;
+
+  stroke: #E1A200;
+  fill: none;
+  stroke-width: 2px; 
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 /*About carousel*/
 #aboutCarousel.carousel {
-  width: 500px;
   align-self: center;
+}
+
+#aboutCarousel .slide {
+  width: 100%;
 }
 
 .about-carousel-prev-col {
@@ -536,11 +560,16 @@ button:focus {
   transform: rotate(180deg);
 }
 
+#aboutCarousel .about-btns {
+  display: inline-block;
+  z-index: 2;
+}
+
 #aboutCarousel .carousel-indicators {
   display: inline-block;
   position: inherit;
   margin: 30px 15px 0px 25px;
-  width: 80px;
+  width: 100px;
   color: #E1A200;
 }
 
@@ -556,10 +585,12 @@ button:focus {
 
 .about-carousel-control-prev-btn {
   display: inline;
+  width: 30px;
 }
 
-.about-carousel-control-prev-btn {
+.about-carousel-control-next-btn {
   display: inline;
+  width: 30px;
   transform: rotate(180deg);
 }
 
@@ -946,14 +977,19 @@ button:focus {
   body {
     background-position: top;
   }
-  
+
+  /*Index*/
+  .index-row-2 {    
+    zoom: 0.95 !important;
+  }
+
   .navbar-container, .main-header-contact-us-button, 
   .social-btns {
     display: none;
   }
 
   .main-header {
-    background: #2e2e2e;
+    background: #202020;
     display: flex;
     justify-content: space-between;
   }
@@ -981,6 +1017,7 @@ button:focus {
   /*About*/
   .about {
     flex-direction: column;
+    height: 100%;
   }
 
   .about-carousel-prev-col, .about-carousel-next-col {
