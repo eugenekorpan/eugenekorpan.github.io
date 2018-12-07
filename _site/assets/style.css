@@ -411,8 +411,8 @@ button:focus {
 }
 
 /*.index-carousel {
-  position: relative;
-  left: -233px;
+position: relative;
+left: -233px;
 }*/
 
 /*Index carousel*/
@@ -466,7 +466,6 @@ button:focus {
   font-weight: normal;
   line-height: normal;
   font-size: 13px;
-
   color: #FFFFFF;
 }
 
@@ -551,7 +550,6 @@ button:focus {
 .about .about-text-1, .about .about-text-2,
 .about .about-text-3, .about .about-text-4 {
   display: none;
-  transition: 1s;
   animation-name: appear;
   animation-duration: 1s;
 }
@@ -1045,6 +1043,7 @@ button:focus {
 
   .about {
     flex-direction: column-reverse !important;
+    align-items: unset !important;
   }
 
   .about-col-1, .about-col-2 {
@@ -1066,18 +1065,24 @@ button:focus {
     text-align: justify !important;
   }
 
-  .about-col-2 { }
+  /*.about-col-2 { }*/
 
   .about-contact-us-btn {
     display: none;
   }
 
-  #aboutCarousel { }
-  #aboutCarousel .active { }
+  .about-carousel-prev-col, .about-carousel-next-col {
+    display: none;
+  }
+
+  .about-col-1, .about-col-2 {
+    max-width: 133.333vw !important;
+  }
 
   #aboutCarousel .carousel-inner {
-    max-width: 133vw;
+    max-width: 133.333vw;
     overflow: hidden;
+    max-width: auto !important;
   }
 
   #aboutCarousel .slide {
@@ -1086,7 +1091,7 @@ button:focus {
     min-width: 675px;
   }
 
-  #aboutCarousel img { }
+  /*#aboutCarousel img { }*/
 
   .about-carousel-control-prev-btn {
     display: none;
@@ -1200,17 +1205,28 @@ button:focus {
 
   /*About*/
   .about {
+    flex: 1;
     flex-direction: column;
     min-height: 100%;
+    align-items: center;
   }
 
   .about-carousel-prev-col, .about-carousel-next-col {
     display: none;
   }
 
+  .about-col-1 {
+    max-width: 676px;
+  }
+
   .about-col-2 {
+    max-width: 676px;
     max-height: 65vh;
     text-align: center;
+  }
+
+  #aboutCarousel .carousel-inner {
+
   }
 
   /*Services*/

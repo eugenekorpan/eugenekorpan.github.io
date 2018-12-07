@@ -50,17 +50,17 @@ jQuery(document).ready(function () {
     });
   });
 
-  setInterval(() => {    
-    if ($('#aboutCarousel .indicator-1').hasClass('active')) {slideChange(1)};
-    if ($('#aboutCarousel .indicator-2').hasClass('active')) {slideChange(2)};
-    if ($('#aboutCarousel .indicator-3').hasClass('active')) {slideChange(3)};
-    if ($('#aboutCarousel .indicator-4').hasClass('active')) {slideChange(4)};
+  setInterval(() => {
+    for (let i = 1; i <= 4; i++) {      
+      if ($('#aboutCarousel .indicator-' + i).hasClass('active')) {slideChange(i)};
+    }
   }, 200);
 
   let currentSlide;
   slideChange = (slide) => {
     if (currentSlide !== slide) {
       currentSlide = slide;
+      console.log(currentSlide)
       for (let i = 1; i <= 4; i++) {
         $('.about .about-text-' + i).css('display', 'none');
       }
