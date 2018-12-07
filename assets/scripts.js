@@ -68,4 +68,9 @@ jQuery(document).ready(function () {
     }
   }
 
+  $('.services-btn-down-mobile').click(() => {
+    $('.services-col-2').toggleClass('down');
+    $('.services-btn-down-mobile').toggleClass('down');
+  })
+
 });

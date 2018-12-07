@@ -624,6 +624,10 @@ left: -233px;
 }
 
 /*Services*/
+.services-btn-down-mobile {
+  display: none;
+}
+
 .services {
   display: flex;
   align-items: stretch;
@@ -641,7 +645,7 @@ left: -233px;
   flex: 1;
 }
 
-.services-col-2 {  
+.services-col-2 {
   min-width: 425px;
   flex: 1;
   display: flex;
@@ -691,6 +695,10 @@ left: -233px;
 .services-btn:hover .services-support-and-maintenance-img path,
 .services-btn:hover .services-sales-and-marketing-img path {
   fill: #000;
+}
+
+.services-contact-us-btn {
+  margin-top: 5vh;
 }
 
 /*Solutions*/
@@ -1121,6 +1129,100 @@ left: -233px;
 
   #about-line-animation {
     display: none !important;
+  }
+
+  /*Services*/
+  #services-body .content-container {
+    padding: unset;
+    align-items: flex-start;
+  }
+
+  .services {    
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column-reverse;
+    flex: 1;
+
+    font-style: normal;
+    font-weight: normal;
+    line-height: 24px;
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  .services-btn {
+    float: unset;
+    width: 50%;
+    border: unset;
+    height: 200px;
+  }
+
+  .services .services-imgs {
+    height: 90px;
+  }
+
+  .services .services-text {    
+    font-size: 16px;
+  }
+
+  .services-col-1 {
+    padding: 6vh 3vh 3vh 3vh;
+    background: #fff;
+    color: #000;
+  }
+
+  .services-col-2 {    
+    min-height: 800px;
+    min-width: unset;
+    flex: 1;
+    display: flex;    
+    justify-content: center;
+    margin-top: -400px;
+    transition: 1s;
+  }
+
+  .services-col-2.down{
+    margin-top: 0px;
+    transition: 1s;
+  }
+
+  .services-btn-down-mobile.down{    
+    top: 845px;    
+    transform: rotate(180deg);
+    transition: 1s;
+  }
+
+  .services-btns-board {
+    width: 177.9vw;
+    height: unset;
+    border: unset;
+    border-radius: unset;
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: center;
+  }
+
+  .services-contact-us-btn {
+    display: none;
+  }
+
+  .services-btn-down-mobile {
+    position: absolute;
+    top: 445px;
+    margin: 0 auto 0 auto;
+    display: block;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #000;
+    transition: 1s;
+  }
+
+  .services-btn-down-mobile svg {
+    position: inherit;
+    left: 21px;
+    top: 18px;
   }
 
   /*Contact us*/
