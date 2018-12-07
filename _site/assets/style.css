@@ -374,7 +374,7 @@ button:focus {
 /*.index {}*/
 
 .index-row-1 {
-  margin-bottom: 13vh;
+  margin-bottom: 17vh;
 }
 
 .index-row-1 h1 {
@@ -384,7 +384,7 @@ button:focus {
   font-size: 40px;
   letter-spacing: 0.03em;
 
-  margin-bottom: 5vh;
+  margin-bottom: 3vh;
 }
 
 .index-row-1 p {
@@ -465,7 +465,7 @@ button:focus {
   font-style: normal;
   font-weight: normal;
   line-height: normal;
-  font-size: 12px;
+  font-size: 13px;
 
   color: #FFFFFF;
 }
@@ -996,9 +996,9 @@ button:focus {
   }
 
   /*Index*/
-
   .index-row-2 {    
     zoom: 0.95 !important;
+    margin-bottom: 10vh;
   }
 
   .navbar-container, .main-header-contact-us-button, 
@@ -1194,6 +1194,10 @@ button:focus {
 }
 
 @media screen and (max-width: 1000px) {
+  .index .contact-us-button {
+    height: 43px;
+  }
+
   /*About*/
   .about {
     flex-direction: column;
