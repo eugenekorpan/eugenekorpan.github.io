@@ -34,18 +34,18 @@ jQuery(document).ready(function () {
     else {sessionStorage.setItem("navbar", "")}
   });
 
-  $("#aboutCarousel").on("touchstart", function(event){
+  $(".carousel").on("touchstart", function(event){
     let xClick = event.originalEvent.touches[0].pageX;
     $(this).one("touchmove", function(event){
       let xMove = event.originalEvent.touches[0].pageX;
       if( Math.floor(xClick - xMove) > 5 ){
-        document.getElementsByClassName('about-carousel-control-next-btn')[0].click();
+        document.getElementsByClassName('carousel-control-next-btn')[0].click();
       }
       else if( Math.floor(xClick - xMove) < -5 ){
-        document.getElementsByClassName('about-carousel-control-prev-btn')[0].click();
+        document.getElementsByClassName('carousel-control-prev-btn')[0].click();
       }
     });
-    $("#aboutCarousel").on("touchend", function(){
+    $(".carousel").on("touchend", function(){
       $(this).off("touchmove");
     });
   });

@@ -20,7 +20,7 @@ ul, li {
   list-style-type: none;
 }
 
-nav a:hover {
+nav a:hover, .carousel a {
   text-decoration: none;
 }
 
@@ -527,18 +527,16 @@ left: -233px;
 
 #about-line-animation {
   position: absolute;
-  top: 0px;
-  right: 0px;
-}
+  z-index: 1;
 
-#about-line-animation path {
-  stroke-dasharray: 3650;
-  stroke-dashoffset: 3650;
-  animation: dash 5s linear forwards;
-
+  stroke-dasharray: 2260;
+  stroke-dashoffset: 2260;
+  animation: dash 1s linear forwards;
+  left: 0;
   stroke: #E1A200;
   fill: none;
-  stroke-width: 2px; 
+  stroke-width: 3px;
+  transform: rotate(180deg);
 }
 
 @keyframes dash {
@@ -770,6 +768,28 @@ left: -233px;
   margin-top: 10vh; 
 }
 
+.solutions-animations-line {
+  position: absolute;
+  width: 179%;
+  top: 4vh;
+  left: 12%;
+
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 4500;
+  animation: dash2 1.5s linear forwards;
+
+  stroke: #E1A200;
+  fill: none;
+  stroke-width: 2px; 
+}
+
+
+@keyframes dash2 {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 /*Solutions carousel*/
 #solutionsCarousel.carousel {
   opacity: 1;
@@ -782,6 +802,7 @@ left: -233px;
 #solutionsCarousel .carousel-control1 {
   margin-top: 70%;
   z-index: 1;
+  margin-left: 20%;
 }
 
 #solutionsCarousel .carousel-inner { 
@@ -1136,6 +1157,7 @@ left: -233px;
   }
 
   #aboutCarousel .carousel-inner {
+    border-radius: 0px;
     max-width: 133.333vw;
     overflow: hidden;
     max-width: auto !important;
@@ -1273,6 +1295,7 @@ left: -233px;
     left: 21px;
     top: 18px;
   }
+
   /*Solutions*/
   #solutions-body {
     background-image: none !important;
@@ -1296,7 +1319,6 @@ left: -233px;
   }
 
   .solutions-col-2 {
-    overflow: hidden;
     margin-bottom: 10vh;
   }
 
@@ -1324,10 +1346,14 @@ left: -233px;
     /*width: 100%;*/
   }
 
-  #solutionsCarousel .carousel-control1 {    
+  #solutionsCarousel .carousel-control1 {
     margin-top: 75%;
     margin-left: 30px;
     margin-bottom: 5vh;
+  }
+
+  #solutionsCarousel .carousel-control1 a {
+    visibility: hidden; 
   }
 
   #solutionsCarousel .carousel-inner {
