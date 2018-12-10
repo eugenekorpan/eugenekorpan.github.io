@@ -19,7 +19,7 @@
   <title>soft - solutions</title>
 </head>
 <!-- <html>... -->
-<body style="background-image: url('media/bg-solutions.png')">
+<body style="background-image: url('media/bg-solutions.png')" id="solutions-body">
   <div class="wrap-container body-opasity">   
     <script>document.write('<div class="navbar-container ' + sessionStorage.getItem("navbar") + '">')</script>
   <nav>
@@ -156,7 +156,7 @@
           <div class="solutions-col-2">
             <div id="solutionsCarousel" class="carousel fade" data-ride="carousel">
   <div class="carousel-inner">
-      
+
     <div class="carousel-item active">
       <img src="../media/solutions-moc-date.png">
     </div>
@@ -178,14 +178,21 @@
 
   </div>
   <div class="row">
-    <div class="col">
-      <div class="carousel-control1">
-        <a class="carousel-control-prev-div" href="#solutionsCarousel" data-slide="prev">
-          <img width="30px" height="30px" title="prev" class="" src="media/button-arrow-left.svg"/>
-        </a>
-        <a class="carousel-control-next-div" href="#solutionsCarousel" role="button" data-slide="next">
-          <img width="30px" height="30px" title="next" class="carousel-control-next1" src="media/button-arrow-left.svg"/>
-        </a>
+    <div class="carousel-control1">
+      <a class="carousel-control-prev-div" href="#solutionsCarousel" data-slide="prev">
+        <img width="30px" height="30px" title="prev" class="" src="media/button-arrow-left.svg"/>
+      </a>
+      <a class="carousel-control-next-div" href="#solutionsCarousel" role="button" data-slide="next">
+        <img width="30px" height="30px" title="next" class="carousel-control-next1" src="media/button-arrow-left.svg"/>
+      </a>
+
+      <div class="carousel-indicators">
+        <div data-target="#aboutCarousel" data-slide-to="0" class="indicator-1 active">1</div>
+        <div data-target="#aboutCarousel" data-slide-to="1" class="indicator-2">2</div>
+        <div data-target="#aboutCarousel" data-slide-to="2" class="indicator-3">3</div>
+        <div data-target="#aboutCarousel" data-slide-to="2" class="indicator-4">4</div>
+        <div data-target="#aboutCarousel" data-slide-to="2" class="indicator-5">5</div>
+        <div data-target="#aboutCarousel" data-slide-to="2" class="indicator-6">6</div>
       </div>
     </div>
   </div>

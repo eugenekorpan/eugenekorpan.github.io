@@ -772,12 +772,16 @@ left: -233px;
 
 /*Solutions carousel*/
 #solutionsCarousel.carousel {
-  margin-top: 500px;
   opacity: 1;
 }
 
 #solutionsCarousel .carousel-inner img {
   width: 120%;
+}
+
+#solutionsCarousel .carousel-control1 {
+  margin-top: 70%;
+  z-index: 1;
 }
 
 #solutionsCarousel .carousel-inner { 
@@ -788,7 +792,6 @@ left: -233px;
   left: -10%;
   display: inline-block;
   position: absolute;
-  top: -500px;
   opacity: 0;
   transition: all 1s ease-out;
 }
@@ -796,6 +799,10 @@ left: -233px;
 #solutionsCarousel.carousel .carousel-item.active {
   opacity: 1;
   transition: all 1s ease-out;
+}
+
+#solutionsCarousel .carousel-indicators {
+  display: none;
 }
 
 /*Approach*/
@@ -1267,6 +1274,84 @@ left: -233px;
     top: 18px;
   }
   /*Solutions*/
+  #solutions-body {
+    background-image: none !important;
+  }
+
+  #solutions-body .content-container {
+    padding: unset;
+    align-items: flex-start;
+  }
+
+  .solutions {
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 1;
+  }
+
+  .solutions-col-1 {
+    background-color: #fff;
+    color: #000;
+    padding: 3vh;
+  }
+
+  .solutions-col-2 {
+    overflow: hidden;
+    margin-bottom: 10vh;
+  }
+
+  .solutions-title, .solutions-line, .solutions-contact-us-btn  {
+    display: none;
+  }
+
+  .solutions b {
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    display: block;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 27px;
+    font-size: 25px;
+    letter-spacing: 0.03em;
+  }
+
+  .solutions p {  
+    padding-right: 4vw;
+  }
+
+  /*Solutions carousel*/
+  #solutionsCarousel .carousel-inner img {
+    /*width: 100%;*/
+  }
+
+  #solutionsCarousel .carousel-control1 {    
+    margin-top: 75%;
+    margin-left: 30px;
+    margin-bottom: 5vh;
+  }
+
+  #solutionsCarousel .carousel-inner {
+    width: 120%;
+  }
+
+  #solutionsCarousel.carousel .carousel-item {
+    /*left: -10%;*/
+    /*display: inline-block;*/
+    /*position: absolute;*/
+    /*opacity: 0;*/
+    /*transition: all 1s ease-out;*/
+  }
+
+  #solutionsCarousel.carousel .carousel-item.active {
+    /*opacity: 1;*/
+    /*transition: all 1s ease-out;*/
+  }
+
+  #solutionsCarousel .carousel-indicators {
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+  }
 
   /*Contact us*/
   .contact-us-title {
