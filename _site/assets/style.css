@@ -643,6 +643,10 @@ left: -233px;
 .services-col-1 {
   padding: 0px 30px 0px 0px;
   flex: 1;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .services-col-2 {
@@ -714,6 +718,20 @@ left: -233px;
   text-align: justify;
 }
 
+.solutions-col-1 { 
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.solutions-col-2 { 
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .solutions-title {
   font-style: normal;
   font-weight: bold;
@@ -728,7 +746,7 @@ left: -233px;
   margin-left: 0px;
   width: 187px;  
   border-radius: 2px;
-  margin-bottom: 7vh;
+  margin-bottom: 5vh;
 }
 
 .solutions b {
@@ -749,12 +767,35 @@ left: -233px;
 .solutions-contact-us-btn {
   display: block;
   margin-left: 0px;
-  margin-top: 12vh; 
+  margin-top: 10vh; 
 }
 
 /*Solutions carousel*/
 #solutionsCarousel.carousel {
-  width: 500px;
+  margin-top: 500px;
+  opacity: 1;
+}
+
+#solutionsCarousel .carousel-inner img {
+  width: 120%;
+}
+
+#solutionsCarousel .carousel-inner { 
+  overflow: unset;
+}
+
+#solutionsCarousel.carousel .carousel-item {
+  left: -10%;
+  display: inline-block;
+  position: absolute;
+  top: -500px;
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+#solutionsCarousel.carousel .carousel-item.active {
+  opacity: 1;
+  transition: all 1s ease-out;
 }
 
 /*Approach*/
@@ -1174,6 +1215,7 @@ left: -233px;
 
   .services-col-2 {    
     min-height: 800px;
+    max-height: 800px;
     min-width: unset;
     flex: 1;
     display: flex;    
@@ -1224,6 +1266,7 @@ left: -233px;
     left: 21px;
     top: 18px;
   }
+  /*Solutions*/
 
   /*Contact us*/
   .contact-us-title {
