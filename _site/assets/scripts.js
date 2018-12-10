@@ -60,7 +60,6 @@ jQuery(document).ready(function () {
   slideChange = (slide) => {
     if (currentSlide !== slide) {
       currentSlide = slide;
-      console.log(currentSlide)
       for (let i = 1; i <= 4; i++) {
         $('.about .about-text-' + i).css('display', 'none');
       }
