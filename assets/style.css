@@ -1136,7 +1136,7 @@ left: -233px;
   }
 
   .about-col-1 {
-    padding: 7vw;
+    padding: 3vh;
     background: #FFF;
     color: #000;
     font-size: 22px;
@@ -1146,7 +1146,7 @@ left: -233px;
   /*.about-col-2 { }*/
 
   .about-contact-us-btn {
-    display: none;
+    /*display: none;*/
   }
 
   .about-carousel-prev-col, .about-carousel-next-col {
@@ -1155,6 +1155,10 @@ left: -233px;
 
   .about-col-1, .about-col-2 {
     max-width: 133.333vw !important;
+  }
+
+  .about-col-2 {
+    max-height: 55vh !important;
   }
 
   #aboutCarousel .carousel-inner {
@@ -1237,10 +1241,33 @@ left: -233px;
     font-size: 16px;
   }
 
+  .services-mask {
+    height: 22px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .services-mask .block-2{
+    display: inline-block;
+    width: 46px;
+    height: 100%;
+    clip-path: polygon(50% 100%, 100% 0, 100% 100%, 0 100%, 0 0);
+    background-color: #fff;
+  }
+
+  .services-mask .block-1{
+    background-color: #fff;
+    flex: 1;
+  }
+
   .services-col-1 {
     padding: 6vh 3vh 3vh 3vh;
     background: #fff;
     color: #000;
+    display: flex;
+    justify-content: flex-start;
   }
 
   .services-col-2 {    
@@ -1254,12 +1281,12 @@ left: -233px;
     transition: 1s;
   }
 
-  .services-col-2.down{
+  .services-col-2.down {
     margin-top: 0px;
     transition: 1s;
   }
 
-  .services-btn-down-mobile.down{    
+  .services-btn-down-mobile.down { 
     top: 845px;    
     transform: rotate(180deg);
     transition: 1s;
@@ -1276,7 +1303,7 @@ left: -233px;
   }
 
   .services-contact-us-btn {
-    display: none;
+    margin-top: 10vh; 
   }
 
   .services-btn-down-mobile {
@@ -1287,7 +1314,6 @@ left: -233px;
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    background-color: #000;
     transition: 1s;
   }
 
@@ -1320,10 +1346,11 @@ left: -233px;
   }
 
   .solutions-col-2 {
-    margin-bottom: 10vh;
+    margin-top: 6vh;
+    margin-bottom: 11vh;
   }
 
-  .solutions-title, .solutions-line, .solutions-contact-us-btn  {
+  .solutions-title, .solutions-line {
     display: none;
   }
 
@@ -1339,7 +1366,7 @@ left: -233px;
   }
 
   .solutions p {  
-    padding-right: 4vw;
+    padding-right: 0;
   }
 
   /*Solutions carousel*/
@@ -1378,6 +1405,12 @@ left: -233px;
     width: 150px;
     display: flex;
     justify-content: space-around;
+    margin-left: 95px;
+  }
+
+  #solutionsCarousel .carousel-indicators div {
+    height: 8px;
+    width: 8px;
   }
 
   /*Contact us*/
