@@ -14,7 +14,7 @@
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- local files -->
-  <script async src="assets/scripts.js"></script>
+  <script src="assets/scripts.js"></script>
   <link rel="stylesheet" href="assets/style.css">
   <title>soft - solutions</title>
 </head>
@@ -26,41 +26,46 @@
     <div class="navbar-logo-block" onclick="location.href='/'">
       <img src="media/logo.svg" alt="logo" class="navbar-main-logo"/>
     </div>
-    <img title="boo" class="navbar-button-hide" src="media/button-arrow-left.svg"/>
+
+    <svg title="minimise" class="navbar-button-hide" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19.0911 12.7273L14.3184 17.5L19.0911 22.2727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="17.5" cy="17.5" r="16.5" stroke="#E1A200" stroke-width="2"/>
+    </svg>
+
     <hr class="navbar-line"/>
     <ul class="navbar-links">
       
-        <li class="navbar-item-home">
-          <a class="navbar-link navbar-link-home" href="/" 
-            >Home</a>
-        </li>
+      <li class="navbar-item-home">
+        <a class="navbar-link navbar-link-home" href="/" 
+        >Home</a>
+      </li>
       
-        <li class="navbar-item-about">
-          <a class="navbar-link navbar-link-about" href="/about.html" 
-            >About</a>
-        </li>
+      <li class="navbar-item-about">
+        <a class="navbar-link navbar-link-about" href="/about.html" 
+        >About</a>
+      </li>
       
-        <li class="navbar-item-services">
-          <a class="navbar-link navbar-link-services" href="/services.html" 
-            >Services</a>
-        </li>
+      <li class="navbar-item-services">
+        <a class="navbar-link navbar-link-services" href="/services.html" 
+        >Services</a>
+      </li>
       
-        <li class="navbar-item-solutions">
-          <a class="navbar-link navbar-link-solutions" href="/solutions.html" 
-            
-              style="color: white;"
-            >Solutions</a>
-        </li>
+      <li class="navbar-item-solutions">
+        <a class="navbar-link navbar-link-solutions" href="/solutions.html" 
+        
+        style="color: white;"
+        >Solutions</a>
+      </li>
       
-        <li class="navbar-item-approach">
-          <a class="navbar-link navbar-link-approach" href="/approach.html" 
-            >Approach</a>
-        </li>
+      <li class="navbar-item-approach">
+        <a class="navbar-link navbar-link-approach" href="/approach.html" 
+        >Approach</a>
+      </li>
       
-        <li class="navbar-item-contact-us">
-          <a class="navbar-link navbar-link-contact-us" href="/contact-us.html" 
-            >Contact us</a>
-        </li>
+      <li class="navbar-item-contact-us">
+        <a class="navbar-link navbar-link-contact-us" href="/contact-us.html" 
+        >Contact us</a>
+      </li>
       
     </ul>
     <div class="navbar-line-2-flex">
@@ -149,8 +154,30 @@
               Solutions
             </div>
             <hr class="solutions-line"/>
-            <b>Sex chats</b>
-            <p>At Libido Software we can build entraining chat platform for your visitors. Our engineers are able to set up interactive bots, develop separate chat rooms for the users and configure the sessions pay-per-view or -per-minute session. Likewise we know how to manage sex-video chat</p>
+            <div class="text text-1">
+              <b>Sex chats</b>
+              <p>At Libido Software we can build entraining chat platform for your visitors. Our engineers are able to set up interactive bots, develop separate chat rooms for the users and configure the sessions pay-per-view or -per-minute session. Likewise we know how to manage sex-video chat</p>
+            </div>
+            <div class="text text-2">
+              <b>Development of dating websites.</b>
+              <p>Every single person desires to fall head over the heels in love. Technically we see that dating sites require functional profiles, precise matching, correctly configured filthes and high protection from bots for the users to remain your project on top</p>
+            </div>
+            <div class="text text-3">
+              <b>Live webcam streaming.</b>
+              <p>Using of webcam sites is rising daily. From the technical side of view we offer you the solutions such as live HD streaming, fast communication between client and your employee and thought-out payment system which switch between chat and live shows in two ups</p>
+            </div>
+            <div class="text text-4">
+              <b>E-commerce.</b>
+              <p>Sex shops are comfortable way to buy toys for people who aren’t dare to entering real adult shops due to sense of shame. In terms of site functionality we establish user-friendly admin panel and payment gateway so as you might manage all goods-on-hand yourself hereafter</p>
+            </div>
+            <div class="text text-5">
+              <b>Escort agency.</b>
+              <p>Along of high competition in escort industry, an architecture of the site is the key factor to keep ahead. We design website which shows candidates in all their glory. Besides, we could develop the system of booking online instead of ordering by phone. Thus, your agency attracts even shy clients</p>
+            </div>
+            <div class="text text-6">
+              <b>Video sharing site.</b>
+              <p>Pornography is one of the top-requested products nowadays. We’re aware of all the newest video players with advanced options to share porn video materials among the site’s users. Still, the design of sharing website takes a particular skills in UX our designers are experienced at</p>
+            </div>
             <button class="contact-us-button solutions-contact-us-btn" onclick="location.href='contact-us.html'">Contact us</button>
           </div>
           <div class="solutions-col-2">
@@ -184,19 +211,25 @@
   <div class="row">
     <div class="carousel-control1">
       <a class="carousel-control-prev-btn" href="#solutionsCarousel" data-slide="prev">
-        <img width="30px" height="30px" title="prev" class="" src="media/button-arrow-left.svg"/>
+        <svg viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.0911 12.7273L14.3184 17.5L19.0911 22.2727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="17.5" cy="17.5" r="16.5" stroke="#E1A200" stroke-width="2"/>
+        </svg>
       </a>
       <a class="carousel-control-next-btn" href="#solutionsCarousel" role="button" data-slide="next">
-        <img width="30px" height="30px" title="next" class="carousel-control-next1" src="media/button-arrow-left.svg"/>
+        <svg class="carousel-control-next1" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.0911 12.7273L14.3184 17.5L19.0911 22.2727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="17.5" cy="17.5" r="16.5" stroke="#E1A200" stroke-width="2"/>
+        </svg>
       </a>
 
       <div class="carousel-indicators">
         <div data-target="#aboutCarousel" data-slide-to="0" class="indicator-1 active">1</div>
         <div data-target="#aboutCarousel" data-slide-to="1" class="indicator-2">2</div>
         <div data-target="#aboutCarousel" data-slide-to="2" class="indicator-3">3</div>
-        <div data-target="#aboutCarousel" data-slide-to="2" class="indicator-4">4</div>
-        <div data-target="#aboutCarousel" data-slide-to="2" class="indicator-5">5</div>
-        <div data-target="#aboutCarousel" data-slide-to="2" class="indicator-6">6</div>
+        <div data-target="#aboutCarousel" data-slide-to="3" class="indicator-4">4</div>
+        <div data-target="#aboutCarousel" data-slide-to="4" class="indicator-5">5</div>
+        <div data-target="#aboutCarousel" data-slide-to="5" class="indicator-6">6</div>
       </div>
     </div>
   </div>

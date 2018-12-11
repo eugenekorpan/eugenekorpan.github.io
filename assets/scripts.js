@@ -9,7 +9,7 @@ jQuery(document).ready(function () {
     });
 
   $('#carouselMainPage.carousel .carousel-item').each(function(){
-    var next = $(this).next();
+    let next = $(this).next();
     if (!next.length) {
       next = $(this).siblings(':first');
     }
@@ -51,8 +51,8 @@ jQuery(document).ready(function () {
   });
 
   setInterval(() => {
-    for (let i = 1; i <= 4; i++) {      
-      if ($('#aboutCarousel .indicator-' + i).hasClass('active')) {slideChange(i)};
+    for (let i = 1; i <= 6; i++) {      
+      if ($('.indicator-' + i).hasClass('active')) {slideChange(i)};
     }
   }, 200);
 
@@ -60,16 +60,43 @@ jQuery(document).ready(function () {
   slideChange = (slide) => {
     if (currentSlide !== slide) {
       currentSlide = slide;
-      for (let i = 1; i <= 4; i++) {
-        $('.about .about-text-' + i).css('display', 'none');
+      for (let i = 1; i <= 6; i++) {
+        $('.text-' + i).css('display', 'none');
       }
-      $('.about .about-text-' + slide).css('display', 'inline');
+      $('.text-' + slide).css('display', 'inline');
     }
   }
 
   $('.services-btn-down-mobile').click(() => {
     $('.services-col-2').toggleClass('down');
     $('.services-btn-down-mobile').toggleClass('down');
-  })
+  });
+
+  if ( $('.contact-us').length ) { 
+    let form = document.getElementsByTagName('form')[0];
+    for (i = 0; i <= 2; i++) {
+      let input = document.getElementsByClassName('contact-us-input')[i];
+      let notify = document.createElement('div');
+      notify.id = 'notify';
+      notify.style.display = 'none';
+
+      form.insertBefore(notify, input)
+      input.addEventListener('invalid', (event) => {
+        event.preventDefault();
+        if ( !event.target.validity.valid ) {  
+          input.classList.add('shake');
+          notify.textContent = 'Enter some text';
+          // console.log(event.textContent);
+          notify.className = 'error';
+          notify.style.display = 'block';
+        }
+        setTimeout(() => {
+          notify.style.display = 'none';
+          input.classList.remove('shake');
+        }, 2000);
+      });
+    }
+  }
+
 
 });

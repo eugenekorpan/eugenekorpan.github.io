@@ -1,12 +1,13 @@
 /*Default*/
 body {
-  /*background-size: auto 100vh;*/
+  background-size: 120% auto;
   background-position: center right;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: #000;
   color: #FFF;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
+  letter-spacing: 0.04em;
 }
 
 code {
@@ -28,8 +29,74 @@ nav a:hover, .carousel a {
   outline: none;
 }
 
+/*input:required:valid {
+border-color: green;
+}*/
+
 button:focus {
   outline: none;
+}
+
+.text {
+  display: none;
+  animation-name: appear;
+  animation-duration: 1s;
+}
+
+#notify {
+  padding: 10px;
+  width: auto;
+  color: #fff;
+  display: block;
+  position: absolute;
+  opacity: 0;
+  margin-left: -90px;
+  border-radius: 5px;  
+  font-size: 14px;
+}
+
+#notify.error {
+  background-color: rgba(100,100,100,0.5);
+  animation-name: pulseError;
+  animation-duration: 2s;
+}
+
+.shake {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes pulseError {
+  0% {
+    opacity: 0;
+  }
+  20% {  
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /*Body*/
@@ -92,6 +159,7 @@ button:focus {
 }
 
 .contact-us-button {
+  cursor: pointer;
   background: none;
   border: 2px solid #E1A200;
   border-radius: 29.5px;
@@ -105,6 +173,13 @@ button:focus {
   font-size: 13px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.contact-us-button:hover {
+  background-color: #E1A200;
+  color: #fff;
+  transition: 0.3s;
 }
 
 .main-header-social-buttons {
@@ -129,11 +204,11 @@ button:focus {
 }
 
 .social-btns a:first-child {
-  margin-right: 7px;
+  margin-right: 12px;
 }
 
 .social-btns a:last-child {
-  margin-left: 7px;
+  margin-left: 12px;
 }
 
 .social-instagram-link { content: url('../media/social-instagram-icon.svg') }
@@ -149,6 +224,7 @@ button:focus {
 
 /*Navbar / Navigation / Links*/
 .navbar-logo-block {
+  cursor: pointer;
   height: 57px;
   background: #E1A200;
 }
@@ -162,12 +238,21 @@ button:focus {
 }
 
 .navbar-button-hide {
+  cursor: pointer;
   position: relative;
   width: 33px;
   height: 33px;
   left: 80px;
   top: 46px;
-  transition: 0.5s;
+  transition: 0.5s;  
+  stroke: #E1A200;
+  border-radius: 50%;
+}
+
+.navbar-button-hide:hover {
+  background-color: #E1A200;
+  border-radius: 50%;
+  stroke: #fff;
 }
 
 .navbar-line {
@@ -236,7 +321,8 @@ button:focus {
   position: relative;
   width: 18px;
   height: 16px;
-  left: 73.5px;
+  top: 5px;
+  left: 73px;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
@@ -356,7 +442,7 @@ button:focus {
 }
 
 .navbar-hide .navbar-counter {
-  left: 66px;
+  left: 64px;
   transition: 0.5s;
 }
 
@@ -443,6 +529,21 @@ left: -233px;
   z-index: -1;
 }
 
+#carouselMainPage svg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: 0.3s;
+  stroke: #E1A200; 
+}
+
+#carouselMainPage svg:hover {
+  background-color: #E1A200;
+  transition: 0.3s;
+  border-radius: 50%;
+  stroke: #fff; 
+}
+
 .carousel-control1 {
   margin-top: 10px;
 }
@@ -516,9 +617,9 @@ left: -233px;
   font-size: 30px;
 }
 
-.about-contact-us-btn {  
+.about-contact-us-btn {
   display: block;
-  margin-top: 5vh; 
+  margin-top: 5vh;
 }
 
 #aboutCarousel .carousel-inner {
@@ -544,13 +645,6 @@ left: -233px;
   to {
     stroke-dashoffset: 0;
   }
-}
-
-.about .about-text-1, .about .about-text-2,
-.about .about-text-3, .about .about-text-4 {
-  display: none;
-  animation-name: appear;
-  animation-duration: 1s;
 }
 
 @keyframes appear {
@@ -618,8 +712,23 @@ left: -233px;
   transform: rotate(180deg);
 }
 
-.about-carousel-control-next-btn img {
+.about-carousel-control-next-btn svg {
   transform: rotate(180deg);
+}
+
+#aboutCarousel .about-btns svg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: 0.3s;
+  stroke: #E1A200; 
+}
+
+#aboutCarousel .about-btns svg:hover {
+  background-color: #E1A200;
+  transition: 0.3s;
+  border-radius: 50%;
+  stroke: #fff; 
 }
 
 /*Services*/
@@ -763,6 +872,10 @@ left: -233px;
   padding-right: 4vw;
 }
 
+.solutions .text {
+  display: none;
+}
+
 .solutions-contact-us-btn {
   display: block;
   margin-left: 0px;
@@ -821,6 +934,21 @@ left: -233px;
 #solutionsCarousel.carousel .carousel-item.active {
   opacity: 1;
   transition: all 1s ease-out;
+}
+
+#solutionsCarousel .carousel-control1 svg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: 0.3s;
+  stroke: #E1A200; 
+}
+
+#solutionsCarousel .carousel-control1 svg:hover {
+  background-color: #E1A200;
+  transition: 0.3s;
+  border-radius: 50%;
+  stroke: #fff; 
 }
 
 #solutionsCarousel .carousel-indicators {
@@ -936,6 +1064,10 @@ left: -233px;
   border-radius: 10px;
 }
 
+.contact-us-input:invalid {
+  /*border: none;*/
+}
+
 .contact-us-input:focus {
   background: rgba(255, 255, 255, 0.03);
   border-color: #FFF;
@@ -979,6 +1111,9 @@ left: -233px;
 .contact-us-col-2 {
   flex: 1;
   padding: 5vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .contact-us-col-2 span {
@@ -1012,7 +1147,7 @@ left: -233px;
 
 .contact-us-line {
   border: 1px solid #E1A200;
-  margin: 3vh 0px 3vh 0px;
+  margin: 5vh 0px 5vh 0px;
 }
 
 .contact-us-social {
@@ -1146,7 +1281,6 @@ left: -233px;
   /*.about-col-2 { }*/
 
   .about-contact-us-btn {
-    /*display: none;*/
   }
 
   .about-carousel-prev-col, .about-carousel-next-col {
@@ -1530,18 +1664,10 @@ left: -233px;
   }
 }
 
-
 @media screen and (max-width: 1366px), (max-height: 768px) {
   .navbar-container, .main-container {
     zoom: 0.75 !important;
   }
 
   #index-body { }
-}
-
-@media screen and (min-width: 1920px) {
-  body {
-    background-size: auto 60vw;
-    background-position: center center;
-  }
 }
