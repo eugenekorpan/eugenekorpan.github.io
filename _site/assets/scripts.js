@@ -72,7 +72,7 @@ jQuery(document).ready(function () {
     $('.services-btn-down-mobile').toggleClass('down');
   });
 
-  if ( $('.contact-us').length ) { 
+  if ( $('.contact-us').length ) {
     let form = document.getElementsByTagName('form')[0];
     for (i = 0; i <= 2; i++) {
       let input = document.getElementsByClassName('contact-us-input')[i];
@@ -80,13 +80,12 @@ jQuery(document).ready(function () {
       notify.id = 'notify';
       notify.style.display = 'none';
 
-      form.insertBefore(notify, input)
+      form.insertBefore(notify, input);
       input.addEventListener('invalid', (event) => {
         event.preventDefault();
         if ( !event.target.validity.valid ) {  
           input.classList.add('shake');
-          notify.textContent = 'Enter some text';
-          // console.log(event.textContent);
+          notify.textContent = event.target.validationMessage;
           notify.className = 'error';
           notify.style.display = 'block';
         }
@@ -97,6 +96,5 @@ jQuery(document).ready(function () {
       });
     }
   }
-
 
 });

@@ -50,13 +50,15 @@ button:focus {
   display: block;
   position: absolute;
   opacity: 0;
-  margin-left: -90px;
+  margin-left: 300px;
+  margin-top: 50px;
   border-radius: 5px;  
   font-size: 14px;
+  max-width: 300px;
 }
 
 #notify.error {
-  background-color: rgba(100,100,100,0.5);
+  background-color: rgba(100,100,100,0.8);
   animation-name: pulseError;
   animation-duration: 2s;
 }
@@ -732,6 +734,10 @@ left: -233px;
 }
 
 /*Services*/
+#services-body .content-container {  
+  padding-right: 3vw;
+}
+
 .services-btn-down-mobile {
   display: none;
 }
@@ -750,7 +756,7 @@ left: -233px;
 
 .services-col-1 {
   padding: 0px 30px 0px 0px;
-  flex: 1;
+  flex: 2;
   display: flex;
   align-items: left;
   flex-direction: column;
@@ -759,9 +765,10 @@ left: -233px;
 
 .services-col-2 {
   min-width: 425px;
-  flex: 1;
+  flex: 3;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .services b {
@@ -775,19 +782,16 @@ left: -233px;
 }
 
 .services-btns-board {
-  width: 425px;
-  height: 575px;
-  border: 2px solid #E1A200;
+  min-width: 633px;
+  width: 633px;
   box-sizing: border-box;
-  border-radius: 10px;
-  overflow: hidden;
 }
 
 .services-btn {
   float: left;
   width: 210.5px;
   height: 145px;
-  border: 1px solid #E1A200;
+  border: 2px solid rgba(0,0,0,0);
 }
 
 .services-btn .services-imgs {
@@ -795,13 +799,15 @@ left: -233px;
 }
 
 .services-btn:hover {
-  background-color: #E1A200;
+  /*background-color: #E1A200;*/
+  border: 2px solid #E1A200;
+  border-radius: 10px;
 }
 
 .services-btn:hover .services-imgs,
 .services-btn:hover .services-text {
-  stroke: #000;
-  color: #000;
+  /*stroke: #000;*/
+  /*color: #000;*/
 }
 
 .services-btn:hover .services-support-and-maintenance-img path,
@@ -1365,6 +1371,10 @@ left: -233px;
     width: 50%;
     border: unset;
     height: 200px;
+  }
+
+  .services-btn:last-child {
+    display: none;
   }
 
   .services .services-imgs {
