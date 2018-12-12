@@ -3,16 +3,20 @@ jQuery(document).ready(function () {
   //   let x = $(window).width()/1920;
   //   $('.navbar').css('zoom', x);
   // });
-  $('.main-header .open-navbar-btn').click(() => {
-    if ($('.alt-navbar').is(':visible')) {$('.alt-navbar').hide()}
-      else {$('.alt-navbar').show()}    
-    });
 
-  $('#carouselMainPage.carousel .carousel-item').each(function(){
+  $('.open-navbar-btn').click(() => {
+    if ( !$('.alt-navbar').hasClass('hide') ) {
+      $('.alt-navbar').addClass('hide') 
+    } else { 
+      $('.alt-navbar').removeClass('hide') 
+    }
+  });
+
+  $('#carouselMainPage.carousel .carousel-item').each(function() {
     let next = $(this).next();
     if (!next.length) {
       next = $(this).siblings(':first');
-    }
+    }    
     next.children(':first-child').clone().appendTo($(this));
 
     if (next.next().length>0) {
@@ -46,6 +50,38 @@ jQuery(document).ready(function () {
       }
     });
     $(".carousel").on("touchend", function(){
+      $(this).off("touchmove");
+    });
+  });
+
+  $("body").on("touchstart", function(event){
+    let xClick = event.originalEvent.touches[0].pageX;
+    $(this).one("touchmove", function(event){
+      let xMove = event.originalEvent.touches[0].pageX;
+      if ( Math.floor(xClick - xMove) > 5 ){
+        $('.alt-navbar').addClass('hide');
+      }
+      else if( xClick < 10 && Math.floor(xClick - xMove) < -5 ) {   
+        $('.alt-navbar').removeClass('hide');
+      }
+    });
+    $("body").on("touchend", function(){
+      $(this).off("touchmove");
+    });
+  });
+
+  $(".services-col-2").on("touchstart", function(event){
+    let yClick = event.originalEvent.touches[0].pageY;
+    $(this).one("touchmove", function(event){
+      let yMove = event.originalEvent.touches[0].pageY;
+      if ( Math.floor(yClick - yMove) > 5 ){
+        $('.services-col-2, .services-btn-down-mobile').removeClass('down');
+      }
+      else if( Math.floor(yClick - yMove) < -5 ) {
+        $('.services-col-2, .services-btn-down-mobile').addClass('down');
+      }
+    });
+    $(".services-col-2").on("touchend", function(){
       $(this).off("touchmove");
     });
   });
