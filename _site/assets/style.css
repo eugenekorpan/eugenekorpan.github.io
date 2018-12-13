@@ -451,9 +451,9 @@ button:focus {
 /*Alt navbar*/
 .alt-navbar {
   width: 250px;
-  height: 100%;
+  height: 120%;
   background-color: #0E0E0E;
-  position: absolute;
+  position: fixed;
   z-index: 4;
   left: 0px;
   transition: 0.5s;

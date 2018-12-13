@@ -4,6 +4,16 @@ jQuery(document).ready(function () {
   //   $('.navbar').css('zoom', x);
   // });
 
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').then(function(registration) {
+        console.log('ServiceWorker registration successful');
+      }, function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }
+
   $('.open-navbar-btn').click(() => {
     if ( !$('.alt-navbar').hasClass('hide') ) {
       $('.alt-navbar').addClass('hide') 
