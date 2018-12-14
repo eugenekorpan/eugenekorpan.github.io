@@ -4,6 +4,8 @@ jQuery(document).ready(function () {
   //   $('.navbar').css('zoom', x);
   // });
 
+  if ( !(navigator.userAgent.indexOf('Chrome') + 1) ) {pop('Recomended use only Chrome browser')}
+
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
       navigator.serviceWorker.register('../sw.js').then(function(registration) {
@@ -12,6 +14,55 @@ jQuery(document).ready(function () {
         console.log('ServiceWorker registration failed: ', err);
       });
     });
+  }
+
+  if ( $('.contact-us').length ) {
+    let form = document.getElementsByTagName('form')[0];
+    for (i = 0; i <= 2; i++) {
+      let input = document.getElementsByClassName('contact-us-input')[i];
+      let notify = document.createElement('div');
+      notify.id = 'notify';
+      notify.style.display = 'none';
+
+      form.insertBefore(notify, input);
+      input.addEventListener('invalid', (event) => {
+        event.preventDefault();
+        if ( !event.target.validity.valid ) {  
+          input.classList.add('shake');
+          notify.textContent = event.target.validationMessage;
+          notify.className = 'error';
+          notify.style.display = 'block';
+        }
+        setTimeout(() => {
+          notify.style.display = 'none';
+          input.classList.remove('shake');
+        }, 2000);
+      });
+    }
+  }
+
+  function pop(message) {
+    console.log(message);
+    console.log(navigator.userAgent);
+    let pop = document.createElement('div');
+    pop.id = 'pop';
+    document.body.appendChild(pop);
+    pop.innerHTML = message;
+    pop.style.display = 'block';
+    setTimeout(() => {
+      pop.style.display = 'none';
+    }, 5000);
+  }
+
+  let currentSlide;
+  slideChange = (slide) => {
+    if (currentSlide !== slide) {
+      currentSlide = slide;
+      for (let i = 1; i <= 6; i++) {
+        $('.text-' + i).css('display', 'none');
+      }
+      $('.text-' + slide).css('display', 'inline');
+    }
   }
 
   $('.open-navbar-btn').click(() => {
@@ -102,45 +153,7 @@ jQuery(document).ready(function () {
     }
   }, 200);
 
-  let currentSlide;
-  slideChange = (slide) => {
-    if (currentSlide !== slide) {
-      currentSlide = slide;
-      for (let i = 1; i <= 6; i++) {
-        $('.text-' + i).css('display', 'none');
-      }
-      $('.text-' + slide).css('display', 'inline');
-    }
-  }
-
   $('.services-btn-down-mobile').click(() => {
-    $('.services-col-2').toggleClass('down');
-    $('.services-btn-down-mobile').toggleClass('down');
+    $('.services-col-2, .services-btn-down-mobile').toggleClass('down');
   });
-
-  if ( $('.contact-us').length ) {
-    let form = document.getElementsByTagName('form')[0];
-    for (i = 0; i <= 2; i++) {
-      let input = document.getElementsByClassName('contact-us-input')[i];
-      let notify = document.createElement('div');
-      notify.id = 'notify';
-      notify.style.display = 'none';
-
-      form.insertBefore(notify, input);
-      input.addEventListener('invalid', (event) => {
-        event.preventDefault();
-        if ( !event.target.validity.valid ) {  
-          input.classList.add('shake');
-          notify.textContent = event.target.validationMessage;
-          notify.className = 'error';
-          notify.style.display = 'block';
-        }
-        setTimeout(() => {
-          notify.style.display = 'none';
-          input.classList.remove('shake');
-        }, 2000);
-      });
-    }
-  }
-
 });

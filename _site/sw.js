@@ -14,11 +14,12 @@
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
-const PRECACHE = 'precache-v1';
+const PRECACHE = 'v1';
 const RUNTIME = 'libido-cache';
 
 // A list of local resources we always want to be cached.
-const PRECACHE_URLS = [
+const PRECACHE_URLS = ['/']
+const PRECACHE_URLS1 = [
   '/about.html',
   '/CNAME',
   '/index.html',
@@ -32,7 +33,67 @@ const PRECACHE_URLS = [
   '/solutions.html',
   '/assets/scripts.js',
   '/assets/style.css',
-  '/media/'
+  '/media/',
+  '/media/about-line-animation.svg',
+  '/media/navbar-contact-us-hover.svg',
+  '/media/about-us-image-1.png',
+  '/media/navbar-contact-us.svg',
+  '/media/about-us-image-2.png',
+  '/media/navbar-home-hover.svg',
+  '/media/about-us-image-3.png',
+  '/media/navbar-home.svg',
+  '/media/about-us-image-4.png',
+  '/media/navbar-services-hover.svg',
+  '/media/approach-1.svg',
+  '/media/navbar-services.svg',
+  '/media/approach-2.svg',
+  '/media/navbar-solutions-hover.svg',
+  '/media/approach-3.svg',
+  '/media/navbar-solutions.svg',
+  '/media/approach-4.svg',
+  '/media/services-apps.svg',
+  '/media/approach-5.svg',
+  '/media/services-content-writing.svg',
+  '/media/approach-6.svg',
+  '/media/services-design.svg',
+  '/media/arrow-left.svg',
+  '/media/services-hz.svg',
+  '/media/bg-about-us.png',
+  '/media/services-logo-design.svg',
+  '/media/bg-approach.png',
+  '/media/services-sales-and-marketing.svg',
+  '/media/bg-contact-us.png',
+  '/media/services-seo.svg',
+  '/media/bg-home.jpg',
+  '/media/services-support-and-maintenance.svg',
+  '/media/bg-services.png',
+  '/media/ervices-web-and-app.svg',
+  '/media/bg-solutions.png',
+  '/media/services-website-dev.svg',
+  '/media/button-arrow-left.svg',
+  '/media/social-facebook-icon-hover.svg',
+  '/media/contact-us-mobile.svg',
+  '/media/social-facebook-icon.svg',
+  '/media/fonts',
+  '/media/social-in-icon-hover.svg',
+  '/media/hello.jpg',
+  '/media/social-in-icon.svg',
+  '/media/logo-mobile.svg',
+  '/media/social-instagram-icon-hover.svg',
+  '/media/logo.svg',
+  '/media/social-instagram-icon.svg',
+  '/media/mobile-logo192.png',
+  '/media/solutions-moc-date.png',
+  '/media/mobile-logo512.png',
+  '/media/solutions-moc-ecommerce.png',
+  '/media/navbar-about-hover.svg',
+  '/media/solutions-moc-escort-agency.png',
+  '/media/navbar-about.svg',
+  '/media/solutions-moc-live-webcam-streaming.png',
+  '/media/navbar-approach-hover.svg',
+  '/media/solutions-moc-sex-chats.png',
+  '/media/navbar-approach.svg',
+  '/media/solutions-moc-video-sharing.png'
 ];
 
 // The install handler takes care of precaching the resources we always need.
