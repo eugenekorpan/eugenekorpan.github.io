@@ -220,8 +220,7 @@ button:focus {
 }
 
 .main-header-contact-us-button {
-  position: relative;
-  top: -9px;
+  margin-top: 9px;
 }
 
 .main-header-mobile, .main-logo-mobile {
