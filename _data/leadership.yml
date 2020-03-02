@@ -1,0 +1,9 @@
+- name: Eugene
+  position: Chief Executive Officer
+  photo: ../media/eugene.png
+- name: Volodymyr
+  position: Chief Technology Officer
+  photo: ../media/vova.png
+- name: Julia
+  position: Project Manager
+  photo: ../media/julia.png

@@ -16,3 +16,6 @@
 - name: Contact us
   lname: contact-us
   link: /contact-us.html
+- name: Leadership
+  lname: leadership
+  link: /leadership.html

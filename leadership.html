@@ -1,0 +1,35 @@
+---
+layout: default
+title: Libido Software - Adult Website Development & Promotion
+page: '07'
+---
+<!-- <html>... -->
+<body style="background: #0B0711" id="leadership-body">
+  <div class="wrap-container body-opasity">
+    {% include navbar.html %}
+    <div class="main-container">
+      {% include header.html %}
+      <div class="content-container">
+
+        <div class="leadership">
+          <div class="leadership-header">
+            <h1 class="leadership-title">{{ site.data.location.en.leadership.our_leadership }}</h1>
+            <div class="leadership-description">
+              {{ site.data.location.en.leadership.description }}
+            </div>
+          </div>
+          <div class="leadership-content">
+            {% for item in site.data.leadership %}
+            <div class="leadership-item">
+              <div class="leadership-item-photo"><img class="photo" src="{{ item.photo }}"></div>
+              <div class="leadership-item-name">{{ item.name }}</div>
+              <div class="leadership-item-position">{{ item.position }}</div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
