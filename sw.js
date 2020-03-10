@@ -94,11 +94,10 @@ const PRECACHE_URLS1 = [
   '/media/navbar-approach-hover.svg',
   '/media/solutions-moc-sex-chats.png',
   '/media/navbar-approach.svg',
-  '/media/solutions-moc-video-sharing.png'
-  '/media/eugene.png'
-  '/media/vova.png'
+  '/media/solutions-moc-video-sharing.png',
+  '/media/eugene.png',
+  '/media/vova.png',
   '/media/julia.png'
-
 ];
 
 // The install handler takes care of precaching the resources we always need.
