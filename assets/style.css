@@ -1739,6 +1739,7 @@ left: -233px;
 @media screen and (max-width: 965px) {
   .leadership-item {
     margin-bottom: 40px;
+    margin-right: 0px;
   }
 }
 
