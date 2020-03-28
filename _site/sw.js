@@ -43,6 +43,8 @@ const PRECACHE_URLS1 = [
   '/media/navbar-home-hover.svg',
   '/media/about-us-image-3.png',
   '/media/navbar-home.svg',
+  '/media/navbar-leadership.svg',
+  '/media/navbar-leadership-hover.svg',
   '/media/about-us-image-4.png',
   '/media/navbar-services-hover.svg',
   '/media/approach-1.svg',

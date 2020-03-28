@@ -466,6 +466,14 @@ button:focus {
   content: url('../media/navbar-contact-us-hover.svg');
 }
 
+.navbar-hide .navbar-link-leadership {
+  content: url('../media/navbar-leadership.svg');
+}
+
+.navbar-hide .navbar-link-leadership:hover {
+  content: url('../media/navbar-leadership-hover.svg');
+}
+
 .navbar-hide .navbar-line-2 {
   left: 73px;
   transition: 0.5s;
