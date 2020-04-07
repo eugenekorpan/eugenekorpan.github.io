@@ -12,12 +12,12 @@
     <hr class="navbar-line"/>
     <ul class="navbar-links">
       {% for item in site.data.navigation %}
-      <li class="navbar-item-{{ item.lname }}">
-        <a class="navbar-link navbar-link-{{ item.lname }}" href="{{ item.link }}" 
-        {% if page.url == item.link %}
-        style="color: white;"
-        {% endif %}>{{ item.name }}</a>
-      </li>
+        <li class="navbar-item-{{ item.lname }}">
+          <a class="navbar-link navbar-link-{{ item.lname }}" href="{{ item.link }}" 
+          {% if page.url == item.link %}
+          style="color: white;"
+          {% endif %}>{{ item.name }}</a>
+        </li>
       {% endfor %}
     </ul>
     <div class="navbar-line-2-flex">

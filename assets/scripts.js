@@ -1,22 +1,18 @@
-jQuery(document).ready(function () {
-  // $(window).resize(() => {
-  //   let x = $(window).width()/1920;
-  //   $('.navbar').css('zoom', x);
-  // });
-
+jQuery(document).ready(function() {
   if ( !(navigator.userAgent.indexOf('Chrome') + 1) ) {pop('Recomended use only Chrome browser')}
 
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('../sw.js').then(function(registration) {
-        console.log('ServiceWorker registration successful');
-      }, function(err) {
-        console.log('ServiceWorker registration failed: ', err);
-      });
-    });
+    navigator.serviceWorker.getRegistrations().then(registrations => {
+      for (let registration of registrations) { registration.unregister() }
+    })
+
+    window.addEventListener('load', _ => navigator.serviceWorker.register('../sw.js').then(
+      suc => console.log('ServiceWorker registration successful'),
+      err => console.log('ServiceWorker registration failed: ', err)
+    ))
   }
 
-  if ( $('.contact-us').length ) {
+  if ($('.contact-us').length) {
     let form = document.getElementsByTagName('form')[0];
     for (i = 0; i <= 2; i++) {
       let input = document.getElementsByClassName('contact-us-input')[i];
@@ -42,16 +38,13 @@ jQuery(document).ready(function () {
   }
 
   function pop(message) {
-    console.log(message);
-    console.log(navigator.userAgent);
+    console.log(message)
     let pop = document.createElement('div');
     pop.id = 'pop';
     document.body.appendChild(pop);
     pop.innerHTML = message;
     pop.style.display = 'block';
-    setTimeout(() => {
-      pop.style.display = 'none';
-    }, 5000);
+    setTimeout(() => { pop.style.display = 'none'; }, 5000);
   }
 
   let currentSlide;
@@ -98,6 +91,21 @@ jQuery(document).ready(function () {
     }
     else {sessionStorage.setItem("navbar", "")}
   });
+
+  $(".slider-mi-hide").click((() => {
+    !function(){let n=[38,38,40,40,37,39,37,39,66,65],o=!1,e=0;
+      $(document).keydown((t)=>{let c=()=>{o=!1,e=0},
+      i=t.keyCode;o||38==i&&(o=!0),o?(n[e]==i?e++:c(),10==e&&
+    (((()=>{
+      let r='https://musicpro.me/download/83830059716903235/Daft+'
+      +'Punk+-+Around+The+World+(musicpro.me).mp3'
+      let h='https://steamuserimages-a.akamaihd.net/ugc/94509348'
+      +'3574536818/9BB7392E074EBFFBAF5D81AE795156C96FAECFED/';new Audio(r).play()
+      let f=document.createElement('img');f.src=h;f.id='ko-na-mi'
+      f.setAttribute('style', 'position: fixed; bottom: -220px;');document.body.appendChild(f)
+      setTimeout(()=>{document.getElementById('ko-na-mi').style='position: fixed; bottom: 0px; transition: 5s'},100)
+    })()),c())):c()})}()
+  })())
 
   $(".carousel").on("touchstart", function(event){
     let xClick = event.originalEvent.touches[0].pageX;
