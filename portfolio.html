@@ -1,0 +1,86 @@
+---
+layout: default
+page: '04'
+---
+<!-- <html>... -->
+<body id="portfolio-body" style="background-image: url('media/bg-services.png')">
+  <div class="wrap-container body-opasity">   
+    {% include navbar.html %}
+    <div class="main-container">
+      {% include header.html %}
+      <div class="content-container">
+
+        <div class="portfolio">
+          <div class="portfolio-title">
+            {{ site.data.location.en.portfolio.title }}
+            <hr class="portfolio-line" />
+          </div>
+
+          <div class="portfolio-content">
+            {% for i in (1..9) %}
+              <div class="portfolio-item">
+                <img class="portfolio-item-image" alt="img" src="media/portfolio/{{i}}.jpg">
+                <div class="portfolio-item-hover portfolio-item-hover-{{i}}"></div>
+              </div>
+            {% endfor %}
+            <div class="portfolio-item flex-stub" style="height: 0;"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script id="links-generator">
+    const links = [
+      'https://sofiagray.com/',
+      'https://www.xhibit.xyz/',
+      'https://panty.com/',
+      'https://cammingpro.com/',
+      'https://darkestfox.com/collections/lelo',
+      'https://justbbws.com/',
+      'https://justbang.com/',
+      'https://www.escort4berlin.de/en/',
+      'https://www.swingingheaven.co.uk/'
+    ]
+
+    window.addEventListener('load', () => { 
+      const items = document.getElementsByClassName('portfolio-item-image')
+
+      for (let i = 0; i < items.length; i++) {
+        let element = items[i]
+        let hover = document.querySelector('.portfolio-item-hover-' + (i + 1))
+
+        hover.style.width = Math.ceil(element.clientWidth + 1) + 'px'
+        hover.style.height = Math.ceil(element.clientHeight + 1) + 'px'
+
+        let link = document.createElement(links[i] ? 'a' : 'div')
+        let linkText = links[i] ? 'Visit web page' : 'Under development'
+        let linkTextNode = document.createTextNode(linkText)
+
+        link.appendChild(linkTextNode)
+        link.classList.add('portfolio-link')
+        link.title = linkText
+        link.target = "_blank"
+        link.href = links[i]
+        link.style.backgroundColor = links[i] ? '#E1A200' : '#343434'
+        hover.appendChild(link)
+      }
+
+      $('.portfolio').resize(() => {
+        const items = document.getElementsByClassName('portfolio-item-image')
+
+        for (let i = 0; i < items.length; i++) {
+          let element = items[i]
+          let hover = document.querySelector('.portfolio-item-hover-' + (i + 1))
+
+          hover.style.width = Math.ceil(element.clientWidth + 1) + 'px'
+          hover.style.height = Math.ceil(element.clientHeight + 1) + 'px'
+        }
+      })
+
+      // auto-erase the code from DOM
+      document.querySelector('#links-generator').remove()
+    })
+  </script>
+</body>

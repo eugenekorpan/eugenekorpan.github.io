@@ -7,6 +7,9 @@
 - name: Services
   lname: services
   link: /services.html
+- name: Portfolio
+  lname: portfolio
+  link: /portfolio.html
 - name: Solutions
   lname: solutions
   link: /solutions.html

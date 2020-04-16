@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <meta name="theme-color" content="#202020">
+  <link rel="manifest" href="../manifest.json">
+  <title>Libido Software - Adult Web Development - Adult Web Design</title>
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-   <title>Libido Software - Adult Software Development & Promotion </title>
-  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#202020">
   <meta name="description" content="LibidoSoft is a development vendor specialized in adult industry. We are up to speed on promoting all-in-one services to design, build, then promote your business whether it's an escort agency or eCommerce shop"/>
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -19,8 +19,9 @@
   <!-- local files -->
   <link rel="stylesheet" href="assets/style.css">
   <script src="assets/scripts.js"></script>
-  <meta name="google-site-verification" content="l6-63PwA4flqh7yYPpmHiBsiVjPsukGgJOvKSp0UI6M" />
+  <script src="assets/libs/jquery.resize.js"></script>
   <!-- Google Tag Manager -->
+  <meta name="google-site-verification" content="l6-63PwA4flqh7yYPpmHiBsiVjPsukGgJOvKSp0UI6M" />
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -28,34 +29,34 @@
   })(window,document,'script','dataLayer','GTM-N3GCQWV');</script>
   
   <!-- Microdata -->
-    <script type="application/ld+json"> { 
-      "@context" : "http://schema.org",
-      "@type" : "Organization", 
-      "name":"Libido Software",
-      "url": "https://libidosoft.com/",
-       "logo": "https://libidosoft.com/media/logo.svg",
-        "description": "LibidoSoft is a development vendor specialized in adult industry. We are up to speed on promoting all-in-one services to design, build, then promote your business whether it's an escort agency or eCommerce shop",
-      "founder" : "Libido Software",
-      "foundingDate" : "107082018",
-      "contactPoint" : {
-          "@type" : "ContactPoint",
-          "contactType" : "Customer Service",
-          "telephone" : "+380977535731",
-          "contactOption" : "TollFree",
-          "areaServed" : ["US","CA","EU"],
-          "availableLanguage" : "English",
-          "email" : "contact@libidosoft.com"
-      }
+  <script type="application/ld+json"> { 
+    "@context" : "http://schema.org",
+    "@type" : "Organization", 
+    "name":"Libido Software",
+    "url": "https://libidosoft.com/",
+      "logo": "https://libidosoft.com/media/logo.svg",
+      "description": "LibidoSoft is a development vendor specialized in adult industry. We are up to speed on promoting all-in-one services to design, build, then promote your business whether it's an escort agency or eCommerce shop",
+    "founder" : "Libido Software",
+    "foundingDate" : "107082018",
+    "contactPoint" : {
+        "@type" : "ContactPoint",
+        "contactType" : "Customer Service",
+        "telephone" : "+380977535731",
+        "contactOption" : "TollFree",
+        "areaServed" : ["US","CA","EU"],
+        "availableLanguage" : "English",
+        "email" : "contact@libidosoft.com"
     }
-    </script>
- <!-- Open Graph tags -->
-    <meta property="og:locale" content="en">
-    <meta property="og:tittle" content="Libido Software - Adult Software Development & Promotion">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="LibidoSoft is a development vendor specialized in adult industry. We are up to speed on promoting all-in-one services to design, build, then promote your business whether it's an escort agency or eCommerce shop">
-    <meta property="og:url" content="https://libidosoft.com/">
-    <meta property="og:site_name" content="Libido Software">
-    <meta property="og:image" content="https://libidosoft.com/media/logo.svg">    
+  }
+  </script>
+  <!-- Open Graph tags -->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:tittle" content="Libido Software - Adult Web Development - Adult Web Design">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="LibidoSoft is a development vendor specialized in adult industry. We are up to speed on promoting all-in-one services to design, build, then promote your business whether it's an escort agency or eCommerce shop">
+  <meta property="og:url" content="https://libidosoft.com/">
+  <meta property="og:site_name" content="Libido Software">
+  <meta property="og:image" content="https://libidosoft.com/media/logo.svg">
 </head>
 <!-- <html>... -->
 <body style="background-image: url('media/bg-about-us.png')" id="about-body">
@@ -74,42 +75,47 @@
     <hr class="navbar-line"/>
     <ul class="navbar-links">
       
-      <li class="navbar-item-home">
-        <a class="navbar-link navbar-link-home" href="/" 
-        >Home</a>
-      </li>
+        <li class="navbar-item-home">
+          <a class="navbar-link navbar-link-home" href="/" 
+          >Home</a>
+        </li>
       
-      <li class="navbar-item-about">
-        <a class="navbar-link navbar-link-about" href="/about.html" 
-        
-        style="color: white;"
-        >About</a>
-      </li>
+        <li class="navbar-item-about">
+          <a class="navbar-link navbar-link-about" href="/about.html" 
+          
+          style="color: white;"
+          >About</a>
+        </li>
       
-      <li class="navbar-item-services">
-        <a class="navbar-link navbar-link-services" href="/services.html" 
-        >Services</a>
-      </li>
+        <li class="navbar-item-services">
+          <a class="navbar-link navbar-link-services" href="/services.html" 
+          >Services</a>
+        </li>
       
-      <li class="navbar-item-solutions">
-        <a class="navbar-link navbar-link-solutions" href="/solutions.html" 
-        >Solutions</a>
-      </li>
+        <li class="navbar-item-portfolio">
+          <a class="navbar-link navbar-link-portfolio" href="/portfolio.html" 
+          >Portfolio</a>
+        </li>
       
-      <li class="navbar-item-approach">
-        <a class="navbar-link navbar-link-approach" href="/approach.html" 
-        >Approach</a>
-      </li>
+        <li class="navbar-item-solutions">
+          <a class="navbar-link navbar-link-solutions" href="/solutions.html" 
+          >Solutions</a>
+        </li>
       
-      <li class="navbar-item-leadership">
-        <a class="navbar-link navbar-link-leadership" href="/leadership.html" 
-        >Leadership</a>
-      </li>
+        <li class="navbar-item-approach">
+          <a class="navbar-link navbar-link-approach" href="/approach.html" 
+          >Approach</a>
+        </li>
       
-      <li class="navbar-item-contact-us">
-        <a class="navbar-link navbar-link-contact-us" href="/contact-us.html" 
-        >Contact us</a>
-      </li>
+        <li class="navbar-item-leadership">
+          <a class="navbar-link navbar-link-leadership" href="/leadership.html" 
+          >Leadership</a>
+        </li>
+      
+        <li class="navbar-item-contact-us">
+          <a class="navbar-link navbar-link-contact-us" href="/contact-us.html" 
+          >Contact us</a>
+        </li>
       
     </ul>
     <div class="navbar-line-2-flex">
@@ -120,9 +126,10 @@
     </div>
   </nav>
 </div>
+
     <div class="main-container">
       <header class="main-header ">
-  <button class="main-header-contact-us-button contact-us-button" onclick="location.href='contact-us.html'">Contact us</button>
+  <button class="contact-us-button main-header-contact-us-button" onclick="location.href='contact-us.html'">Contact us</button>
 
   <div class="main-header-left">
     <button class="open-navbar-btn">|||</button>
@@ -130,7 +137,6 @@
   </div>
   <a href="/contact-us.html"><img src="../media/contact-us-mobile.svg" class="main-header-mobile" width="45px" alt="contact-us"></a>
 </header>
-
 
 <div class="alt-navbar hide">
   <nav>
@@ -153,6 +159,11 @@
       <li class="navbar-item-services">
         <a class="navbar-link navbar-link-services" href="/services.html" 
         >Services</a>
+      </li>
+      
+      <li class="navbar-item-portfolio">
+        <a class="navbar-link navbar-link-portfolio" href="/portfolio.html" 
+        >Portfolio</a>
       </li>
       
       <li class="navbar-item-solutions">
@@ -193,22 +204,35 @@
           </a>
 
           <div class="about-col-1">
-            <div class="text text-1">
-              <b>About us</b>
-              We could say we’re the highly-qualified team with experienced developers, designers and marketers like everyone else wrote onto their  pages. We didn’t. We dare guess you have an advance knowledge about our skills so as landing you’re here. The distinguishing feature of our agency is our unbiased specification. Consolidated with competent and skilled team indeed
-            </div>
-            <div class="text text-2">
-              <b>Why we specialize in adult industry</b>
-              Someone has to. Really, according to Forrester Research porn industry was estimated as a $100 billion industry. In comparison, Hollywood makes $10 million in profit that is 10 times lower. Thereby this industry is so hot and well loved, we couldn’t leave unattended the fact of the increasing demand for outsourcing services. While you’re continuing to get on with your business, we develop your product from technical side
-            </div>
-            <div class="text text-3">
-              <b>Cause that what we do</b>
-              Despite on human wants to have sex, there is everybody and their brother blames adult industry. We aren’t going along with it. Observing it from a psychological aspect of humanity, we'll analyze your business thoroughly, suggest all possible solutions from bug fixing of existent site till creating the design and building of marketing strategy from the ground up. Specializing in the one field, we’re capable to delve into a project deeply and proceed with the work achieving your goals
-            </div>
-            <div class="text text-4">
-              <b>Who would want to</b>
-              Don't we all? Whether you’re going to make a dating site, or you want your sex-shop will become more visible. Staying competitive in adult industry, everyone needs to do the same&#58; create or re-design website, have strong marketing campaign strategy and find out the ways to generate standing customers. When all is said and done, your prospective buyers will prone to the company that shed the light on their identity and provide the self-explanatory information. We have a clue how it should be done
-            </div>
+            
+              
+              
+              <div class="text text-1">
+                <b>About us</b>
+                We could say we’re the highly-qualified team with experienced developers, designers and marketers like everyone else wrote onto their  pages. We didn’t. We dare guess you have an advance knowledge about our skills so as landing you’re here. The distinguishing feature of our agency is our unbiased specification. Consolidated with competent and skilled team indeed
+              </div>
+            
+              
+              
+              <div class="text text-2">
+                <b>Why we specialize in adult industry</b>
+                Someone has to. Really, according to Forrester Research porn industry was estimated as a $100 billion industry. In comparison, Hollywood makes $10 million in profit that is 10 times lower. Thereby this industry is so hot and well loved, we couldn’t leave unattended the fact of the increasing demand for outsourcing services. While you’re continuing to get on with your business, we develop your product from technical side
+              </div>
+            
+              
+              
+              <div class="text text-3">
+                <b>Cause that what we do</b>
+                Despite on human wants to have sex, there is everybody and their brother blames adult industry. We aren’t going along with it. Observing it from a psychological aspect of humanity, we'll analyze your business thoroughly, suggest all possible solutions from bug fixing of existent site till creating the design and building of marketing strategy from the ground up. Specializing in the one field, we’re capable to delve into a project deeply and proceed with the work achieving your goals
+              </div>
+            
+              
+              
+              <div class="text text-4">
+                <b>Who would want to</b>
+                Don't we all? Whether you’re going to make a dating site, or you want your sex-shop will become more visible. Staying competitive in adult industry, everyone needs to do the same&#58; create or re-design website, have strong marketing campaign strategy and find out the ways to generate standing customers. When all is said and done, your prospective buyers will prone to the company that shed the light on their identity and provide the self-explanatory information. We have a clue how it should be done
+              </div>
+            
             <button class="contact-us-button about-contact-us-btn" onclick="location.href='contact-us.html'">Contact us</button>
           </div>
 
@@ -219,10 +243,15 @@
                 <path d="M10 0C4.47715 0 0 4.47715 0 10V450C0 455.523 4.47715 460 10 460H668C673.523 460 678 455.523 678 450V10C678 4.47715 673.523 0 668 0H10Z"/>
               </svg>
 
-              <div class="carousel-item active"><img class="slide" src="../media/about-us-image-1.png"></div>
-              <div class="carousel-item"><img class="slide" src="../media/about-us-image-2.png"></div>
-              <div class="carousel-item"><img class="slide" src="../media/about-us-image-3.png"></div>
-              <div class="carousel-item"><img class="slide" src="../media/about-us-image-4.png"></div>
+              
+                <div class="carousel-item active"><img class="slide" src="../media/about-us-image-1.png"></div>
+              
+                <div class="carousel-item "><img class="slide" src="../media/about-us-image-2.png"></div>
+              
+                <div class="carousel-item "><img class="slide" src="../media/about-us-image-3.png"></div>
+              
+                <div class="carousel-item "><img class="slide" src="../media/about-us-image-4.png"></div>
+              
             </div>
             <div class="about-btns">
               <a class="about-carousel-control-prev-btn carousel-control-prev-btn" href="#aboutCarousel" data-slide="prev">
@@ -232,10 +261,19 @@
                 </svg>
               </a>
               <div class="carousel-indicators">
-                <div data-target="#aboutCarousel" data-slide-to="0" class="indicator-1 active">1</div>
-                <div data-target="#aboutCarousel" data-slide-to="1" class="indicator-2">2</div>
-                <div data-target="#aboutCarousel" data-slide-to="2" class="indicator-3">3</div>
-                <div data-target="#aboutCarousel" data-slide-to="2" class="indicator-4">4</div>
+                
+                  <div data-target="#aboutCarousel" data-slide-to="0"
+                      class="indicator-1 active">1</div>
+                
+                  <div data-target="#aboutCarousel" data-slide-to="1"
+                      class="indicator-2 ">2</div>
+                
+                  <div data-target="#aboutCarousel" data-slide-to="2"
+                      class="indicator-3 ">3</div>
+                
+                  <div data-target="#aboutCarousel" data-slide-to="3"
+                      class="indicator-4 ">4</div>
+                
               </div>
               <a class="about-carousel-control-next-btn carousel-control-next-btn" href="#aboutCarousel" role="button" data-slide="next">
                 <svg viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -255,4 +293,5 @@
     </div>
   </div>
 </body>
+
 </html>
