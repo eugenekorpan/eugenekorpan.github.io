@@ -14,11 +14,11 @@ page: '08'
           <div class="contact-us-col-1">
             <div class="contact-us-block">
               <div class="contact-us-title">{{ site.data.location.en.contact_us_btn }}</div>
-              <form action="https://formspree.io/contact@libidosoft.com" method="POST">
+              <form action="https://formspree.io/mnqbebrv" method="POST">
                 <label class="contact-us-label" for="name">{{ site.data.location.en.contact_us.name }}</label>
                 <input class="contact-us-input" autocomplete="off" type="text" name="name" required placeholder="{{ site.data.location.en.contact_us.name_plc }}"><br>
                 <label class="contact-us-label" for="email">{{ site.data.location.en.contact_us.email }}</label>
-                <input class="contact-us-input" autocomplete="off" type="email" name="email" required pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" placeholder="{{ site.data.location.en.contact_us.email_plc }}"><br>
+                <input class="contact-us-input" autocomplete="off" type="email" name="_replyto" required pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" placeholder="{{ site.data.location.en.contact_us.email_plc }}"><br>
                 <label class="contact-us-label" for="message">{{ site.data.location.en.contact_us.message }}</label>
                 <textarea class="contact-us-input message" autocomplete="off" type="text" name="message" required placeholder="{{ site.data.location.en.contact_us.message_plc2 }}"></textarea><br>
                 <input class="contact-us-send-btn" type="submit" value="{{ site.data.location.en.contact_us.send }}">
