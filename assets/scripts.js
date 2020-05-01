@@ -2,10 +2,6 @@ jQuery(document).ready(function() {
   if ( !(navigator.userAgent.indexOf('Chrome') + 1) ) {pop('Recomended use only Chrome browser')}
 
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then(registrations => {
-      for (let registration of registrations) { registration.unregister() }
-    })
-
     window.addEventListener('load', _ => navigator.serviceWorker.register('../sw.js').then(
       suc => console.log('ServiceWorker registration successful'),
       err => console.log('ServiceWorker registration failed: ', err)

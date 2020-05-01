@@ -220,52 +220,60 @@ s0.parentNode.insertBefore(s1,s0);
           </div>
 
           <div class="portfolio-content">
-            
-              <div class="portfolio-item">
-                <img class="portfolio-item-image" alt="img" src="media/portfolio/1.jpg">
-                <div class="portfolio-item-hover portfolio-item-hover-1"></div>
+            <div class="portfolio-item">
+              <img class="portfolio-item-image" alt="img" src="media/portfolio/1.jpg">
+              <div class="portfolio-item-hover">
+                <a href="https://sofiagray.com/" target="_blank" class="portfolio-link">Visit website</a>
               </div>
-            
-              <div class="portfolio-item">
-                <img class="portfolio-item-image" alt="img" src="media/portfolio/2.jpg">
-                <div class="portfolio-item-hover portfolio-item-hover-2"></div>
+            </div>
+            <div class="portfolio-item">
+              <img class="portfolio-item-image" alt="img" src="media/portfolio/2.jpg">
+              <div class="portfolio-item-hover">
+                <a href="https://www.xhibit.xyz/" target="_blank" class="portfolio-link">Visit website</a>
               </div>
-            
-              <div class="portfolio-item">
-                <img class="portfolio-item-image" alt="img" src="media/portfolio/3.jpg">
-                <div class="portfolio-item-hover portfolio-item-hover-3"></div>
+            </div>
+            <div class="portfolio-item">
+              <img class="portfolio-item-image" alt="img" src="media/portfolio/3.jpg">
+              <div class="portfolio-item-hover">
+                <a href="https://panty.com/" target="_blank" class="portfolio-link">Visit website</a>
               </div>
-            
-              <div class="portfolio-item">
-                <img class="portfolio-item-image" alt="img" src="media/portfolio/4.jpg">
-                <div class="portfolio-item-hover portfolio-item-hover-4"></div>
+            </div>
+            <div class="portfolio-item">
+              <img class="portfolio-item-image" alt="img" src="media/portfolio/4.jpg">
+              <div class="portfolio-item-hover">
+                <a href="https://cammingpro.com/" target="_blank" class="portfolio-link">Visit website</a>
               </div>
-            
-              <div class="portfolio-item">
-                <img class="portfolio-item-image" alt="img" src="media/portfolio/5.jpg">
-                <div class="portfolio-item-hover portfolio-item-hover-5"></div>
+            </div>
+            <div class="portfolio-item">
+              <img class="portfolio-item-image" alt="img" src="media/portfolio/5.jpg">
+              <div class="portfolio-item-hover">
+                <a href="https://darkestfox.com/collections/lelo" target="_blank" class="portfolio-link">Visit website</a>
               </div>
-            
-              <div class="portfolio-item">
-                <img class="portfolio-item-image" alt="img" src="media/portfolio/6.jpg">
-                <div class="portfolio-item-hover portfolio-item-hover-6"></div>
+            </div>
+            <div class="portfolio-item">
+              <img class="portfolio-item-image" alt="img" src="media/portfolio/6.jpg">
+              <div class="portfolio-item-hover">
+                <a href="https://justbbws.com/" target="_blank" class="portfolio-link">Visit website</a>
               </div>
-            
-              <div class="portfolio-item">
-                <img class="portfolio-item-image" alt="img" src="media/portfolio/7.jpg">
-                <div class="portfolio-item-hover portfolio-item-hover-7"></div>
+            </div>
+            <div class="portfolio-item">
+              <img class="portfolio-item-image" alt="img" src="media/portfolio/7.jpg">
+              <div class="portfolio-item-hover">
+                <a href="https://justbang.com/" target="_blank" class="portfolio-link">Visit website</a>
               </div>
-            
-              <div class="portfolio-item">
-                <img class="portfolio-item-image" alt="img" src="media/portfolio/8.jpg">
-                <div class="portfolio-item-hover portfolio-item-hover-8"></div>
+            </div>
+            <div class="portfolio-item">
+              <img class="portfolio-item-image" alt="img" src="media/portfolio/8.jpg">
+              <div class="portfolio-item-hover">
+                <a href="https://www.escort4berlin.de/en/" target="_blank" class="portfolio-link">Visit website</a>
               </div>
-            
-              <div class="portfolio-item">
-                <img class="portfolio-item-image" alt="img" src="media/portfolio/9.jpg">
-                <div class="portfolio-item-hover portfolio-item-hover-9"></div>
+            </div>
+            <div class="portfolio-item">
+              <img class="portfolio-item-image" alt="img" src="media/portfolio/9.jpg">
+              <div class="portfolio-item-hover">
+                <a href="https://www.swingingheaven.co.uk/" target="_blank" class="portfolio-link">Visit website</a>
               </div>
-            
+            </div>
             <div class="portfolio-item flex-stub" style="height: 0;"></div>
           </div>
         </div>
@@ -275,52 +283,19 @@ s0.parentNode.insertBefore(s1,s0);
   </div>
 
   <script id="links-generator">
-    const links = [
-      'https://sofiagray.com/',
-      'https://www.xhibit.xyz/',
-      'https://panty.com/',
-      'https://cammingpro.com/',
-      'https://darkestfox.com/collections/lelo',
-      'https://justbbws.com/',
-      'https://justbang.com/',
-      'https://www.escort4berlin.de/en/',
-      'https://www.swingingheaven.co.uk/'
-    ]
-
     window.addEventListener('load', () => { 
-      const items = document.getElementsByClassName('portfolio-item-image')
-
-      for (let i = 0; i < items.length; i++) {
-        let element = items[i]
-        let hover = document.querySelector('.portfolio-item-hover-' + (i + 1))
+      const setHoverSize = () => $('.portfolio-item').each((_, item) => {
+        let element = item.querySelector('.portfolio-item-image')
+        let hover = item.querySelector('.portfolio-item-hover')
+        if (!hover) return
 
         hover.style.width = Math.ceil(element.clientWidth + 1) + 'px'
         hover.style.height = Math.ceil(element.clientHeight + 1) + 'px'
-
-        let link = document.createElement(links[i] ? 'a' : 'div')
-        let linkText = links[i] ? 'Visit web page' : 'Under development'
-        let linkTextNode = document.createTextNode(linkText)
-
-        link.appendChild(linkTextNode)
-        link.classList.add('portfolio-link')
-        link.title = linkText
-        link.target = "_blank"
-        link.href = links[i]
-        link.style.backgroundColor = links[i] ? '#E1A200' : '#343434'
-        hover.appendChild(link)
-      }
-
-      $('.portfolio').resize(() => {
-        const items = document.getElementsByClassName('portfolio-item-image')
-
-        for (let i = 0; i < items.length; i++) {
-          let element = items[i]
-          let hover = document.querySelector('.portfolio-item-hover-' + (i + 1))
-
-          hover.style.width = Math.ceil(element.clientWidth + 1) + 'px'
-          hover.style.height = Math.ceil(element.clientHeight + 1) + 'px'
-        }
       })
+
+      setHoverSize()
+
+      $('.portfolio').resize(setHoverSize)
 
       // auto-erase the code from DOM
       document.querySelector('#links-generator').remove()

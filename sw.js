@@ -2,32 +2,28 @@ const PRECACHE = 'v1';
 const RUNTIME = 'libido-cache';
 
 // A list of local resources we always want to be cached.
-// const PRECACHE_URLS = ['/']
+const PRECACHE_URLS = ['/']
 
 // The install handler takes care of precaching the resources we always need.
-// self.addEventListener('install', event => {
-//   event.waitUntil(
-//     caches.open(PRECACHE)
-//       .then(cache => cache.addAll(PRECACHE_URLS))
-//       .then(self.skipWaiting())
-//   );
-// });
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(PRECACHE)
+      .then(cache => cache.addAll(PRECACHE_URLS))
+      .then(self.skipWaiting())
+  );
+});
 
 // The activate handler takes care of cleaning up old caches.
-self.addEventListener('activate', function(event) {
+self.addEventListener('activate', event => {
   event.waitUntil(
-    caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.filter(function(cacheName) {
-          // Return true if you want to remove this cache,
-          // but remember that caches are shared across
-          // the whole origin
-          return true
-        }).map(function(cacheName) {
-          return caches.delete(cacheName);
-        })
-      );
-    })
+    caches.keys().then(cacheNames => {
+      return cacheNames.filter(cacheName => PRECACHE !== cacheName);
+    }).then(unusedCaches => {
+      console.log('DESTROYING CACHE', unusedCaches.join(','));
+      return Promise.all(unusedCaches.map(unusedCache => {
+        return caches.delete(unusedCache);
+      }));
+    }).then(() => self.clients.claim())
   );
 });
 

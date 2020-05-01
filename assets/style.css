@@ -892,6 +892,7 @@ button:focus {
 }
 
 .portfolio-item {
+  position: relative;
   display: flex;
   flex: 1;
   min-width: 10cm;
@@ -908,6 +909,7 @@ button:focus {
   align-items: center;
   border-radius: 15px;
   background: transparent;
+  width: 100%;
   transition: background .3s;
 }
 
@@ -921,6 +923,7 @@ button:focus {
 }
 
 .portfolio-link {
+  background: #E1A200;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -935,14 +938,6 @@ button:focus {
   opacity: 0;
   color: white;
   transition: .3s;
-}
-
-div.portfolio-link {
-  cursor: not-allowed;
-}
-
-div.portfolio-link:hover {
-  box-shadow: 0 0 5px red;
 }
 
 .portfolio-link:hover {
