@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-  if ( !(navigator.userAgent.indexOf('Chrome') + 1) ) {pop('Recomended use only Chrome browser')}
+  if (!(navigator.userAgent.indexOf('Chrome') + 1)) {pop('Recomended use only Chrome browser')}
 
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', _ => navigator.serviceWorker.register('../sw.js').then(
@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
       form.insertBefore(notify, input);
       input.addEventListener('invalid', (event) => {
         event.preventDefault();
-        if ( !event.target.validity.valid ) {  
+        if (!event.target.validity.valid) {  
           input.classList.add('shake');
           notify.textContent = event.target.validationMessage;
           notify.className = 'error';
@@ -43,8 +43,7 @@ jQuery(document).ready(function() {
     setTimeout(() => { pop.style.display = 'none'; }, 5000);
   }
 
-  let currentSlide;
-  slideChange = (slide) => {
+  slideChange = (slide, currentSlide) => {
     if (currentSlide !== slide) {
       currentSlide = slide;
       for (let i = 1; i <= 6; i++) {

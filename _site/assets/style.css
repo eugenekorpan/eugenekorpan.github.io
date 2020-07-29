@@ -45,10 +45,6 @@ nav a:hover, .carousel a {
   outline: none;
 }
 
-/*input:required:valid {
-border-color: green;
-}*/
-
 button:focus {
   outline: none;
 }
@@ -99,51 +95,24 @@ button:focus {
 }
 
 @keyframes shake {
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-
-  20%, 80% {
-    transform: translate3d(2px, 0, 0);
-  }
-
-  30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-
-  40%, 60% {
-    transform: translate3d(4px, 0, 0);
-  }
+  10%, 90%      { transform: translate3d(-1px, 0, 0); }
+  20%, 80%      { transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+  40%, 60%      { transform: translate3d(4px, 0, 0); }
 }
 
 @keyframes pulseError {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  60%  { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 @keyframes pulseError2 {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.2;
-  }
-  60% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 0;
-  }
+  0%   { opacity: 0; }
+  20%  { opacity: 0.2; }
+  60%  { opacity: 0.2; }
+  100% { opacity: 0; }
 }
 
 /* Body */
@@ -198,7 +167,6 @@ button:focus {
   color: #FFF;
   margin-left: 15px;
   font-size: 35px;
-  /*display: flex; */
   display: none;
   float: left;
   background: none;
@@ -319,7 +287,6 @@ button:focus {
   font-size: 20px;
   letter-spacing: 0.05em;
   color: #FFFFFF;
-
   transition: 0.5s;
 }
 
@@ -555,6 +522,14 @@ button:focus {
   width: 440px;
 }
 
+.seo-descriprion {
+  position: absolute;
+  max-height: 0px;
+  max-width: 0px;
+  bottom: 0px;
+  overflow: hidden;
+}
+
 /* Index carousel */
 .index-row-our-services {
   font-style: normal;
@@ -661,7 +636,7 @@ button:focus {
   padding: 2vw;
 }
 
-.about b {
+.about h1 {
   display: block;
   margin-bottom: 3vh;
   font-style: normal;
@@ -823,7 +798,7 @@ button:focus {
   align-items: center;
 }
 
-.services b {
+.services h1 {
   display: block;
   margin-bottom: 3vh;
   font-style: normal;
@@ -1205,10 +1180,6 @@ button:focus {
   border-radius: 10px;
 }
 
-.contact-us-input:invalid {
-  /*border: none;*/
-}
-
 .contact-us-input:focus {
   background: rgba(255, 255, 255, 0.03);
   border-color: #FFF;
@@ -1217,6 +1188,7 @@ button:focus {
 .contact-us-input.message {
   max-height: 129px;
   min-height: 129px;
+  resize: none;
 }
 
 .contact-us-label {
@@ -1420,6 +1392,7 @@ button:focus {
     padding: 0px;
     justify-content: flex-start;
     text-align: left !important;
+    max-width: 133.333vw !important;
   }
 
   .about-col-1 {
@@ -1432,10 +1405,6 @@ button:focus {
 
   .about-carousel-prev-col, .about-carousel-next-col {
     display: none;
-  }
-
-  .about-col-1, .about-col-2 {
-    max-width: 133.333vw !important;
   }
 
   .about-col-2 {

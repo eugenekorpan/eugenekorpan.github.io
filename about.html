@@ -1,6 +1,7 @@
 ---
 layout: default
 page: '02'
+permalink: /about
 ---
 <!-- <html>... -->
 <body style="background-image: url('media/bg-about-us.png')" id="about-body">
@@ -20,7 +21,7 @@ page: '02'
               {% assign h = "h1-" | append: i %}
               {% assign p = "p-1-" | append: i %}
               <div class="text text-{{i}}">
-                <b>{{ site.data.location.en.about[h] }}</b>
+                <h1>{{ site.data.location.en.about[h] }}</h1>
                 {{ site.data.location.en.about[p] }}
               </div>
             {% endfor %}
