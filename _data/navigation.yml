@@ -3,22 +3,22 @@
   link: /
 - name: About
   lname: about
-  link: /about.html
+  link: /about
 - name: Services
   lname: services
-  link: /services.html
+  link: /services
 - name: Portfolio
   lname: portfolio
-  link: /portfolio.html
+  link: /portfolio
 - name: Solutions
   lname: solutions
-  link: /solutions.html
+  link: /solutions
 - name: Approach
   lname: approach
-  link: /approach.html
+  link: /approach
 - name: Leadership
   lname: leadership
-  link: /leadership.html
+  link: /leadership
 - name: Contact us
   lname: contact-us
-  link: /contact-us.html
+  link: /contact-us
